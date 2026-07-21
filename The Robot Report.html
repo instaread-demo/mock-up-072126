@@ -1,0 +1,934 @@
+<!DOCTYPE html><html lang="en-US" class=""><head><base href="https://www.therobotreport.com/friction-is-key-to-making-better-robot-world-models/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="fb:admins" content="1140409510">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="fb:admins" content="107031532675062">
+	<meta name="msvalidate.01" content="40BA1B879066C83CDFCA374CA4B490C3">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v28.0 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Friction is key to making better robot world models - The Robot Report</title>
+	<meta name="description" content="Deploying world models in real robotic systems requires a step that receives less attention than the models themselves: conditioning.">
+	<link rel="stylesheet" type="text/css" href="https://wtwh-marketing.s3.us-east-1.amazonaws.com/lytics/wtwh-lytics-custom.css"><link rel="canonical" href="https://www.therobotreport.com/friction-is-key-to-making-better-robot-world-models/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Friction is key to making better robot world models - The Robot Report">
+	<meta property="og:description" content="Deploying world models in real robotic systems requires a step that receives less attention than the models themselves: conditioning.">
+	<meta property="og:url" content="https://www.therobotreport.com/friction-is-key-to-making-better-robot-world-models/">
+	<meta property="og:site_name" content="The Robot Report">
+	<meta property="article:published_time" content="2026-07-21T12:19:30+00:00">
+	<meta property="og:image" content="https://www.therobotreport.com/wp-content/uploads/2026/07/contactile-featured.jpg">
+	<meta property="og:image:width" content="1000">
+	<meta property="og:image:height" content="649">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="author" content="Heba Khamis">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:creator" content="@therobotreport">
+	<meta name="twitter:site" content="@therobotreport">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Heba Khamis">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="8 minutes">
+	
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//scripts.wtwhmedia.com">
+<link rel="dns-prefetch" href="//static.addtoany.com">
+<link rel="dns-prefetch" href="//kit.fontawesome.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="The Robot Report » Feed" href="https://www.therobotreport.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="The Robot Report » Comments Feed" href="https://www.therobotreport.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="The Robot Report » Friction is key to making better robot world models Comments Feed" href="https://www.therobotreport.com/friction-is-key-to-making-better-robot-world-models/feed/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.therobotreport.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.therobotreport.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel="stylesheet" id="theme-wtwh-amplifying-css" href="https://www.therobotreport.com/wp-content/themes/ThemeWTWHv2/style.css?ver=1778973560" media="all">
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="buttons-css" href="https://www.therobotreport.com/wp-includes/css/buttons.min.css?ver=7.0.2" media="all">
+<link rel="stylesheet" id="dashicons-css" href="https://www.therobotreport.com/wp-includes/css/dashicons.min.css?ver=7.0.2" media="all">
+<link rel="stylesheet" id="mediaelement-css" href="https://www.therobotreport.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17" media="all">
+<link rel="stylesheet" id="wp-mediaelement-css" href="https://www.therobotreport.com/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=7.0.2" media="all">
+<link rel="stylesheet" id="media-views-css" href="https://www.therobotreport.com/wp-includes/css/media-views.min.css?ver=7.0.2" media="all">
+<link rel="stylesheet" id="imgareaselect-css" href="https://www.therobotreport.com/wp-includes/js/imgareaselect/imgareaselect.css?ver=0.9.8" media="all">
+<link rel="stylesheet" id="frontend-sponsored-ads-css-css" href="https://www.therobotreport.com/wp-content/plugins/sponsored-content-ad/css/frontend-sponsored-ads.css?ver=1.01202607211784637609" media="all">
+<link rel="stylesheet" id="ea-fonts-css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,700&amp;ver=7.0.2" media="all">
+<link rel="stylesheet" id="ea-style-css" href="https://www.therobotreport.com/wp-content/themes/ThemeWTWHv2/assets/css/main.css?ver=1778973560" media="all">
+<link rel="stylesheet" id="tablepress-default-css" href="https://www.therobotreport.com/wp-content/plugins/tablepress/css/build/default.css?ver=3.3.3" media="all">
+<link rel="stylesheet" id="addtoany-css" href="https://www.therobotreport.com/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16" media="all">
+<link rel="stylesheet" id="wtwh-uni-gam-prestitial-style-css" href="https://www.therobotreport.com/wp-content/plugins/wtwh-universal-gam/assets/css/frontend/prestitial/prestitial.css?ver=1784637609" media="all">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="https://api.w.org/" href="https://www.therobotreport.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.therobotreport.com/wp-json/wp/v2/posts/588843"><link rel="shortlink" href="https://www.therobotreport.com/?p=588843">
+<style>
+		#category-posts-3-internal ul {padding: 0;}
+#category-posts-3-internal .cat-post-item img {max-width: initial; max-height: initial; margin: initial;}
+#category-posts-3-internal .cat-post-author {margin-bottom: 0;}
+#category-posts-3-internal .cat-post-thumbnail {margin: 5px 10px 5px 0;}
+#category-posts-3-internal .cat-post-item:before {content: ""; clear: both;}
+#category-posts-3-internal .cat-post-excerpt-more {display: inline-block;}
+#category-posts-3-internal .cat-post-item {list-style: none; margin: 3px 0 10px; padding: 3px 0;}
+#category-posts-3-internal .cat-post-current .cat-post-title {font-weight: bold; text-transform: uppercase;}
+#category-posts-3-internal [class*=cat-post-tax] {font-size: 0.85em;}
+#category-posts-3-internal [class*=cat-post-tax] * {display:inline-block;}
+#category-posts-3-internal .cat-post-item:after {content: ""; display: table;	clear: both;}
+#category-posts-3-internal .cat-post-item .cat-post-title {overflow: hidden;text-overflow: ellipsis;white-space: initial;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;padding-bottom: 0 !important;}
+#category-posts-3-internal .cat-post-item:after {content: ""; display: table;	clear: both;}
+#category-posts-3-internal .cat-post-thumbnail {display:block; float:left; margin:5px 10px 5px 0;}
+#category-posts-3-internal .cat-post-crop {overflow:hidden;display:block;}
+#category-posts-3-internal p {margin:5px 0 0 0}
+#category-posts-3-internal li > div {margin:5px 0 0 0; clear:both;}
+#category-posts-3-internal .dashicons {vertical-align:middle;}
+#category-posts-3-internal .cat-post-thumbnail .cat-post-crop img {height: 95px;}
+#category-posts-3-internal .cat-post-thumbnail .cat-post-crop img {width: 150px;}
+#category-posts-3-internal .cat-post-thumbnail .cat-post-crop img {object-fit: cover; max-width: 100%; display: block;}
+#category-posts-3-internal .cat-post-thumbnail .cat-post-crop-not-supported img {width: 100%;}
+#category-posts-3-internal .cat-post-thumbnail {max-width:100%;}
+#category-posts-3-internal .cat-post-item img {margin: initial;}
+#category-posts-3-internal .cat-post-dark img {padding-bottom: 0 !important; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -ms-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease;}
+#category-posts-3-internal .cat-post-dark:hover img {-webkit-filter: brightness(75%); -moz-filter: brightness(75%); -ms-filter: brightness(75%); -o-filter: brightness(75%); filter: brightness(75%);}
+</style>
+		<link rel="pingback" href="https://www.therobotreport.com/xmlrpc.php">
+<!-- Google Tag Manager for Global Container-->
+
+<!-- End Google Tag Manager -->
+ 
+<!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+<link rel="icon" href="https://www.therobotreport.com/wp-content/uploads/2017/08/cropped-robot-report-site-32x32.png" sizes="32x32">
+<link rel="icon" href="https://www.therobotreport.com/wp-content/uploads/2017/08/cropped-robot-report-site-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.therobotreport.com/wp-content/uploads/2017/08/cropped-robot-report-site-180x180.png">
+<meta name="msapplication-TileImage" content="https://www.therobotreport.com/wp-content/uploads/2017/08/cropped-robot-report-site-270x270.png">
+<style id="wp-custom-css">
+/*body > div.site-container > div.site-inner > div > div > main > article > div > p > a {
+	color: #D2232A;
+}*/
+
+.entry-content a {
+	color: #D2232A;
+	font-weight: bold;
+}
+
+.site-header .title-area {
+	width: 350px;
+}
+
+@media only screen and (max-width: 1152px) {
+	.site-header .title-area {
+		width: 120px;
+	}
+}
+
+.SoundCloudPubDate{padding:10px}
+.SoundCloudTitle{padding:10px}
+
+
+
+@media only screen and (min-width: 1028px) {
+body.small-header .nav-primary .menu-item.home {
+    display: block;
+    width: 150px;
+    height: 40px;
+    margin-right: 30px;
+    vertical-align: middle;
+    margin-top: -13px;
+	}
+}
+
+
+@media only screen and (max-width: 1150px) {
+	.site-header .title-area {
+width: 250px !important;
+}
+}
+
+@media only screen and (max-width: 510px) {
+	.site-header .title-area {
+		width: 175px !important;
+	}
+}
+/*
+.postid-561743 .author-box {
+	display: none !important;
+}*/
+
+/*Fix for Categories/home page article display*/
+@media only screen and (max-width: 500px) {
+ .content .entry .entry-header, .archive-entry .entry-header {
+		
+	}
+	
+	
+	.entry-content img {
+		text-align: center !important;
+		width: 100% !important;
+	}
+	
+	.archive-entry {
+		display: flex;
+		flex-direction: column-reverse;
+		width: 100% !important;
+	}
+	
+	.archive-entry > .entry-header, .archive-entry .entry-content {
+		width: 100% !important;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+.archive.category .entry-content p  {
+	display: none !important
+}
+	
+	.blog .entry-content p {
+		display: none !important;
+	}
+	
+	
+}
+
+.slick-slider.header-slides .header-slide .overlay h4, .slick-slider.header-slides .header-slide .overlay h2 {
+text-shadow: 2px 2px 5px black;
+background: none !important;
+-webkit-text-stroke-width: 0px !important;
+-webkit-text-stroke-color: transparent !important;
+}
+
+/* Search Page */
+
+.search .content {
+    width: 100%;
+    max-width: 100%;
+}
+
+body.search .site-inner {
+   display: unset;
+}
+ 
+body.search .site-inner {
+    padding-left: unset;
+    padding-right: unset;
+}
+
+.search-results-outer-container {
+    align-items: flex-start;
+}
+
+.page-id-582623 .entry-title{display: none;}
+
+/*SUBSCRIBE BUTTON CSS*/
+
+.site-header--subscribe{
+	background-color: #BE1E2D;
+  color: white;
+  padding: 0 16px;
+}
+
+.site-header--subscribe a{
+	color: white !important;
+}
+
+/*GATED COUNTRY FIELD FULL WIDTH & TERMS====*/
+#input_29_54_6_container{
+flex: 0 0 100%;
+}
+
+.terms{
+	font-size: 10px;
+  font-style: italic;
+}
+
+.type-gated .entry-content img{
+	width: 100%;
+}
+
+.nav-primary .menu-item a{
+	font-size: 11px !important;
+}
+
+/*Search*/
+
+@media only screen and (min-width: 780px) {
+	.search .wrap {
+	display: flex !important;
+	flex-direction: row!important;
+}
+
+.search .wrap .sidebar {
+	padding-left: 20px;
+	width: 30%;
+}
+	
+}
+
+.postid-587789 .wtwh-gf-sponsor-section .sponsor-wrapper a{
+	align-content: center;align-content;
+	max-height: unset !important;
+}
+
+.postid-587789 .wtwh-gf-sponsor-section .sponsor-wrapper img{
+	max-height: unset !important;
+}
+
+.postid-587789 .sponsor-wrapper a:nth-child(3) img{max-width: 175px;}
+
+/*SHOWS DESCRIPTION ON CATEGORIES*/
+.archive-intro {
+	display: revert !important;
+}
+</style>
+    
+    
+<style>.main-input.svelte-f8yk6y{border:solid var(--border-color) 1px;background:var(--bg-color);width:100%;box-shadow:none;border-radius:50px;padding:12px 16px;font-size:clamp(16px,1rem + .3906vw - 2.99981px,18px)}.main-input.svelte-f8yk6y:focus{border:2px solid #000}.main-btn.svelte-f8yk6y{aspect-ratio:1;background:var(--bg-color);cursor:pointer;border:none;border-radius:50px;justify-content:center;align-items:center;height:71%;padding:0;display:flex;position:absolute;right:1%}.main-btn.svelte-f8yk6y svg:where(.svelte-f8yk6y){width:90%;fill:var(--accent-color);padding:6px;transition:opacity .25s}.main-btn.busy.svelte-f8yk6y{cursor:default}.main-btn.busy.svelte-f8yk6y svg:where(.svelte-f8yk6y){opacity:.35}@media (prefers-reduced-motion:no-preference){.main-btn.busy.svelte-f8yk6y svg:where(.svelte-f8yk6y){animation:1.6s ease-in-out infinite svelte-f8yk6y-send-breathe}}@keyframes svelte-f8yk6y-send-breathe{0%,to{opacity:.25}50%{opacity:.55}}@media (width<=800px){.main-btn.svelte-f8yk6y{right:2%}}.query-container.svelte-j9539c{flex-direction:column;align-items:flex-end;margin-bottom:20px;display:flex}.query.svelte-j9539c{background:var(--accent-color);color:#fff;border-radius:20px 20px 4px;width:fit-content;max-width:500px;padding:12px 18px;font-size:17px;font-weight:400;line-height:1.4;position:relative}.query.svelte-j9539c:after{content:"";background:var(--accent-color);clip-path:polygon(100% 0,100% 100%,0 0);width:25px;height:18px;position:absolute;bottom:-15px;right:0}.query-time.svelte-j9539c{color:var(--sidebar-font-color);margin-top:4px;margin-right:21px;font-size:11px}.query-rating.svelte-qq962f{align-items:center;gap:10px;margin-bottom:20px;display:flex}.rating-actions.svelte-qq962f{align-items:center;gap:8px;display:flex}hr.svelte-qq962f{background:#eceaea;flex:1}.rating-btn.svelte-qq962f{cursor:pointer;background:0 0;border:none;border-radius:4px;justify-content:center;align-items:center;padding:4px;transition:background .15s;display:flex}.rating-btn.svelte-qq962f:hover{background:var(--sidebar-bg-color,#f0f0f0)}.rating-btn.svelte-qq962f svg:where(.svelte-qq962f){fill:#a9a9a9;width:17px;height:17px;transition:fill .15s}.thumbs-down.svelte-qq962f svg:where(.svelte-qq962f){position:relative;top:2px}.thumbs-up.svelte-qq962f:hover svg:where(.svelte-qq962f),.thumbs-up.svelte-qq962f .chosen:where(.svelte-qq962f){fill:green!important}.thumbs-down.svelte-qq962f:hover svg:where(.svelte-qq962f),.thumbs-down.svelte-qq962f .chosen:where(.svelte-qq962f){fill:red!important}.copy-btn.svelte-qq962f:hover svg:where(.svelte-qq962f){fill:var(--accent-color,#4a90d9)}.copy-btn.svelte-qq962f .check-icon:where(.svelte-qq962f){fill:green}.suggested-queries.svelte-jpelg9{flex-direction:column;display:flex}.suggested-queries.svelte-jpelg9 h4:where(.svelte-jpelg9){gap:10px;margin:0 0 10px;display:flex;color:#000!important;font-weight:700!important}.ai-icon.svelte-jpelg9{flex-shrink:0;width:25px;display:flex}.ai-icon.svelte-jpelg9 svg:where(.svelte-jpelg9){width:100%}.suggested-queries.svelte-jpelg9 button:where(.svelte-jpelg9){text-align:left;cursor:pointer;white-space:wrap;background:0 0;border:none;border-bottom:1px solid #e2e2e2;justify-content:space-between;align-items:center;padding:10px 1.2rem 10px 0;display:flex;color:#000!important;text-transform:none!important;font-weight:400!important}.suggested-queries.svelte-jpelg9 button:where(.svelte-jpelg9):hover{color:#819299!important}.suggested-queries.svelte-jpelg9 button:where(.svelte-jpelg9) span:where(.svelte-jpelg9){font-size:clamp(17px,1.3rem,19px);font-weight:100!important}.loading-dots.svelte-1h1pwvy{align-items:center;gap:4px;display:inline-flex}.loading-dots.svelte-1h1pwvy span:where(.svelte-1h1pwvy){width:var(--dot-size);height:var(--dot-size);background:var(--dot-color);border-radius:50%;animation:1.2s ease-in-out infinite svelte-1h1pwvy-dot-bounce}.loading-dots.svelte-1h1pwvy span:where(.svelte-1h1pwvy):nth-child(2){animation-delay:.15s}.loading-dots.svelte-1h1pwvy span:where(.svelte-1h1pwvy):nth-child(3){animation-delay:.3s}@keyframes svelte-1h1pwvy-dot-bounce{0%,80%,to{opacity:.4;transform:scale(.6)}40%{opacity:1;transform:scale(1)}}.circle-loader.svelte-9ctkdl{border:3px solid #ccc;border-top-color:#888;border-radius:50%;width:50px;height:50px;margin:0 auto;animation:1s linear infinite svelte-9ctkdl-rotate;position:relative}@keyframes svelte-9ctkdl-rotate{0%{transform:rotate(0)}to{transform:rotate(360deg)}}.loading-answer.svelte-9ctkdl{text-align:center;width:100%;padding:2rem 0}.typing-indicator.svelte-9ctkdl{align-items:center;margin:1rem 0;display:inline-flex}.sources-panel.svelte-rbygqo{background:var(--bg-color);border-left:none;flex-direction:column;flex-shrink:0;width:0;min-height:0;transition:width .25s,border-left .25s,overflow 0s .25s;display:flex;overflow:hidden;height:100%!important}.sources-panel.open.svelte-rbygqo{border-left:1px solid var(--border-color);width:320px;transition:width .25s,border-left .25s,overflow;overflow:visible}.query-text.svelte-rbygqo{color:var(--sidebar-font-color);text-overflow:ellipsis;line-clamp:2;-webkit-line-clamp:2;-webkit-box-orient:vertical;height:30px;margin:0 0 20px;padding-bottom:0;font-size:12px;line-height:1.3;display:-webkit-box;overflow:hidden}.panel-content.svelte-rbygqo{overscroll-behavior:contain;flex:1;padding:16px 16px 24px;min-height:0!important;overflow-y:auto!important}.panel-content.svelte-rbygqo::-webkit-scrollbar{width:6px}.panel-content.svelte-rbygqo::-webkit-scrollbar-track{background:0 0}.panel-content.svelte-rbygqo::-webkit-scrollbar-thumb{background:var(--border-color);border-radius:3px}.section.svelte-rbygqo{margin-bottom:20px}.section.svelte-rbygqo:last-child{margin-bottom:0}.sources-panel.svelte-rbygqo .section-title:where(.svelte-rbygqo){text-transform:uppercase;letter-spacing:.5px;color:var(--sidebar-font-color);border-bottom:1px solid var(--border-color);align-items:center;gap:8px;margin:0 0 10px;padding-bottom:6px;font-size:12px;font-weight:600;display:flex}.section-title.svelte-rbygqo svg:where(.svelte-rbygqo){width:14px;height:14px;fill:var(--accent-color);flex-shrink:0}.source-list.svelte-rbygqo{flex-direction:column;gap:1px;margin:0;padding:0;list-style:none;display:flex}.source-list.svelte-rbygqo li:where(.svelte-rbygqo){margin:0;padding:0}.source-item.svelte-rbygqo{border-left:2px solid #0000;border-radius:4px;align-items:flex-start;gap:0;padding:8px 10px;text-decoration:none;transition:background .15s;display:flex;overflow:hidden}.source-item.svelte-rbygqo:hover{background:var(--sidebar-bg-color);border-left-color:var(--accent-color);text-decoration:none}.source-image.svelte-rbygqo{opacity:0;border-radius:4px;flex-shrink:0;width:0;height:50px;margin-right:0;transition:width .25s,opacity .25s,margin-right .25s;overflow:hidden}.source-item.svelte-rbygqo:hover .source-image:where(.svelte-rbygqo){opacity:1;width:60px;margin-right:10px}.source-image.svelte-rbygqo img:where(.svelte-rbygqo){object-fit:cover;width:100%;height:100%}.source-text.svelte-rbygqo{flex-direction:column;flex:1;gap:2px;min-width:0;display:flex}.source-title.svelte-rbygqo{color:var(--font-color);line-clamp:2;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:12px;font-weight:500;line-height:1.4;display:-webkit-box;overflow:hidden}.source-meta.svelte-rbygqo{color:var(--sidebar-font-color);opacity:.7;font-size:10px}.loading-state.svelte-rbygqo{justify-content:center;gap:6px;padding:24px 0;display:flex}.empty-state.svelte-rbygqo{text-align:center;color:var(--sidebar-font-color);padding:24px 0}.empty-state.svelte-rbygqo p:where(.svelte-rbygqo){margin:0;font-size:12px}@media (width<=800px){.sources-panel.open.svelte-rbygqo{width:100%;max-width:280px}}.mobile-close-btn.svelte-rbygqo{display:none}@media (width<=600px){.sources-panel.svelte-rbygqo{z-index:200;position:fixed;top:0;bottom:0;right:0;box-shadow:-4px 0 20px #00000026}.sources-panel.open.svelte-rbygqo{z-index:1000;width:85vw;max-width:320px}.panel-content.svelte-rbygqo{padding:50px 16px 16px}.mobile-close-btn.svelte-rbygqo{background:var(--sidebar-bg-color);border:1px solid var(--border-color);cursor:pointer;z-index:10;width:32px;height:32px;padding:unset;border-radius:50%;justify-content:center;align-items:center;transition:background .15s;display:flex;position:absolute;top:12px;right:12px}.mobile-close-btn.svelte-rbygqo:hover{background:var(--border-color)}.mobile-close-btn.svelte-rbygqo svg:where(.svelte-rbygqo){width:18px;height:18px;fill:var(--sidebar-font-color)}}.main-layout.svelte-10amobe{min-height:0;display:flex;position:relative;height:100%!important}.content-column.svelte-10amobe{flex-direction:column;flex:1;min-width:0;padding:2rem 0 0;transition:flex .25s;display:flex}.ai-answer.svelte-10amobe{scrollbar-width:none;-ms-overflow-style:none;min-width:0;scroll-padding-bottom:var(--answer-bottom-clearance,250px);flex:1;padding:0 6rem;position:relative;overflow-x:hidden;overflow-y:scroll!important}.answer-bottom-spacer.svelte-10amobe{height:var(--answer-bottom-clearance,250px);pointer-events:none;flex-shrink:0}.message-wrapper.svelte-10amobe p,.message-wrapper.svelte-10amobe li{font-size:14px!important}.message-wrapper.svelte-10amobe h2,.message-wrapper.svelte-10amobe h3{font-size:18px!important}.main-layout.sidebar-open.svelte-10amobe .ai-answer:where(.svelte-10amobe){padding-right:2rem}.ai-answer.svelte-10amobe::-webkit-scrollbar{display:none}.ai-query-input-wrapper.svelte-10amobe{justify-content:center;align-items:center;width:100%;display:flex}.ai-query-input-wrapper.sticky.svelte-10amobe{width:100%;position:sticky;bottom:0}.ai-query-input-wrapper.fixed.svelte-10amobe{width:var(--input-width,100%);max-width:var(--input-width,800px);position:fixed;bottom:30px}.input-bar-controls.svelte-10amobe{background:var(--sidebar-bg-color);border-radius:0;align-items:center;gap:4px;width:100%;padding:10px 16px;display:flex}.control-btn.svelte-10amobe{cursor:pointer;background:0 0;border:none;border-radius:8px;justify-content:center;align-items:center;width:40px;min-width:40px;height:40px;padding:0;transition:all .2s;display:flex}.control-btn.svelte-10amobe:hover{background:var(--border-color)}.control-btn.svelte-10amobe svg:where(.svelte-10amobe){width:22px;height:22px;fill:var(--sidebar-font-color);transition:fill .2s}.control-btn.svelte-10amobe:hover svg:where(.svelte-10amobe){fill:var(--font-color)}.control-btn.has-tooltip.svelte-10amobe{position:relative}.control-btn.has-tooltip.svelte-10amobe:before{content:attr(data-tooltip);background:var(--font-color);color:var(--bg-color);white-space:nowrap;opacity:0;visibility:hidden;pointer-events:none;z-index:1000;border-radius:6px;padding:6px 10px;font-size:12px;font-weight:500;transition:opacity .15s,visibility .15s;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translate(-50%)}.control-btn.has-tooltip.svelte-10amobe:after{content:"";border:5px solid #0000;border-top-color:var(--font-color);opacity:0;visibility:hidden;pointer-events:none;z-index:1000;transition:opacity .15s,visibility .15s;position:absolute;bottom:calc(100% + 2px);left:50%;transform:translate(-50%)}.control-btn.has-tooltip.svelte-10amobe:hover:before,.control-btn.has-tooltip.svelte-10amobe:hover:after{opacity:1;visibility:visible}.sidebar-toggle-btn.svelte-10amobe{background:var(--bg-color);border:1px solid var(--border-color);cursor:pointer;z-index:101;border-radius:50px;justify-content:center;align-items:center;width:40px;min-width:40px;height:40px;padding:0;transition:background .15s,margin-right .25s;display:flex;position:relative}.sidebar-toggle-btn.open.svelte-10amobe{margin-right:-20px;position:absolute;right:0}.sidebar-toggle-btn.svelte-10amobe:hover{background:var(--border-color)}.sidebar-toggle-btn.svelte-10amobe:focus{background:0 0}.sidebar-toggle-btn.svelte-10amobe .toggle-arrow:where(.svelte-10amobe){width:22px;height:22px;fill:var(--sidebar-font-color);transition:transform .25s,fill .2s}.sidebar-toggle-btn.svelte-10amobe:hover .toggle-arrow:where(.svelte-10amobe){fill:var(--font-color)}.sidebar-toggle-btn.open.svelte-10amobe .toggle-arrow:where(.svelte-10amobe){transform:rotate(180deg)}.desktop-only.svelte-10amobe{display:flex}.search-input-container.svelte-10amobe{flex:1;align-items:center;margin:0 8px;display:flex;position:relative}.scroll-buttons-container.svelte-10amobe{z-index:10;gap:8px;display:flex;position:absolute;top:-40px;left:50%;transform:translate(-50%)}.ai-query-input-wrapper.svelte-10amobe .scroll-to-btn:where(.svelte-10amobe){cursor:pointer;border:1px solid var(--border-color);letter-spacing:1px;color:#fff;white-space:nowrap;background:#000;border-radius:50px;padding:7px 15px;font-size:13px}.ai-query-input-wrapper.svelte-10amobe .scroll-to-btn:where(.svelte-10amobe):hover{background:#353535}.ai-query-input-wrapper.svelte-10amobe .scroll-to-btn.loading-btn:where(.svelte-10amobe){cursor:pointer;align-items:center;gap:10px;padding:10px 20px;display:flex}.scroll-text.svelte-10amobe{margin-left:2px}.desktop-controls.svelte-10amobe{align-items:center;gap:4px;display:flex}.mobile-controls.svelte-10amobe{display:none;position:relative}.mobile-menu-btn.svelte-10amobe svg:where(.svelte-10amobe){fill:var(--sidebar-font-color)}.mobile-menu-backdrop.svelte-10amobe{z-index:199;position:fixed;inset:0}.mobile-controls-menu.svelte-10amobe{background:var(--bg-color);border:1px solid var(--border-color);z-index:200;border-radius:10px;min-width:180px;padding:7px 0;position:absolute;bottom:calc(100% + 8px);right:0;overflow:hidden;box-shadow:0 4px 20px #00000026}.mobile-menu-item.svelte-10amobe{width:100%;color:var(--font-color);cursor:pointer;text-align:left;white-space:nowrap;background:0 0;border:none;align-items:center;gap:10px;padding:9px 16px;font-size:13px;transition:background .15s;display:flex}.mobile-menu-item.svelte-10amobe:hover{background:var(--sidebar-bg-color)}.mobile-menu-item.svelte-10amobe svg:where(.svelte-10amobe){width:16px;height:16px;fill:var(--sidebar-font-color)}@media (width<=600px){.main-layout.svelte-10amobe{flex-direction:column;height:unset!important}.content-column.svelte-10amobe{height:unset}.ai-answer.svelte-10amobe{padding-bottom:30px;padding-left:1rem;padding-right:1rem}.desktop-controls.svelte-10amobe,.desktop-only.svelte-10amobe{display:none}.mobile-controls.svelte-10amobe{display:block}.search-input-container.svelte-10amobe{margin:0}.control-btn.svelte-10amobe{width:25px;min-width:25px}}.loader-wrapper.svelte-1c033g5{justify-content:center;align-items:center;width:100%;min-height:300px;display:flex}.loader.svelte-1c033g5{flex-direction:column;align-items:center;gap:1rem;display:flex}.spinner.svelte-1c033g5{border:4px solid #f3f3f3;border-top-color:#000;border-radius:50%;width:40px;height:40px;animation:1s linear infinite svelte-1c033g5-spin}.loader.svelte-1c033g5 p:where(.svelte-1c033g5){margin:0;font-size:1rem;color:#666!important}@keyframes svelte-1c033g5-spin{0%{transform:rotate(0)}to{transform:rotate(360deg)}}.ai-main-wrapper.svelte-1x3ozr1{padding:1.5rem 4rem}.error-wrapper.svelte-1x3ozr1{justify-content:center;align-items:center;width:100%;min-height:300px;display:flex}.error.svelte-1x3ozr1{text-align:center;flex-direction:column;align-items:center;gap:1rem;max-width:400px;display:flex}.error-icon.svelte-1x3ozr1{font-size:3rem}.error.svelte-1x3ozr1 h3:where(.svelte-1x3ozr1){margin:0;font-size:1.5rem;color:#d32f2f!important}.error.svelte-1x3ozr1 p:where(.svelte-1x3ozr1){margin:0;line-height:1.5;color:#666!important}.retry-button.svelte-1x3ozr1{cursor:pointer;background-color:#000;border:none;border-radius:.3em;padding:.75rem 1.5rem;font-size:1rem;transition:background-color .3s;color:#fff!important}.retry-button.svelte-1x3ozr1:hover{background-color:#333}.ai-description-wrapper.svelte-1x3ozr1{text-align:center;flex-direction:column;align-items:center;display:flex}.ai-description-wrapper.svelte-1x3ozr1 h1:where(.svelte-1x3ozr1){gap:10px;margin-bottom:.67rem;display:flex;color:#000!important}.ai-description-wrapper.svelte-1x3ozr1 .ai-icon:where(.svelte-1x3ozr1){width:35px;display:flex}.ai-description-wrapper.svelte-1x3ozr1 .ai-icon:where(.svelte-1x3ozr1) svg:where(.svelte-1x3ozr1){width:100%}.ai-description-wrapper.svelte-1x3ozr1 p:where(.svelte-1x3ozr1){width:70%;margin:1rem 0 1.5rem;color:#000!important}.ai-description.svelte-1x3ozr1{color:var(--sidebar-font-color)}.input-bar-container.svelte-1x3ozr1{align-items:center;gap:12px;width:100%;display:flex}.history-btn.svelte-1x3ozr1{background:var(--sidebar-bg-color);border:1px solid var(--border-color);cursor:pointer;border-radius:50%;justify-content:center;align-items:center;width:48px;min-width:48px;height:48px;padding:0;transition:all .2s;display:flex}.history-btn.svelte-1x3ozr1:hover{background:var(--accent-color);border-color:var(--accent-color)}.history-btn.svelte-1x3ozr1 svg:where(.svelte-1x3ozr1){width:22px;height:22px;fill:var(--sidebar-font-color);transition:fill .2s}.history-btn.svelte-1x3ozr1:hover svg:where(.svelte-1x3ozr1){fill:var(--bg-color)}.ai-query-input-wrapper.svelte-1x3ozr1{flex:1;align-items:center;display:flex;position:relative}.ai-query-suggestions-wrapper.svelte-1x3ozr1{grid-template-columns:1fr 1fr;gap:15px;margin-top:30px;display:grid}.ai-query-suggestion.svelte-1x3ozr1{text-align:left;cursor:pointer;background:var(--sidebar-bg-color);border:none;border-radius:.3em;outline:none;align-items:center;gap:10px;padding:20px 2rem;transition:all 1s;display:flex;position:relative;color:#000!important;text-transform:none!important;font-weight:400!important}.ai-query-suggestion.svelte-1x3ozr1 p:where(.svelte-1x3ozr1){color:var(--sidebar-font-color);font-family:sans-serif;font-size:15px!important}.ai-query-suggestion.svelte-1x3ozr1:hover{box-shadow:inset 0px 0px 25px var(--sidebar-font-color)}.ai-query-suggestion.svelte-1x3ozr1 svg:where(.svelte-1x3ozr1){width:40px;min-width:40px}.ai-query-suggestion.svelte-1x3ozr1 p:where(.svelte-1x3ozr1){margin:0;line-height:1.2;color:#000!important}@media (width<=500px){.ai-main-wrapper.svelte-1x3ozr1{padding:2rem 1rem}.ai-description-wrapper.svelte-1x3ozr1 h1:where(.svelte-1x3ozr1){flex-direction:column}.ai-description-wrapper.svelte-1x3ozr1 h1:where(.svelte-1x3ozr1) .ai-icon:where(.svelte-1x3ozr1){align-self:center}.ai-description-wrapper.svelte-1x3ozr1 p:where(.svelte-1x3ozr1){width:100%}.ai-query-suggestions-wrapper.svelte-1x3ozr1{grid-template-columns:1fr}.ai-query-suggestion.svelte-1x3ozr1{text-align:center;width:100%}}.search-results-outer-container.svelte-7tvoe0{flex-direction:column;gap:16px;width:100%;height:100%;padding:0 3rem;display:flex}.search-header.svelte-7tvoe0{flex-wrap:wrap;gap:12px;padding-top:2rem;display:flex}.search-header.svelte-7tvoe0 h2:where(.svelte-7tvoe0){color:var(--font-color);text-align:center;width:100%;margin:0;font-size:16px;font-weight:500}.search-bar-row.svelte-7tvoe0{flex-grow:1;align-items:center;gap:8px;display:flex}#wtwh-wp-search-bar.svelte-7tvoe0{border:1px solid var(--border-color);background:var(--bg-color);color:var(--font-color);border-radius:8px;flex-grow:1;min-width:0;padding:10px 14px;font-size:14px}#wtwh-wp-search-bar.svelte-7tvoe0:focus{border-color:var(--accent-color);outline:none}.search-bar-row.svelte-7tvoe0 .search-btn:where(.svelte-7tvoe0){background:var(--accent-color);color:#fff;cursor:pointer;border:none;border-radius:8px;flex-shrink:0;padding:10px 20px;font-size:14px;font-weight:500;transition:opacity .2s}.search-btn.svelte-7tvoe0:hover{opacity:.9}select#search-sort.svelte-7tvoe0{border:1px solid var(--border-color);background:var(--bg-color);color:var(--sidebar-font-color);cursor:pointer;border-radius:4px;flex-shrink:1;max-width:150px;height:auto;min-height:0;padding:9px 6px;font-size:14px;line-height:1.2}select#search-sort.svelte-7tvoe0:hover{border-color:var(--accent-color)}select#search-sort.svelte-7tvoe0:focus{border-color:var(--accent-color);outline:none}.search-results-container.svelte-7tvoe0{height:410px;min-height:0;overflow-y:auto}.search-results-container.svelte-7tvoe0::-webkit-scrollbar{width:6px}.search-results-container.svelte-7tvoe0::-webkit-scrollbar-track{background:0 0}.search-results-container.svelte-7tvoe0::-webkit-scrollbar-thumb{background:var(--border-color);border-radius:3px}#wtwh-wp-search-results.svelte-7tvoe0{flex-direction:column;gap:4px;display:flex}.search-result-card.svelte-7tvoe0{border-radius:6px;gap:12px;padding:10px 8px;text-decoration:none;transition:background .15s;display:flex}.search-result-card.svelte-7tvoe0:hover{background:var(--sidebar-bg-color);text-decoration:none}.result-thumbnail.svelte-7tvoe0{background:var(--sidebar-bg-color);border-radius:6px;flex-shrink:0;width:200px;height:100%;overflow:hidden}.result-thumbnail.svelte-7tvoe0 img:where(.svelte-7tvoe0){object-fit:cover;width:100%;height:100%;display:block}.result-content.svelte-7tvoe0{flex-direction:column;flex:1;gap:2px;min-width:0;padding-right:30px;display:flex}.result-date.svelte-7tvoe0{color:var(--sidebar-font-color);font-size:14px}.result-title.svelte-7tvoe0{color:var(--font-color);line-clamp:2;-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:0;font-size:12px;font-weight:500;line-height:1.3;display:-webkit-box;overflow:hidden}.result-excerpt.svelte-7tvoe0{color:var(--sidebar-font-color);line-clamp:2;-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:0;line-height:1.4;display:-webkit-box;overflow:hidden;font-size:14px!important}.view-more-container.svelte-7tvoe0{border-top:1px solid var(--border-color);flex-direction:column;align-items:center;gap:8px;margin-top:16px;padding-top:16px;display:flex}.view-more-btn.svelte-7tvoe0{border:1px solid var(--accent-color);color:var(--accent-color);cursor:pointer;background:0 0;border-radius:8px;justify-content:center;align-items:center;gap:6px;min-width:140px;padding:10px 24px;font-size:14px;font-weight:500;transition:background .2s,color .2s;display:flex}.view-more-btn.svelte-7tvoe0:hover:not(:disabled){background:var(--accent-color);color:#fff}.view-more-btn.svelte-7tvoe0:hover:not(:disabled) .chevron-down:where(.svelte-7tvoe0){fill:#fff}.view-more-btn.svelte-7tvoe0:disabled{opacity:.7;cursor:not-allowed}.chevron-down.svelte-7tvoe0{width:16px;height:16px;fill:var(--accent-color);transition:fill .2s}.results-count.svelte-7tvoe0{color:var(--sidebar-font-color);font-size:12px}.loading-state.svelte-7tvoe0{justify-content:center;padding:40px 0;display:flex}.no-results.svelte-7tvoe0{text-align:center;color:var(--sidebar-font-color);padding:40px 0;font-size:14px}.search-ad-container.svelte-7tvoe0{background:var(--sidebar-bg-color);border-radius:8px;padding:12px 8px}@media (width<=600px){.search-results-outer-container.svelte-7tvoe0{padding:0 16px}.search-result-card.svelte-7tvoe0{flex-direction:column;gap:10px}.result-thumbnail.svelte-7tvoe0{width:100%;height:140px;display:none}.search-bar-row.svelte-7tvoe0{flex-direction:column}.search-btn.svelte-7tvoe0{width:100%}select#search-sort.svelte-7tvoe0{max-width:100%}}.toggle-btn.svelte-qjp6z5{color:#969696;cursor:pointer;background:0 0;border:none;outline:none;padding:0;text-transform:none!important;text-decoration:underline!important}.toggle-btn.svelte-qjp6z5:hover,.toggle-btn.svelte-qjp6z5:focus{background:0 0}.toggle-btn.svelte-qjp6z5:hover{color:var(--accent-color)}.login-form-container.svelte-qjp6z5{flex-direction:column;gap:10px;display:flex}form.svelte-qjp6z5 .input-wrapper:where(.svelte-qjp6z5){flex-direction:column;width:100%;margin-bottom:20px;display:flex}.login-form-container.svelte-qjp6z5 p:where(.svelte-qjp6z5){text-align:center;text-align:center;margin:0;line-height:1.2;color:#000!important}.login-form-container.svelte-qjp6z5 label:where(.svelte-qjp6z5){font-size:clamp(16px,1rem + .3906vw - 4.56221px,17px);color:#000!important;font-weight:700!important}.login-form-container.svelte-qjp6z5 input:where(.svelte-qjp6z5){border:2px solid #000;padding:12px 17px;color:#000!important}form.svelte-qjp6z5 button:where(.svelte-qjp6z5){width:100%}.toggle-btns.svelte-qjp6z5{flex-direction:column;justify-content:center;gap:5px;margin-top:5px;display:flex}.login-form-container.svelte-qjp6z5 .submit-button:where(.svelte-qjp6z5){cursor:pointer;text-transform:none;background:var(--accent-color);color:var(--bg-color);border:none;padding:12px 17px;font-weight:400;line-height:20px}.login-form-container.svelte-qjp6z5 .submit-button:where(.svelte-qjp6z5):hover{background:var(--accent-color);color:var(--bg-color)}.login-form-container.svelte-qjp6z5 .error-message:where(.svelte-qjp6z5){font-weight:400;color:red!important}@media (width<=600px){.input-wrapper.svelte-qjp6z5 label:where(.svelte-qjp6z5){margin-bottom:5px;line-height:1}}.register-form-container.svelte-1hifi0j{flex-direction:column;gap:10px;display:flex}#ai_email_signup.svelte-1hifi0j{max-height:80vh;position:relative;overflow-y:scroll}#ai_email_signup.svelte-1hifi0j::-webkit-scrollbar{display:none}.two-col-form.svelte-1hifi0j{grid-template-columns:1fr 1fr;gap:14px 20px;display:grid}.two-col-form.svelte-1hifi0j .email-input:where(.svelte-1hifi0j),.two-col-form.svelte-1hifi0j .newsletters-input:where(.svelte-1hifi0j),.two-col-form.svelte-1hifi0j .submit-button:where(.svelte-1hifi0j){grid-column:span 2}.two-col-form.svelte-1hifi0j .two-col-newsletters:where(.svelte-1hifi0j){grid-template-columns:1fr 1fr;display:grid}.two-col-form.svelte-1hifi0j .three-col-newsletters:where(.svelte-1hifi0j){grid-template-columns:1fr 1fr 1fr;display:grid}form.svelte-1hifi0j .input-wrapper:where(.svelte-1hifi0j){flex-direction:column;width:100%;margin-bottom:20px;display:flex}.two-col-form.svelte-1hifi0j .input-wrapper:where(.svelte-1hifi0j){margin-bottom:0}.register-form-container.svelte-1hifi0j h5:where(.svelte-1hifi0j){margin:0;color:#000!important}.register-form-container.svelte-1hifi0j p:where(.svelte-1hifi0j){text-align:center;text-align:center;margin:0;line-height:1.2;color:#000!important}.register-form-container.svelte-1hifi0j legend:where(.svelte-1hifi0j),.register-form-container.svelte-1hifi0j label:where(.svelte-1hifi0j){font-size:clamp(16px,1rem + .3906vw - 4.56221px,17px);color:#000!important;font-weight:700!important}.register-form-container.svelte-1hifi0j fieldset:where(.svelte-1hifi0j){padding:.7em .75em .625em}.register-form-container.svelte-1hifi0j legend:where(.svelte-1hifi0j){text-align:center;line-height:1.2}.register-form-container.svelte-1hifi0j fieldset:where(.svelte-1hifi0j) label:where(.svelte-1hifi0j){font-weight:400!important}.register-form-container.svelte-1hifi0j .legend-newsletter-error:where(.svelte-1hifi0j) fieldset:where(.svelte-1hifi0j){border:2px solid red}.register-form-container.svelte-1hifi0j input:where(.svelte-1hifi0j),.register-form-container.svelte-1hifi0j select:where(.svelte-1hifi0j){border:2px solid #000;padding:12px 17px;color:#000!important}form.svelte-1hifi0j button:where(.svelte-1hifi0j){width:100%}.error-box.svelte-1hifi0j{text-align:center;background-color:#fdd;border:2px solid red;width:100%;min-width:275px;padding:12px 17px;line-height:20px;position:absolute;bottom:-3px;left:0;color:red!important}.toggle-btns.svelte-1hifi0j{flex-direction:column;justify-content:center;gap:5px;margin-top:5px;display:flex}.toggle-btn.svelte-1hifi0j{color:#969696;cursor:pointer;background:0 0;border:none;outline:none;padding:0;text-transform:none!important;text-decoration:underline!important}.toggle-btn.svelte-1hifi0j:hover,.toggle-btn.svelte-1hifi0j:focus{background:0 0}.toggle-btn.svelte-1hifi0j:hover{color:var(--accent-color)}.register-form-container.svelte-1hifi0j .submit-button:where(.svelte-1hifi0j){background:var(--accent-color);color:var(--bg-color);cursor:pointer;border:none;padding:12px 17px;line-height:20px;text-transform:none!important;font-weight:400!important}.register-form-container.svelte-1hifi0j .submit-button:where(.svelte-1hifi0j):hover{background:var(--font-color);color:var(--bg-color)}.required.svelte-1hifi0j{color:red!important}@media (width<=860px){.two-col-form.svelte-1hifi0j .three-col-newsletters:where(.svelte-1hifi0j){grid-template-columns:1fr 1fr}}@media (width<=600px){.two-col-form.svelte-1hifi0j{grid-template-columns:1fr}.two-col-form.svelte-1hifi0j .email-input:where(.svelte-1hifi0j),.two-col-form.svelte-1hifi0j .newsletters-input:where(.svelte-1hifi0j),.two-col-form.svelte-1hifi0j .submit-button:where(.svelte-1hifi0j){grid-column:1}.two-col-form.svelte-1hifi0j .two-col-newsletters:where(.svelte-1hifi0j),.two-col-form.svelte-1hifi0j .three-col-newsletters:where(.svelte-1hifi0j){grid-template-columns:1fr}.input-wrapper.svelte-1hifi0j label:where(.svelte-1hifi0j){margin-bottom:5px;line-height:1}.error-box.svelte-1hifi0j{position:absolute;bottom:-3px;left:-2px}}.form-modal-root.svelte-gqzgg5{z-index:9999;position:fixed;inset:0}.fallback-search-toggle.svelte-gqzgg5{cursor:pointer;background:0 0;border:none;outline:none;margin-bottom:16px;padding:0;color:#969696!important;text-transform:none!important;text-decoration:underline!important}.fallback-search-toggle.svelte-gqzgg5:hover{background:0 0}.prompt-container.svelte-gqzgg5{text-align:center;flex-direction:column;gap:20px;display:flex}.buttons.svelte-gqzgg5{justify-content:center;gap:10px;display:flex}.overlay.svelte-gqzgg5{z-index:9999;background-color:#000000b0;width:100%;height:100vh;position:fixed;top:0;left:0}.form-modal.svelte-gqzgg5{z-index:9999;background-color:#fff;border-radius:5px;flex-direction:column;gap:10px;width:500px;padding:3rem;display:flex;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%)}.two-col-form-modal.svelte-gqzgg5{width:1000px}.form-modal.svelte-gqzgg5 h5:where(.svelte-gqzgg5){margin:0}.form-modal.svelte-gqzgg5 p:where(.svelte-gqzgg5){text-align:center;margin:0;line-height:1.2}.resend-code-btn.svelte-gqzgg5{cursor:pointer;font-size:inherit;background:0 0;border:none;padding:0;color:#666!important;text-decoration:underline!important}.submit-button.svelte-gqzgg5{cursor:pointer;border:none;padding:12px 17px;line-height:20px;text-transform:none!important;font-weight:400!important}.submit-button.secondary.svelte-gqzgg5{background:#fff;border:1px solid #ccc;color:#000!important}.close-button.svelte-gqzgg5{aspect-ratio:1;cursor:pointer;border:none;border-radius:50px;width:25px;padding:0;font-size:12px;position:absolute;top:0;right:-4rem;font-weight:700!important}.form-modal.svelte-gqzgg5 .close-button:where(.svelte-gqzgg5){color:#fff;background:#000}.form-modal.svelte-gqzgg5 .close-button:where(.svelte-gqzgg5):hover{background:var(--accent-color)}@media (width<=860px){.two-col-form-modal.svelte-gqzgg5{width:700px}}@media (width<=600px){.form-modal.svelte-gqzgg5{width:100%;position:absolute;top:10%;transform:translate(-50%)}.two-col-form-modal.svelte-gqzgg5{width:100%}.overlay.svelte-gqzgg5{height:100%}.close-button.svelte-gqzgg5{top:-2rem;right:1%}.buttons.svelte-gqzgg5{flex-direction:column}}.top-nav.svelte-1bbihea{background:var(--sidebar-bg-color);z-index:100;border-bottom:none;justify-content:space-between;align-items:center;padding:14px 24px;display:flex;position:sticky;top:0}.top-nav.svelte-1bbihea:after{content:"";background:linear-gradient(90deg, transparent 0%, var(--sidebar-bg-color) 5%, var(--border-color) 50%, var(--sidebar-bg-color) 95%, transparent 100%);opacity:1;height:2px;position:absolute;bottom:0;left:0;right:0}.nav-left.svelte-1bbihea{align-items:center;display:flex}.nav-right.svelte-1bbihea{align-items:center;gap:20px;display:flex}.app-name.svelte-1bbihea{align-items:center;gap:10px;display:flex}.app-name-text.svelte-1bbihea{color:var(--sidebar-font-color);letter-spacing:.02em;font-size:14px;font-weight:400}.app-icon.svelte-1bbihea{width:22px;height:22px;fill:var(--accent-color)}.nav-link.svelte-1bbihea{cursor:pointer;white-space:nowrap;background:0 0;border:none;align-items:center;gap:6px;padding:0;font-size:13px;font-weight:400;transition:color .2s;display:flex}.nav-link-label.svelte-1bbihea{color:var(--sidebar-font-color);transition:color .2s}.nav-link.svelte-1bbihea:focus,.nav-link.svelte-1bbihea:hover{background:0 0}.nav-link.svelte-1bbihea:hover .nav-link-label:where(.svelte-1bbihea){color:var(--accent-color)}.nav-link.svelte-1bbihea:hover .nav-icon:where(.svelte-1bbihea){fill:var(--accent-color)}.nav-icon.svelte-1bbihea{width:15px;height:15px;fill:var(--sidebar-font-color);transition:fill .2s}.nav-divider.svelte-1bbihea{background:var(--border-color);width:2px;height:16px}.profile-menu-container.svelte-1bbihea{position:relative}.profile-btn.svelte-1bbihea{cursor:pointer;background:0 0;border:none;border-radius:50%;justify-content:center;align-items:center;width:32px;height:32px;padding:0;transition:background .15s;display:flex}.profile-btn.svelte-1bbihea:hover{background:var(--border-color)}.profile-icon.svelte-1bbihea{width:24px;height:24px;fill:var(--sidebar-font-color);transition:fill .2s}.profile-btn.svelte-1bbihea:hover .profile-icon:where(.svelte-1bbihea){fill:var(--accent-color)}.profile-menu-backdrop.svelte-1bbihea{z-index:199;position:fixed;inset:0}.profile-menu.svelte-1bbihea{background:var(--bg-color);border:1px solid var(--border-color);z-index:200;border-radius:10px;min-width:200px;margin-top:8px;padding:8px 0;position:absolute;top:100%;right:0;overflow:hidden;box-shadow:0 4px 20px #00000026}.profile-menu-greeting.svelte-1bbihea{color:var(--sidebar-font-color);white-space:nowrap;text-overflow:ellipsis;max-width:220px;padding:10px 16px;font-size:12px;display:block;overflow:hidden}.profile-menu-divider.svelte-1bbihea{background:var(--border-color);height:1px;margin:4px 0}.profile-menu-item.svelte-1bbihea{width:100%;color:var(--font-color);cursor:pointer;text-align:left;background:0 0;border:none;align-items:center;gap:10px;padding:10px 16px;font-size:13px;transition:background .15s;display:flex}.profile-menu-item.svelte-1bbihea:hover{background:var(--sidebar-bg-color)}.profile-menu-item.svelte-1bbihea svg:where(.svelte-1bbihea){width:16px;height:16px;fill:var(--sidebar-font-color)}.mobile-nav.svelte-1bbihea{display:none}.mobile-menu-btn.svelte-1bbihea{cursor:pointer;width:36px;height:36px;padding:unset;background:0 0;border:none;border-radius:6px;justify-content:center;align-items:center;transition:background .15s;display:flex}.mobile-menu-btn.svelte-1bbihea:hover{background:var(--border-color)}.mobile-menu-btn.svelte-1bbihea svg:where(.svelte-1bbihea){width:20px;height:20px;fill:var(--sidebar-font-color)}.mobile-menu-backdrop.svelte-1bbihea{z-index:199;position:fixed;inset:0}.mobile-menu.svelte-1bbihea{background:var(--bg-color);border:1px solid var(--border-color);z-index:200;border-radius:10px;min-width:200px;margin-top:8px;padding:8px 0;position:absolute;top:100%;right:0;overflow:hidden;box-shadow:0 4px 20px #00000026}.mobile-menu-greeting.svelte-1bbihea{white-space:nowrap;text-overflow:ellipsis;max-width:175px;color:var(--sidebar-font-color);padding:8px 20px;font-size:13px;display:block;overflow:hidden}.mobile-menu-item.no-border.svelte-1bbihea+.mobile-menu-divider:where(.svelte-1bbihea){display:none}.mobile-menu-item.svelte-1bbihea{width:100%;color:var(--font-color);cursor:pointer;text-align:left;background:0 0;border:none;align-items:center;gap:10px;padding:12px 20px;font-size:13px;transition:background .15s;display:flex}.mobile-menu-item.svelte-1bbihea:hover{background:var(--sidebar-bg-color)}.mobile-menu-item.svelte-1bbihea svg:where(.svelte-1bbihea){width:16px;height:16px;fill:var(--sidebar-font-color)}.mobile-menu-divider.svelte-1bbihea{background:var(--border-color);height:1px;margin:4px 0}@media (width<=600px){.top-nav.svelte-1bbihea{padding:12px 16px}.desktop-nav.svelte-1bbihea{display:none}.mobile-nav.svelte-1bbihea{display:flex;position:relative}.app-name-text.svelte-1bbihea{font-size:13px}}.modal-backdrop.svelte-orbtxf{-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);z-index:9999;pointer-events:auto;background:#00000080;justify-content:center;align-items:center;animation:.2s svelte-orbtxf-fadeIn;display:flex;position:fixed;inset:0}@keyframes svelte-orbtxf-fadeIn{0%{opacity:0}to{opacity:1}}.modal-container.svelte-orbtxf{z-index:1;pointer-events:auto;background:var(--bg-color);border-radius:16px;flex-direction:column;width:90%;max-width:500px;max-height:70vh;animation:.3s svelte-orbtxf-slideUp;display:flex;position:relative;overflow:hidden;box-shadow:0 20px 60px #0000004d}@keyframes svelte-orbtxf-slideUp{0%{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}.modal-header.svelte-orbtxf{border-bottom:1px solid var(--border-color);justify-content:space-between;align-items:center;padding:20px 24px;display:flex}.modal-header.svelte-orbtxf h3:where(.svelte-orbtxf){color:var(--font-color);margin:0;font-size:18px;font-weight:600}.close-btn.svelte-orbtxf{cursor:pointer;background:0 0;border:none;border-radius:8px;justify-content:center;align-items:center;width:32px;height:32px;transition:background .2s;display:flex}.close-btn.svelte-orbtxf:hover{background:var(--border-color)}.close-btn.svelte-orbtxf svg:where(.svelte-orbtxf){width:20px;height:20px;fill:var(--sidebar-font-color)}.search-container.svelte-orbtxf{border-bottom:1px solid var(--border-color);padding:16px 24px;position:relative}.search-container.svelte-orbtxf .search-icon:where(.svelte-orbtxf){width:16px;height:16px;fill:var(--sidebar-font-color);position:absolute;top:50%;left:40px;transform:translateY(-50%)}.search-container.svelte-orbtxf input:where(.svelte-orbtxf){border:1px solid var(--border-color);background:var(--sidebar-bg-color);width:100%;color:var(--font-color);border-radius:10px;padding:12px 12px 12px 40px;font-size:14px;transition:border-color .2s}.search-container.svelte-orbtxf input:where(.svelte-orbtxf):focus{border-color:var(--accent-color);outline:none}.search-container.svelte-orbtxf input:where(.svelte-orbtxf)::placeholder{color:var(--sidebar-font-color)}.chat-list.svelte-orbtxf{flex:1;padding:8px;overflow-y:auto}.chat-list.svelte-orbtxf::-webkit-scrollbar{width:6px}.chat-list.svelte-orbtxf::-webkit-scrollbar-track{background:0 0}.chat-list.svelte-orbtxf::-webkit-scrollbar-thumb{background:var(--border-color);border-radius:3px}.chat-item.svelte-orbtxf{cursor:pointer;pointer-events:auto;touch-action:manipulation;text-align:left;width:100%;color:var(--font-color);background:0 0;border:none;border-radius:10px;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 16px;font-weight:400;transition:background .2s;display:flex;position:relative}.chat-item.svelte-orbtxf:hover{background:var(--sidebar-bg-color)}.chat-item.svelte-orbtxf:hover .arrow-icon:where(.svelte-orbtxf){opacity:1;transform:translate(0)}.chat-content.svelte-orbtxf{flex-direction:column;flex:1;gap:4px;min-width:0;display:flex}.chat-name.svelte-orbtxf{color:var(--font-color);white-space:normal;overflow-wrap:anywhere;word-break:break-word;font-size:14px;font-weight:400;line-height:1.4;display:block}.chat-date.svelte-orbtxf{color:var(--sidebar-font-color);opacity:.6;font-size:11px;font-weight:400}.arrow-icon.svelte-orbtxf{width:18px;height:18px;fill:var(--accent-color);opacity:0;flex-shrink:0;margin-top:2px;transition:all .2s;transform:translate(-4px)}.empty-state.svelte-orbtxf{text-align:center;flex-direction:column;justify-content:center;align-items:center;padding:48px 24px;display:flex}.empty-state.svelte-orbtxf p:where(.svelte-orbtxf){color:var(--font-color);margin:0;font-size:15px;font-weight:500}.empty-state.svelte-orbtxf span:where(.svelte-orbtxf){color:var(--sidebar-font-color);margin-top:8px;font-size:13px}@media (width<=600px){.modal-container.svelte-orbtxf{border-radius:12px;width:95%;max-height:80vh}.modal-header.svelte-orbtxf{padding:16px 20px}.search-container.svelte-orbtxf{padding:12px 20px}.search-container.svelte-orbtxf .search-icon:where(.svelte-orbtxf){left:36px}}.ai-app-container.svelte-1n46o8q{background:var(--bg-color);border-radius:10px;flex-direction:column;width:100%;min-height:100%;display:flex;overflow:hidden}.ai-app-container.fallback-mode.svelte-1n46o8q{border-radius:10px}.ai-wrapper.svelte-1n46o8q p,.ai-wrapper.svelte-1n46o8q a,.ai-wrapper.svelte-1n46o8q button{font-size:clamp(14px,1rem + .3906vw - 4.56221px,18px)}.ai-wrapper.svelte-1n46o8q a,.ai-wrapper.svelte-1n46o8q button{color:var(--accent-color)}.ai-wrapper.svelte-1n46o8q h1{color:var(--font-color);font-size:clamp(32px,2rem + 1.5625vw - 12px,40px)}.ai-wrapper.svelte-1n46o8q h2{color:var(--font-color);font-size:clamp(18px,2rem + 1.5625vw - 12px,21px)}.ai-wrapper.svelte-1n46o8q h3{color:var(--font-color);font-size:clamp(20px,1.25rem + 1.5625vw - 12px,28px)}.ai-wrapper.svelte-1n46o8q h4{color:var(--font-color);font-size:clamp(20px,1.25rem + .7813vw - 6.00038px,24px)}.ai-wrapper.svelte-1n46o8q h5{color:var(--font-color);font-size:clamp(19px,1rem + .3906vw - 1.82801px,21px)}.ai-wrapper.svelte-1n46o8q h6{color:var(--font-color);font-size:clamp(14px,1rem + -.3906vw + 2.99981px,16px)}.ai-app-container.svelte-1n46o8q button{text-transform:none;font-weight:unset;color:unset}.ai-app-container.svelte-1n46o8q hr{margin:unset;padding:unset}.ai-wrapper.svelte-1n46o8q{color:var(--font-color);flex-direction:column;flex:1;justify-content:center;width:100%;min-height:0;display:flex;position:relative}.ai-wrapper.query-active.svelte-1n46o8q{justify-content:flex-start}.ai-wrapper.svelte-1n46o8q svg{fill:var(--accent-color)}@media (width<=1000px){.ai-wrapper.svelte-1n46o8q{padding:25px}}
+/*$vite$:1*/</style><style id="wtwh-ai-search-app-styles">#search-ai-app{--accent-color:#43bc9d;--bg-color:white;--grey-accent:#a9a9a9;--sidebar-bg-color:#f5f5f5;--border-color:#e7e6e6;--font-color:#3c3c3c;--sidebar-font-color:gray;border:0;border:2px solid var(--border-color);background:var(--bg-color);z-index:1;border-radius:10px;max-width:1050px;height:600px;margin:1rem auto;padding:0;display:flex;position:relative;overflow:hidden}@media (width<=600px){#search-ai-app{height:unset;margin:10px 0;padding:0}}body #content #primary main #search-ai-app{margin:50px auto}#content #primary main #search-ai-app #wtwh-wp-search-bar-container button{background:#e5e5e5}#content #primary main #search-ai-app #wtwh-wp-search-bar-container button:hover{background:#4c4c4c}.search .archive-intro,.search .sidebar{display:none}.search .content{float:unset;width:100%!important}</style><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><link href="https://securepubads.g.doubleclick.net/pagead/managed/dict/m202606180101/gpt" rel="compression-dictionary"><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><style type="text/css">.a2a_hide{display:none}.a2a_logo_color{background-color:#0166ff}.a2a_menu,.a2a_menu *{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;float:none;margin:0;padding:0;position:static;height:auto;width:auto}.a2a_menu{border-radius:6px;display:none;direction:ltr;background:#FFF;font:16px sans-serif-light,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Arial,Helvetica,"Liberation Sans",sans-serif;color:#000;line-height:12px;border:1px solid #CCC;vertical-align:baseline;overflow:hidden}.a2a_mini{min-width:200px;position:absolute;width:300px;z-index:9999997}.a2a_overlay{display:none;background:#616c7deb;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);position:fixed;top:0;right:0;left:0;bottom:0;z-index:9999998;-webkit-tap-highlight-color:transparent;transition:opacity .14s,backdrop-filter .14s}.a2a_full{background:#FFF;border:1px solid #FFF;box-shadow:#2a2a2a1a 0 0 20px 10px;height:auto;height:calc(320px);top:15%;left:50%;margin-left:-320px;position:fixed;text-align:center;width:640px;z-index:9999999;transition:transform .14s,opacity .14s}.a2a_full_footer,.a2a_full_header,.a2a_full_services{border:0;margin:0;padding:12px;box-sizing:border-box}.a2a_full_header{padding-bottom:8px}.a2a_full_services{height:280px;overflow-y:scroll;padding:0 12px;-webkit-overflow-scrolling:touch}.a2a_full_services .a2a_i{display:inline-block;float:none;width:181px;width:calc(33.334% - 18px)}div.a2a_full_footer{font-size:12px;text-align:center;padding:8px 14px}div.a2a_full_footer a,div.a2a_full_footer a:visited{display:inline;font-size:12px;line-height:14px;padding:8px 14px}div.a2a_full_footer a:focus,div.a2a_full_footer a:hover{background:0 0;border:0;color:#0166FF}div.a2a_full_footer a span.a2a_s_a2a,div.a2a_full_footer a span.a2a_w_a2a{background-size:14px;border-radius:3px;display:inline-block;height:14px;line-height:14px;margin:0 3px 0 0;vertical-align:top;width:14px}.a2a_modal{height:0;left:50%;margin-left:-320px;position:fixed;text-align:center;top:15%;width:640px;z-index:9999999;transition:transform .14s,opacity .14s;-webkit-tap-highlight-color:transparent}.a2a_modal_body{background:0 0;border:0;font:24px sans-serif-light,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Arial,Helvetica,"Liberation Sans",sans-serif;position:relative;height:auto;width:auto}.a2a_thanks{color:#fff;height:auto;margin-top:20px;width:auto}.a2a_thanks>div:first-child{margin:0 0 40px 0}.a2a_thanks div *{height:inherit}#a2a_copy_link{background:#FFF;border:1px solid #FFF;cursor:pointer;margin-top:15%}label.a2a_s_link#a2a_copy_link_icon,label.a2a_w_link#a2a_copy_link_icon{background-size:48px;border-radius:0;display:inline-block;height:48px;left:0;line-height:48px;margin:0 3px 0 0;position:absolute;vertical-align:top;width:48px}#a2a_modal input#a2a_copy_link_text{background-color:transparent;border:0;color:#2A2A2A;cursor:pointer;font:inherit;height:48px;left:62px;max-width:initial;min-height:auto;padding:0;position:relative;width:564px;width:calc(100% - 76px)}#a2a_copy_link_copied{background-color:#0166ff;color:#fff;display:none;font:inherit;font-size:16px;margin-top:1px;padding:3px 8px}@media (forced-colors:active){.a2a_color_buttons a,.a2a_svg{forced-color-adjust:none}}@media (prefers-contrast:more){.a2a_menu label.a2a_s_find svg path{fill:#2A2A2A!important}.a2a_menu_find_container{border:1px solid #2A2A2A!important}}@media (prefers-color-scheme:dark){.a2a_menu a,.a2a_menu a.a2a_i,.a2a_menu a.a2a_i:visited,.a2a_menu a.a2a_more,i.a2a_i{border-color:#2a2a2a!important;color:#fff!important}.a2a_menu a.a2a_i:active,.a2a_menu a.a2a_i:focus,.a2a_menu a.a2a_i:hover,.a2a_menu a.a2a_more:active,.a2a_menu a.a2a_more:focus,.a2a_menu a.a2a_more:hover,.a2a_menu_find_container{border-color:#717370!important;background-color:#444!important}.a2a_menu:not(.a2a_thanks){background-color:#2a2a2a;border-color:#2a2a2a}.a2a_menu_find{color:#fff!important}.a2a_menu label.a2a_s_find svg{background-color:transparent!important}.a2a_menu label.a2a_s_find svg path{fill:#fff!important}.a2a_full{box-shadow:#00000066 0 0 20px 10px}.a2a_overlay{background-color:#373737eb}}@media print{.a2a_floating_style,.a2a_menu,.a2a_overlay{visibility:hidden}}@keyframes a2aFadeIn{from{opacity:0}to{opacity:1}}.a2a_starting{opacity:0}.a2a_starting.a2a_full,.a2a_starting.a2a_modal{transform:scale(.8)}@media (max-width:639px){.a2a_full{border-radius:0;top:15%;left:0;margin-left:auto;width:100%}.a2a_modal{left:0;margin-left:10px;width:calc(100% - 20px)}}@media (min-width:318px) and (max-width:437px){.a2a_full .a2a_full_services .a2a_i{width:calc(50% - 18px)}}@media (max-width:317px){.a2a_full .a2a_full_services .a2a_i{width:calc(100% - 18px)}}@media (max-height:436px){.a2a_full{bottom:40px;height:auto;top:40px}}@media (max-height:550px){.a2a_modal{top:30px}}@media (max-height:360px){.a2a_modal{top:20px}.a2a_thanks>div:first-child{margin-bottom:20px}}.a2a_menu a{color:#0166FF;text-decoration:none;font:16px sans-serif-light,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Arial,Helvetica,"Liberation Sans",sans-serif;line-height:14px;height:auto;width:auto;outline:0}.a2a_menu a.a2a_i:visited,.a2a_menu a.a2a_more{color:#0166FF}.a2a_menu a.a2a_i:active,.a2a_menu a.a2a_i:focus,.a2a_menu a.a2a_i:hover,.a2a_menu a.a2a_more:active,.a2a_menu a.a2a_more:focus,.a2a_menu a.a2a_more:hover{color:#2A2A2A;border-color:#EEE;border-style:solid;background-color:#EEE;text-decoration:none}.a2a_menu label.a2a_s_find{background-size:24px;height:24px;left:8px;pointer-events:auto;position:absolute;top:7px;width:24px}.a2a_menu label.a2a_s_find svg{background-color:#FFF}.a2a_menu label.a2a_s_find svg path{fill:#CCC}#a2a_menu_container{display:inline-block}.a2a_menu_find_container{border:1px solid #CCC;border-radius:6px;padding:2px 24px 2px 0;position:relative;text-align:left}.a2a_cols_container .a2a_col1{overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch}#a2a_modal input,#a2a_modal input[type=text],.a2a_menu input,.a2a_menu input[type=text]{display:block;background-image:none;box-shadow:none;line-height:100%;margin:0;outline:0;overflow:hidden;padding:0;-moz-box-shadow:none;-webkit-box-shadow:none;-webkit-appearance:none}#a2afeed_find_container input,#a2afeed_find_container input[type=text],#a2apage_find_container input,#a2apage_find_container input[type=text]{background-color:transparent;border:0;box-sizing:content-box;color:#2A2A2A;float:none;font:inherit;font-size:16px;height:28px;line-height:20px;left:38px;outline:0;margin:0;max-width:initial;min-height:initial;padding:2px 0;position:relative;width:99%}.a2a_clear{clear:both}.a2a_svg{background-repeat:no-repeat;display:block;overflow:hidden;height:32px;line-height:32px;padding:0;pointer-events:none;width:32px}.a2a_svg svg{background-repeat:no-repeat;background-position:50% 50%;border:none;display:block;left:0;margin:0 auto;overflow:hidden;padding:0;position:relative;top:0;width:auto;height:auto}a.a2a_i,i.a2a_i{display:block;float:left;border:1px solid #FFF;line-height:24px;padding:6px 8px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:132px}a.a2a_i span,a.a2a_more span{display:inline-block;overflow:hidden;vertical-align:top}a.a2a_i .a2a_svg{margin:0 6px 0 0}a.a2a_i .a2a_svg,a.a2a_more .a2a_svg{background-size:24px;height:24px;line-height:24px;width:24px}a.a2a_sss:hover{border-left:1px solid #CCC}a.a2a_more{border-bottom:1px solid #FFF;border-left:0;border-right:0;line-height:24px;margin:6px 0 0;padding:6px;-webkit-touch-callout:none}a.a2a_more span{height:24px;margin:0 6px 0 0}.a2a_kit .a2a_svg{background-repeat:repeat}.a2a_default_style a:empty,.a2a_flex_style a:empty,.a2a_floating_style a:empty,.a2a_overlay_style a:empty{display:none}.a2a_color_buttons a,.a2a_floating_style a{text-decoration:none}.a2a_default_style:not(.a2a_flex_style) a{float:left;line-height:16px;padding:0 2px}.a2a_default_style a:hover .a2a_svg,.a2a_floating_style a:hover .a2a_svg,.a2a_overlay_style a:hover .a2a_svg svg{opacity:.7}.a2a_overlay_style.a2a_default_style a:hover .a2a_svg{opacity:1}.a2a_default_style .a2a_count,.a2a_default_style .a2a_svg,.a2a_floating_style .a2a_svg,.a2a_menu .a2a_svg,.a2a_vertical_style .a2a_count,.a2a_vertical_style .a2a_svg{border-radius:4px}.a2a_default_style .a2a_counter img,.a2a_default_style .a2a_dd,.a2a_default_style .a2a_svg{float:left}.a2a_default_style .a2a_img_text{margin-right:4px}.a2a_default_style .a2a_divider{border-left:1px solid #000;display:inline;float:left;height:16px;line-height:16px;margin:0 5px}.a2a_kit a{cursor:pointer;transition:none}.a2a_floating_style{background-color:#fff;border-radius:6px;position:fixed;z-index:9999995}.a2a_overlay_style{z-index:2147483647}.a2a_floating_style,.a2a_overlay_style{animation:a2aFadeIn .2s ease-in;padding:4px}.a2a_vertical_style:not(.a2a_flex_style) a{clear:left;display:block;overflow:hidden;padding:4px}.a2a_floating_style.a2a_default_style{bottom:0}.a2a_floating_style.a2a_default_style a,.a2a_overlay_style.a2a_default_style a{padding:4px}.a2a_count{background-color:#fff;border:1px solid #ccc;box-sizing:border-box;color:#2a2a2a;display:block;float:left;font:12px Arial,Helvetica,sans-serif;height:16px;margin-left:4px;position:relative;text-align:center;width:50px}.a2a_count:after,.a2a_count:before{border:solid transparent;border-width:4px 4px 4px 0;content:"";height:0;left:0;line-height:0;margin:-4px 0 0 -4px;position:absolute;top:50%;width:0}.a2a_count:before{border-right-color:#ccc}.a2a_count:after{border-right-color:#fff;margin-left:-3px}.a2a_count span{animation:a2aFadeIn .14s ease-in}.a2a_vertical_style .a2a_counter img{display:block}.a2a_vertical_style .a2a_count{float:none;margin-left:0;margin-top:6px}.a2a_vertical_style .a2a_count:after,.a2a_vertical_style .a2a_count:before{border:solid transparent;border-width:0 4px 4px 4px;content:"";height:0;left:50%;line-height:0;margin:-4px 0 0 -4px;position:absolute;top:0;width:0}.a2a_vertical_style .a2a_count:before{border-bottom-color:#ccc}.a2a_vertical_style .a2a_count:after{border-bottom-color:#fff;margin-top:-3px}.a2a_color_buttons .a2a_count,.a2a_color_buttons .a2a_count:after,.a2a_color_buttons .a2a_count:before,.a2a_color_buttons.a2a_vertical_style .a2a_count:after,.a2a_color_buttons.a2a_vertical_style .a2a_count:before{background-color:transparent;border:none;color:#fff;float:none;width:auto}.a2a_color_buttons.a2a_vertical_style .a2a_count{margin-top:0}.a2a_flex_style{display:flex;align-items:flex-start;gap:0}.a2a_default_style.a2a_flex_style{left:0;right:0;width:100%}.a2a_vertical_style.a2a_flex_style{flex-direction:column;top:0;bottom:0}.a2a_flex_style a{display:flex;justify-content:center;flex:1;padding:4px}.a2a_flex_style.a2a_vertical_style a{flex-direction:column}.a2a_floating_style.a2a_color_buttons,.a2a_floating_style.a2a_flex_style{border-radius:0;padding:0}.a2a_floating_style.a2a_default_style.a2a_flex_style{bottom:0}.a2a_kit.a2a_flex_style .a2a_counter img,.a2a_kit.a2a_flex_style .a2a_dd,.a2a_kit.a2a_flex_style .a2a_svg{float:none}.a2a_nowrap{white-space:nowrap}.a2a_note{margin:0 auto;padding:9px;font-size:12px;text-align:center}.a2a_note .a2a_note_note{margin:0;color:#2A2A2A}.a2a_wide a{display:block;margin-top:3px;border-top:1px solid #EEE;text-align:center}.a2a_label{position:absolute!important;clip-path:polygon(0px 0px,0px 0px,0px 0px);-webkit-clip-path:polygon(0px 0px,0px 0px,0px 0px);overflow:hidden;height:1px;width:1px}.a2a_kit,.a2a_menu,.a2a_modal,.a2a_overlay{-ms-touch-action:manipulation;touch-action:manipulation;outline:0}.a2a_dd{-webkit-user-drag:none}.a2a_dd img{border:0}.a2a_button_facebook_like iframe{max-width:none}</style><div style="width: 1px; height: 1px; display: inline; position: absolute;"><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/b/out?af0=c53a4ce3&amp;adroll_fpc=e54697ed636096dfb8311c3062f54ebb-1784637633961&amp;pv=14886386092.412598&amp;arrfrr=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;advertisable=4TYUAT2XHJHQLKPXL5L6PL"><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/b_s/out?af0=c53a4ce3&amp;adroll_fpc=e54697ed636096dfb8311c3062f54ebb-1784637633961&amp;pv=14886386092.412598&amp;arrfrr=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;advertisable=4TYUAT2XHJHQLKPXL5L6PL"><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/bombora/out?af0=c53a4ce3&amp;adroll_fpc=e54697ed636096dfb8311c3062f54ebb-1784637633961&amp;pv=14886386092.412598&amp;arrfrr=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;advertisable=4TYUAT2XHJHQLKPXL5L6PL"><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/equativ/out?af0=c53a4ce3&amp;adroll_fpc=e54697ed636096dfb8311c3062f54ebb-1784637633961&amp;pv=14886386092.412598&amp;arrfrr=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;advertisable=4TYUAT2XHJHQLKPXL5L6PL"><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/experian/out?af0=c53a4ce3&amp;adroll_fpc=e54697ed636096dfb8311c3062f54ebb-1784637633961&amp;pv=14886386092.412598&amp;arrfrr=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;advertisable=4TYUAT2XHJHQLKPXL5L6PL"><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/eyeota/out?af0=c53a4ce3&amp;adroll_fpc=e54697ed636096dfb8311c3062f54ebb-1784637633961&amp;pv=14886386092.412598&amp;arrfrr=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;advertisable=4TYUAT2XHJHQLKPXL5L6PL"><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/g/out?af0=c53a4ce3&amp;adroll_fpc=e54697ed636096dfb8311c3062f54ebb-1784637633961&amp;pv=14886386092.412598&amp;arrfrr=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;advertisable=4TYUAT2XHJHQLKPXL5L6PL"><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/index/out?af0=c53a4ce3&amp;adroll_fpc=e54697ed636096dfb8311c3062f54ebb-1784637633961&amp;pv=14886386092.412598&amp;arrfrr=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;advertisable=4TYUAT2XHJHQLKPXL5L6PL"><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/n/out?af0=c53a4ce3&amp;adroll_fpc=e54697ed636096dfb8311c3062f54ebb-1784637633961&amp;pv=14886386092.412598&amp;arrfrr=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;advertisable=4TYUAT2XHJHQLKPXL5L6PL"><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/o/out?af0=c53a4ce3&amp;adroll_fpc=e54697ed636096dfb8311c3062f54ebb-1784637633961&amp;pv=14886386092.412598&amp;arrfrr=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;advertisable=4TYUAT2XHJHQLKPXL5L6PL"><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/outbrain/out?af0=c53a4ce3&amp;adroll_fpc=e54697ed636096dfb8311c3062f54ebb-1784637633961&amp;pv=14886386092.412598&amp;arrfrr=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;advertisable=4TYUAT2XHJHQLKPXL5L6PL"><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/pubmatic/out?af0=c53a4ce3&amp;adroll_fpc=e54697ed636096dfb8311c3062f54ebb-1784637633961&amp;pv=14886386092.412598&amp;arrfrr=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;advertisable=4TYUAT2XHJHQLKPXL5L6PL"><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/taboola/out?af0=c53a4ce3&amp;adroll_fpc=e54697ed636096dfb8311c3062f54ebb-1784637633961&amp;pv=14886386092.412598&amp;arrfrr=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;advertisable=4TYUAT2XHJHQLKPXL5L6PL"><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/triplelift/out?af0=c53a4ce3&amp;adroll_fpc=e54697ed636096dfb8311c3062f54ebb-1784637633961&amp;pv=14886386092.412598&amp;arrfrr=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;advertisable=4TYUAT2XHJHQLKPXL5L6PL"><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/x/out?af0=c53a4ce3&amp;adroll_fpc=e54697ed636096dfb8311c3062f54ebb-1784637633961&amp;pv=14886386092.412598&amp;arrfrr=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;advertisable=4TYUAT2XHJHQLKPXL5L6PL"></div><div style="width: 1px; height: 1px; display: inline; position: absolute;"></div><style type="text/css">[data-pftrigger], [data-pfrecommend]{ display: none; }</style><link rel="stylesheet" type="text/css" href="https://c.lytics.io/static/pathfora.min.css"></head>
+<body class="wp-singular post-template-default single single-post postid-588843 single-format-standard wp-theme-genesis wp-child-theme-ThemeWTWHv2 content-sidebar genesis-breadcrumbs-hidden"><a href="https://www.therobotreport.com/cdn-cgi/content?id=BAODMoDKLc_CPErjhWY2duOBfedle7jMoK.I1bBR7nQ-1784637653.501332-1.2.1.1-DxPhN2kZ2XvVRYTM5PLa07GhXCZTRoVyI2m4ZcfHyv8" aria-hidden="true" rel="nofollow noopener" style="display: none !important; visibility: hidden !important"></a>    <!-- xyzzy top -->    
+    
+    <div class="site-container"><header class="site-header"><div class="wrap"><div class="title-area"><p class="site-title"><a href="https://www.therobotreport.com/">The Robot Report</a></p></div><div class="widget-area header-widget-area"><section id="custom_html-5" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><div class="textwidget custom-html-widget"><div id="div-gpt-trr-header" data-google-query-id="CN3Zg6_l45UDFTYLDAIds6UVMA">
+	
+<div id="google_ads_iframe_/5272491/robo_network/trr_header_0__container__" style="border: 0pt none;"></div></div>
+</div></div></section>
+</div><div class="mobile-toggles"><a href="#" class="search-toggle"><i class="icon-search"></i></a><a href="#" class="mobile-menu-toggle"><i class="icon-menu"></i></a></div></div></header><nav class="nav-primary" aria-label="Main"><div class="wrap"><ul id="menu-main-nav" class="menu genesis-nav-menu menu-primary"><li id="menu-item-560423" class="home menu-item"><a href="https://www.therobotreport.com/"><span>Home</span></a></li>
+<li id="menu-item-559325" class="menu-item"><a href="https://www.therobotreport.com/category/news/"><span>News</span></a></li>
+<li id="menu-item-97308" class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a href="https://www.therobotreport.com/category/technologies/"><span>Technologies</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-97313" class="menu-item"><a href="https://www.therobotreport.com/category/technologies/batteries-power-supplies/"><span>Batteries / Power Supplies</span></a></li>
+	<li id="menu-item-97314" class="menu-item"><a href="https://www.therobotreport.com/category/technologies/cameras-imaging-vision/"><span>Cameras / Imaging / Vision</span></a></li>
+	<li id="menu-item-97315" class="menu-item"><a href="https://www.therobotreport.com/category/technologies/controllers/"><span>Controllers</span></a></li>
+	<li id="menu-item-76283" class="menu-item"><a href="https://www.therobotreport.com/category/technologies/grippers-end-effectors/"><span>End Effectors</span></a></li>
+	<li id="menu-item-101203" class="menu-item"><a href="https://www.therobotreport.com/category/technologies/microprocessors-socs/"><span>Microprocessors / SoCs</span></a></li>
+	<li id="menu-item-102500" class="menu-item"><a href="https://www.therobotreport.com/category/robot-components/motioncontrol/"><span>Motion Control</span></a></li>
+	<li id="menu-item-97328" class="menu-item"><a href="https://www.therobotreport.com/category/technologies/sensors-sensing/"><span>Sensors</span></a></li>
+	<li id="menu-item-102479" class="menu-item"><a href="https://www.therobotreport.com/category/technologies/soft-robotics/"><span>Soft Robotics</span></a></li>
+	<li id="menu-item-97316" class="menu-item"><a href="https://www.therobotreport.com/category/software-simulation/"><span>Software / Simulation</span></a></li>
+</ul>
+</li>
+<li id="menu-item-97307" class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a href="https://www.therobotreport.com/category/design-development/"><span>Development</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-76261" class="menu-item"><a href="https://www.therobotreport.com/category/design-development/ai-cognition/"><span>Artificial Intelligence</span></a></li>
+	<li id="menu-item-97329" class="menu-item"><a href="https://www.therobotreport.com/category/design-development/haptics/"><span>Human Robot Interaction / Haptics</span></a></li>
+	<li id="menu-item-97330" class="menu-item"><a href="https://www.therobotreport.com/category/design-development/mobility-navigation/"><span>Mobility / Navigation</span></a></li>
+	<li id="menu-item-97306" class="menu-item"><a href="https://www.therobotreport.com/category/research-development/"><span>Research</span></a></li>
+</ul>
+</li>
+<li id="menu-item-97309" class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a href="https://www.therobotreport.com/category/robots-platforms/"><span>Robots</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-97317" class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/agv/"><span>AGVs</span></a></li>
+	<li id="menu-item-102481" class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/amrs/"><span>AMRs</span></a></li>
+	<li id="menu-item-97319" class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/consumer-robotics/"><span>Consumer</span></a></li>
+	<li id="menu-item-76286" class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/collaborative-robot/"><span>Collaborative Robots</span></a></li>
+	<li id="menu-item-97318" class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/uav-drones/"><span>Drones</span></a></li>
+	<li id="menu-item-578016" class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/humanoids/"><span>Humanoids</span></a></li>
+	<li id="menu-item-559160" class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/industrial-robots/"><span>Industrial</span></a></li>
+	<li id="menu-item-76292" class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/self-driving-vehicles/"><span>Self-Driving Vehicles</span></a></li>
+	<li id="menu-item-102483" class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/ums/"><span>Unmanned Maritime Systems</span></a></li>
+</ul>
+</li>
+<li id="menu-item-577276" class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a><span>Business</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-560106" class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a href="https://www.therobotreport.com/category/financial/"><span>Financial</span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-560108" class="menu-item"><a href="https://www.therobotreport.com/category/financial/investments-funding/"><span>Investments</span></a></li>
+		<li id="menu-item-560107" class="menu-item"><a href="https://www.therobotreport.com/category/financial/mergers-acquisitions/"><span>Mergers &amp; Acquisitions</span></a></li>
+		<li id="menu-item-560109" class="menu-item"><a href="https://www.therobotreport.com/category/financial/earnings/"><span>Earnings</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-97310" class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a href="https://www.therobotreport.com/category/markets-industries/"><span>Markets</span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-97320" class="menu-item"><a href="https://www.therobotreport.com/category/markets-industries/ag/"><span>Agriculture</span></a></li>
+		<li id="menu-item-97322" class="menu-item"><a href="https://www.therobotreport.com/category/markets-industries/biotechnology-medical-healthcare/"><span>Healthcare</span></a></li>
+		<li id="menu-item-97323" class="menu-item"><a href="https://www.therobotreport.com/category/markets-industries/logistics-warehousing-asrs/"><span>Logistics</span></a></li>
+		<li id="menu-item-102140" class="menu-item"><a href="https://www.therobotreport.com/category/markets-industries/manufacturing/"><span>Manufacturing</span></a></li>
+		<li id="menu-item-97324" class="menu-item"><a href="https://www.therobotreport.com/category/markets-industries/mining/"><span>Mining</span></a></li>
+		<li id="menu-item-97321" class="menu-item"><a href="https://www.therobotreport.com/category/markets-industries/defense-security/"><span>Security</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-581404" class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a href="https://www.therobotreport.com/tag/rbr50/"><span>RBR50</span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-581405" class="menu-item"><a href="https://www.therobotreport.com/rbr50-2025/"><span>RBR50 Winners 2025</span></a></li>
+		<li id="menu-item-578645" class="menu-item"><a href="https://www.therobotreport.com/rbr50-2024/"><span>RBR50 Winners 2024</span></a></li>
+		<li id="menu-item-105870" class="menu-item"><a href="https://www.therobotreport.com/meet-2023-rbr50-robotics-innovation-awards/"><span>RBR50 Winners 2023</span></a></li>
+		<li id="menu-item-577278" class="menu-item"><a href="https://www.therobotreport.com/2022-rbr50-robotics-innovation-award-honorees/"><span>RBR50 Winners 2022</span></a></li>
+		<li id="menu-item-577691" class="menu-item"><a href="https://www.therobotreport.com/2021-rbr50-robotics-innovation-awards-digital-edition/"><span>RBR50 Winners 2021</span></a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-97312" class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a><span>Resources</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-578076" class="menu-item"><a target="_blank" href="https://www.automatedwarehouseonline.com/category/reports/"><span>Automated Warehouse Research Reports</span></a></li>
+	<li id="menu-item-99211" class="menu-item"><a href="https://www.therobotreport.com/category/digital-issues/"><span>Digital Issues</span></a></li>
+	<li id="menu-item-565430" class="menu-item"><a href="https://www.therobotreport.com/category/ebooks/"><span>eBooks</span></a></li>
+	<li id="menu-item-105202" class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a><span>Publications</span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-577275" class="menu-item"><a target="_blank" href="https://mobilerobotguide.com/category/logistics-warehouse-transportation/"><span>Automated Warehouse</span></a></li>
+		<li id="menu-item-105204" class="menu-item"><a target="_blank" href="https://www.cobottrends.com"><span>Collaborative Robotics Trends</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-107139" class="menu-item"><a target="_blank" href="https://search.therobotreport.com"><span>Search Robotics Database</span></a></li>
+	<li id="menu-item-101719" class="menu-item"><a target="_blank" href="https://www.youtube.com/channel/UCFvPK74I5Hd5eVzZ_5t6FbQ/videos"><span>Videos</span></a></li>
+	<li id="menu-item-568546" class="menu-item"><a target="_blank" href="https://gateway.on24.com/wcc/experience/elitewtwhmedia/2927718/4415911/robot-report"><span>Webinars / Digital Events</span></a></li>
+</ul>
+</li>
+<li id="menu-item-102139" class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a href="https://www.therobotreport.com/category/events/"><span>Events</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-104093" class="menu-item"><a target="_blank" href="https://www.robobusiness.com/"><span>RoboBusiness</span></a></li>
+	<li id="menu-item-96803" class="menu-item"><a target="_blank" href="https://www.roboticssummit.com"><span>Robotics Summit &amp; Expo</span></a></li>
+	<li id="menu-item-102253" class="menu-item"><a target="_blank" href="https://www.devicetalks.com/"><span>DeviceTalks</span></a></li>
+	<li id="menu-item-104100" class="menu-item"><a target="_blank" href="https://www.rd100conference.com"><span>R&amp;D 100</span></a></li>
+	<li id="menu-item-560506" class="menu-item"><a target="_blank" href="https://roboweeks.com/"><span>Robotics Weeks</span></a></li>
+</ul>
+</li>
+<li id="menu-item-105374" class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a href="https://www.therobotreport.com/category/podcast/"><span>Podcast</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-560351" class="menu-item"><a href="https://www.therobotreport.com/category/podcast/"><span>Episodes</span></a></li>
+</ul>
+</li>
+<li id="menu-item-583659" class="menu-item"><a target="_blank" href="https://www.arrowfly.com/robotics-network/"><span>Advertise</span></a></li>
+<li id="menu-item-581801" class="site-header--subscribe menu-item"><a href="https://www.therobotreport.com/the-robot-report-enewsletter/"><span>Subscribe</span></a></li>
+<li class="menu-item search"><a href="#" class="search-toggle"><i class="icon-search"></i></a></li></ul></div></nav>    <div style="padding-top:10px;text-align:center"><div id="jumbo-banner-ad-container" style="min-width: 970px; min-height: 90px; display: none;" data-google-query-id="COTZg6_l45UDFTYLDAIds6UVMA"><div id="google_ads_iframe_/5272491/robo_network/trr_largeleader_0__container__" style="border: 0pt none; width: 970px; height: 0px;"></div></div></div>
+    <div class="site-inner"><div class="wrap"><div class="content-sidebar-wrap"><main class="content"><article class="type-post entry" aria-label="Friction is key to making better robot world models"><header class="entry-header"><h1 class="entry-title">Friction is key to making better robot world models</h1>
+<p class="entry-meta"><span class="entry-author">By <a href="https://www.therobotreport.com/author/hkhamis/" class="entry-author-link" rel="author"><span class="entry-author-name">Heba Khamis</span></a></span> | <time class="entry-time">July 21, 2026</time></p></header><div class="entry-content"><div class="addtoany_share_save_container addtoany_content addtoany_content_top"><div class="a2a_kit a2a_kit_size_16 addtoany_list" data-a2a-url="https://www.therobotreport.com/friction-is-key-to-making-better-robot-world-models/" data-a2a-title="Friction is key to making better robot world models" style="line-height: 16px;"><a class="a2a_button_facebook" href="/#facebook" title="Facebook" rel="nofollow noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_facebook" style="background-color: rgb(8, 102, 255); width: 16px; line-height: 16px; height: 16px; background-size: 16px; border-radius: 2px;"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#fff" d="M28 16c0-6.627-5.373-12-12-12S4 9.373 4 16c0 5.628 3.875 10.35 9.101 11.647v-7.98h-2.474V16H13.1v-1.58c0-4.085 1.849-5.978 5.859-5.978.76 0 2.072.15 2.608.298v3.325c-.283-.03-.775-.045-1.386-.045-1.967 0-2.728.745-2.728 2.683V16h3.92l-.673 3.667h-3.247v8.245C23.395 27.195 28 22.135 28 16"></path></svg></span><span class="a2a_label">Facebook</span></a><a class="a2a_button_x" href="/#x" title="X" rel="nofollow noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_x" style="background-color: rgb(26, 26, 26); width: 16px; line-height: 16px; height: 16px; background-size: 16px; border-radius: 2px;"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#fff" d="M21.751 7h3.067l-6.7 7.658L26 25.078h-6.172l-4.833-6.32-5.531 6.32h-3.07l7.167-8.19L6 7h6.328l4.37 5.777L21.75 7Zm-1.076 16.242h1.7L11.404 8.74H9.58l11.094 14.503Z"></path></svg></span><span class="a2a_label">X</span></a><a class="a2a_button_linkedin" href="/#linkedin" title="LinkedIn" rel="nofollow noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_linkedin" style="background-color: rgb(0, 123, 181); width: 16px; line-height: 16px; height: 16px; background-size: 16px; border-radius: 2px;"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M6.227 12.61h4.19v13.48h-4.19zm2.095-6.7a2.43 2.43 0 0 1 0 4.86c-1.344 0-2.428-1.09-2.428-2.43s1.084-2.43 2.428-2.43m4.72 6.7h4.02v1.84h.058c.56-1.058 1.927-2.176 3.965-2.176 4.238 0 5.02 2.792 5.02 6.42v7.395h-4.183v-6.56c0-1.564-.03-3.574-2.178-3.574-2.18 0-2.514 1.7-2.514 3.46v6.668h-4.187z"></path></svg></span><span class="a2a_label">LinkedIn</span></a><a class="a2a_button_reddit" href="/#reddit" title="Reddit" rel="nofollow noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_reddit" style="background-color: rgb(255, 69, 0); width: 16px; line-height: 16px; height: 16px; background-size: 16px; border-radius: 2px;"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#fff" d="M28.543 15.774a2.953 2.953 0 0 0-2.951-2.949 2.88 2.88 0 0 0-1.9.713 14.1 14.1 0 0 0-6.85-2.044l1.38-4.349 3.768.884a2.452 2.452 0 1 0 .24-1.176l-4.274-1a.6.6 0 0 0-.709.4l-1.659 5.224a14.3 14.3 0 0 0-7.316 2.029 2.9 2.9 0 0 0-1.872-.681 2.942 2.942 0 0 0-1.618 5.4 5 5 0 0 0-.062.765c0 4.158 5.037 7.541 11.229 7.541s11.22-3.383 11.22-7.541a5 5 0 0 0-.053-.706 2.96 2.96 0 0 0 1.427-2.51m-18.008 1.88a1.753 1.753 0 0 1 1.73-1.74 1.73 1.73 0 0 1 1.709 1.74 1.71 1.71 0 0 1-1.709 1.711 1.733 1.733 0 0 1-1.73-1.711m9.565 4.968a5.57 5.57 0 0 1-4.081 1.272h-.032a5.58 5.58 0 0 1-4.087-1.272.6.6 0 0 1 .844-.854 4.5 4.5 0 0 0 3.238.927h.032a4.5 4.5 0 0 0 3.237-.927.6.6 0 1 1 .844.854zm-.331-3.256a1.726 1.726 0 1 1 1.709-1.712 1.717 1.717 0 0 1-1.712 1.712z"></path></svg></span><span class="a2a_label">Reddit</span></a><a class="a2a_button_pinterest" href="/#pinterest" title="Pinterest" rel="nofollow noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_pinterest" style="background-color: rgb(230, 0, 35); width: 16px; line-height: 16px; height: 16px; background-size: 16px; border-radius: 2px;"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#fff" d="M15.995 4C9.361 4 4 9.37 4 15.995c0 5.084 3.16 9.428 7.622 11.176-.109-.948-.198-2.41.039-3.446.217-.938 1.402-5.963 1.402-5.963s-.356-.72-.356-1.777c0-1.668.968-2.912 2.172-2.912 1.027 0 1.52.77 1.52 1.688 0 1.027-.65 2.567-.996 3.998-.287 1.195.602 2.172 1.777 2.172 2.132 0 3.771-2.25 3.771-5.489 0-2.873-2.063-4.877-5.015-4.877-3.416 0-5.42 2.557-5.42 5.203 0 1.027.395 2.132.888 2.735a.36.36 0 0 1 .08.345c-.09.375-.297 1.195-.336 1.363-.05.217-.178.266-.405.158-1.481-.711-2.409-2.903-2.409-4.66 0-3.781 2.745-7.257 7.928-7.257 4.156 0 7.394 2.962 7.394 6.931 0 4.137-2.606 7.464-6.22 7.464-1.214 0-2.36-.632-2.744-1.383l-.75 2.854c-.267 1.046-.998 2.35-1.491 3.149a12 12 0 0 0 3.554.533C22.629 28 28 22.63 28 16.005 27.99 9.37 22.62 4 15.995 4"></path></svg></span><span class="a2a_label">Pinterest</span></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=https%3A%2F%2Fwww.therobotreport.com%2Ffriction-is-key-to-making-better-robot-world-models%2F&amp;title=Friction%20is%20key%20to%20making%20better%20robot%20world%20models"><span class="a2a_svg a2a_s__default a2a_s_a2a" style="background-color: rgb(1, 102, 255); width: 16px; line-height: 16px; height: 16px; background-size: 16px; border-radius: 2px;"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span><span class="a2a_label a2a_localize" data-a2a-localize="inner,Share">Share</span></a></div></div><div id="attachment_588847" style="width: 1010px" class="wp-caption aligncenter"><a href="https://www.therobotreport.com/wp-content/uploads/2026/07/contactile-featured.jpg"><img decoding="async" aria-describedby="caption-attachment-588847" class="wp-image-588847 size-full" src="https://www.therobotreport.com/wp-content/uploads/2026/07/contactile-featured.jpg" alt="Contactile offers robotic hands and grippers equipped with its tactile sensors. These provide data for world models." width="1000" height="649" srcset="https://www.therobotreport.com/wp-content/uploads/2026/07/contactile-featured.jpg 1000w, https://www.therobotreport.com/wp-content/uploads/2026/07/contactile-featured-300x195.jpg 300w, https://www.therobotreport.com/wp-content/uploads/2026/07/contactile-featured-150x97.jpg 150w, https://www.therobotreport.com/wp-content/uploads/2026/07/contactile-featured-768x498.jpg 768w, https://www.therobotreport.com/wp-content/uploads/2026/07/contactile-featured-368x238.jpg 368w" sizes="(max-width: 1000px) 100vw, 1000px"></a><p id="caption-attachment-588847" class="wp-caption-text">Contactile offers robotic hands and grippers equipped with its tactile sensors. | Source: Contactile</p></div>
+<div id="instaread-demo-player-wrap">
+<style>
+  #instaread-demo-player-wrap { margin:20px 0 26px; width:100%;
+    min-width:min(520px, 92vw); max-width:100%; clear:both; flex:1 1 100%; }
+  #instaread-demo-player-wrap .instaread-player { background:#ffffff; border:1px solid #ececec;
+    border-radius:14px; box-shadow:0 2px 10px rgba(0,0,0,.08); padding:18px 20px 12px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    text-align:left; color:#1b1b1b; line-height:1.4; box-sizing:border-box; }
+  #instaread-demo-player-wrap * { box-sizing:border-box; margin:0; padding:0; }
+  #instaread-demo-player-wrap .irp-top { display:flex; justify-content:space-between;
+    align-items:baseline; gap:16px; margin:0 0 10px; }
+  #instaread-demo-player-wrap .irp-label { font-size:15px; font-weight:700; color:#1b1b1b; }
+  #instaread-demo-player-wrap .irp-sponsor-tag { font-size:11.5px; color:#9a9a9a; white-space:nowrap; }
+  #instaread-demo-player-wrap .irp-mid { display:flex; align-items:center; gap:14px; }
+  #instaread-demo-player-wrap .irp-btn { flex:0 0 46px; width:46px; height:46px;
+    border-radius:50%; border:none; background:#d2232a; cursor:pointer; display:flex;
+    align-items:center; justify-content:center; transition:transform .12s ease; }
+  #instaread-demo-player-wrap .irp-btn:hover { transform:scale(1.06); }
+  #instaread-demo-player-wrap .irp-btn svg { width:18px; height:18px; fill:#fff; display:block; }
+  #instaread-demo-player-wrap .irp-wave { flex:1 1 auto; height:44px; display:flex;
+    align-items:center; gap:1.5px; cursor:pointer; min-width:0; }
+  #instaread-demo-player-wrap .irp-wave span { flex:1 1 auto; min-width:1px;
+    background:#d6d6d6; border-radius:1px; transition:background .15s linear; }
+  #instaread-demo-player-wrap .irp-wave span.played { background:#3d3d3d; }
+  #instaread-demo-player-wrap .irp-ad { flex:0 0 190px; }
+  #instaread-demo-player-wrap .irp-ad img { display:block; width:190px; height:52px;
+    border-radius:4px; }
+  #instaread-demo-player-wrap .irp-bottom { display:flex; justify-content:flex-end;
+    align-items:center; gap:6px; margin-top:8px; }
+  #instaread-demo-player-wrap .irp-time { font-size:11.5px; color:#a5a5a5;
+    margin-right:auto; font-variant-numeric:tabular-nums; }
+  #instaread-demo-player-wrap .irp-brand { display:flex; align-items:center; gap:4px;
+    font-size:10.5px; font-weight:600; color:#6a6a6a; }
+  #instaread-demo-player-wrap .irp-brand svg { width:8px; height:13px; }
+  @media (max-width: 700px) { #instaread-demo-player-wrap .irp-ad { display:none; } }
+</style>
+<div class="instaread-player">
+  <div class="irp-top">
+    <div class="irp-label">Listen to audio version of this article</div>
+    <div class="irp-sponsor-tag">Sponsored by</div>
+  </div>
+  <div class="irp-mid">
+    <button class="irp-btn" id="irp-btn" aria-label="Play">
+      <svg id="irp-icon-play" viewBox="0 0 24 24" style="margin-left:2px"><path d="M8 5v14l11-7z"></path></svg>
+      <svg id="irp-icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"></path></svg>
+    </button>
+    <div class="irp-wave" id="irp-wave"><span style="height:40%"></span><span style="height:17%"></span><span style="height:33%"></span><span style="height:61%"></span><span style="height:69%"></span><span style="height:96%"></span><span style="height:100%"></span><span style="height:100%"></span><span style="height:91%"></span><span style="height:100%"></span><span style="height:100%"></span><span style="height:100%"></span><span style="height:95%"></span><span style="height:100%"></span><span style="height:75%"></span><span style="height:94%"></span><span style="height:100%"></span><span style="height:100%"></span><span style="height:95%"></span><span style="height:100%"></span><span style="height:100%"></span><span style="height:80%"></span><span style="height:63%"></span><span style="height:88%"></span><span style="height:95%"></span><span style="height:78%"></span><span style="height:73%"></span><span style="height:97%"></span><span style="height:100%"></span><span style="height:81%"></span><span style="height:62%"></span><span style="height:37%"></span><span style="height:59%"></span><span style="height:77%"></span><span style="height:83%"></span><span style="height:83%"></span><span style="height:71%"></span><span style="height:98%"></span><span style="height:86%"></span><span style="height:63%"></span><span style="height:39%"></span><span style="height:23%"></span><span style="height:14%"></span><span style="height:14%"></span><span style="height:14%"></span><span style="height:14%"></span><span style="height:14%"></span><span style="height:31%"></span><span style="height:14%"></span><span style="height:14%"></span><span style="height:30%"></span><span style="height:33%"></span><span style="height:27%"></span><span style="height:39%"></span><span style="height:35%"></span><span style="height:27%"></span><span style="height:14%"></span><span style="height:35%"></span><span style="height:37%"></span><span style="height:53%"></span><span style="height:31%"></span><span style="height:46%"></span><span style="height:24%"></span><span style="height:14%"></span><span style="height:14%"></span><span style="height:16%"></span><span style="height:28%"></span><span style="height:55%"></span><span style="height:35%"></span><span style="height:15%"></span><span style="height:14%"></span><span style="height:32%"></span><span style="height:14%"></span><span style="height:17%"></span><span style="height:34%"></span><span style="height:62%"></span><span style="height:34%"></span><span style="height:19%"></span><span style="height:47%"></span><span style="height:68%"></span><span style="height:64%"></span><span style="height:73%"></span><span style="height:62%"></span><span style="height:66%"></span><span style="height:78%"></span><span style="height:65%"></span><span style="height:80%"></span><span style="height:93%"></span></div>
+    <div class="irp-ad"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzODAiIGhlaWdodD0iMTA0IiB2aWV3Qm94PSIwIDAgMzgwIDEwNCI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgo8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxNTE2MWQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM2ZjJhMmQiLz4KPC9saW5lYXJHcmFkaWVudD48L2RlZnM+CjxyZWN0IHdpZHRoPSIzODAiIGhlaWdodD0iMTA0IiByeD0iOCIgZmlsbD0idXJsKCNnKSIvPgo8dGV4dCB4PSIyNCIgeT0iNDciIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjkwMCIKIGZpbGw9IiNmZmZmZmYiIGxldHRlci1zcGFjaW5nPSIxIj5OT1ZBKzwvdGV4dD4KPHRleHQgeD0iMjQiIHk9Ijc2IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiNjZmQzZTAiPgpOZXcgc2Vhc29uIMK3IFN0cmVhbSBub3c8L3RleHQ+CjxjaXJjbGUgY3g9IjMzMCIgY3k9IjUyIiByPSIyNiIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC45MiIvPgo8cGF0aCBkPSJNMzIyIDM4IEwzNDYgNTIgTDMyMiA2NiBaIiBmaWxsPSIjMTUxNjFkIi8+CjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSIzMCIgaGVpZ2h0PSIxNiIgcng9IjMiIGZpbGw9IiMwMDAiIG9wYWNpdHk9IjAuMzUiLz4KPHRleHQgeD0iMjEiIHk9IjE4IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiNmZmYiCiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BRDwvdGV4dD4KPC9zdmc+" alt="Advertisement"></div>
+  </div>
+  <div class="irp-bottom">
+    <div class="irp-time"><span id="irp-cur">0:00</span> / 9:05</div>
+    <div class="irp-brand">
+      <svg viewBox="0 0 15 26" fill="none">
+        <path fill="#3a3a3a" d="M0.5 0 H14.5 V16.8 A4.2 4.2 0 0 1 10.3 21 H4.7 A4.2 4.2 0 0 1 0.5 16.8 Z"></path>
+        <rect x="1.7" y="1.9" width="11.6" height="1.5" fill="#ffffff"></rect>
+        <rect x="1.7" y="4.5" width="11.6" height="1.5" fill="#ffffff"></rect>
+        <circle cx="7.5" cy="9.9" r="2.3" fill="#ffffff"></circle>
+        <rect x="5.7" y="13.2" width="3.6" height="7.8" fill="#ffffff"></rect>
+        <path fill="#3a3a3a" d="M4.9 21 H10.1 V26 L7.5 24.2 L4.9 26 Z"></path>
+      </svg>
+      Instaread
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var DURATION = 545;
+  var btn = document.getElementById('irp-btn');
+  var iconPlay = document.getElementById('irp-icon-play');
+  var iconPause = document.getElementById('irp-icon-pause');
+  var wave = document.getElementById('irp-wave');
+  var cur = document.getElementById('irp-cur');
+  var bars = wave.getElementsByTagName('span');
+  var playing = false, elapsed = 0, timer = null, last = 0;
+
+  function fmt(s) {
+    s = Math.max(0, Math.round(s));
+    return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2);
+  }
+  function render() {
+    var frac = Math.min(1, elapsed / DURATION);
+    var n = Math.round(frac * bars.length);
+    for (var i = 0; i < bars.length; i++) {
+      bars[i].className = i < n ? 'played' : '';
+    }
+    cur.textContent = fmt(elapsed);
+  }
+  function tick() {
+    if (!playing) return;
+    var now = performance.now();
+    elapsed += (now - last) / 1000;
+    last = now;
+    if (elapsed >= DURATION) { elapsed = DURATION; stop(); }
+    render();
+  }
+  function start() {
+    if (elapsed >= DURATION) elapsed = 0;
+    playing = true;
+    iconPlay.style.display = 'none';
+    iconPause.style.display = 'block';
+    btn.setAttribute('aria-label', 'Pause');
+    last = performance.now();
+    timer = setInterval(tick, 100);
+  }
+  function stop() {
+    playing = false;
+    if (timer) { clearInterval(timer); timer = null; }
+    iconPlay.style.display = 'block';
+    iconPause.style.display = 'none';
+    btn.setAttribute('aria-label', 'Play');
+  }
+  btn.addEventListener('click', function (e) {
+    e.preventDefault(); e.stopPropagation();
+    playing ? stop() : start();
+  });
+  wave.addEventListener('click', function (e) {
+    e.preventDefault(); e.stopPropagation();
+    var r = wave.getBoundingClientRect();
+    elapsed = DURATION * Math.min(1, Math.max(0, (e.clientX - r.left) / r.width));
+    render();
+    if (!playing) start();
+  });
+  render();
+})();
+</script>
+</div><p><span class="TextRun SCXW129549722 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="none"><span class="NormalTextRun SCXW129549722 BCX0">World models are the next frontier in robot learning. But, because conditioning on touch remains fundamentally incomplete, they cannot reliably generalize across novel surfaces and objects</span><span class="NormalTextRun SCXW129549722 BCX0">. A new model class,&nbsp;</span><span class="NormalTextRun SpellingErrorV2Themed SCXW129549722 BCX0">VμA</span><span class="NormalTextRun SCXW129549722 BCX0">, proposes to fix that by making friction a first-class input.</span></span><span class="EOP Selected SCXW129549722 BCX0" data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335557856&quot;:16777215,&quot;335559738&quot;:0,&quot;335559739&quot;:120}">&nbsp;</span></p>
+<h1><span class="TextRun MacChromeBold SCXW21024299 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="none"><span class="NormalTextRun SCXW21024299 BCX0">World models are the next frontier</span></span></h1>
+<p>The most ambitious direction in robot learning today is the world model: a generalist model of physical reality that a robot can use to predict the consequences of its actions, plan across long horizons, and generalize to situations it has never encountered in training.</p>
+<p>If a robot’s internal model of the world is accurate enough, it does not need to memorize every task. Instead, it can reason its way through novel ones.</p>
+<p>This is a compelling vision, and the field is moving fast. But deploying world models in real robotic systems requires a step that receives less attention than the models themselves: conditioning. A world model must be conditioned on the robot’s current physical state before it can make useful predictions.</p>
+<p>And the quality of that conditioning determines whether the model’s predictions reflect reality, or merely an approximation of it.</p>
+<p><div class="fluid-width-video-wrapper" style="padding-top: 56.2162%;"></div></p>
+<p>&nbsp;</p>
+<h2><b>The conditioning problem: Touch is missing</b></h2>
+<p>Current world model conditioning in robotics relies primarily on two inputs. These are visual observations from cameras, and <a href="https://www.therobotreport.com/category/technologies/grippers-end-effectors/" target="_blank" rel="noopener">end-effector</a> position from joint encoders. Some of the most capable systems in the field condition on nothing more than this. For free-space <a href="https://www.therobotreport.com/category/robot-components/motioncontrol/" target="_blank" rel="noopener">motion</a> tasks, it is often sufficient.</p>
+<p>For contact-rich manipulation, it is not enough. The moment a robot touches an object, the information that matters most — what is happening at the interface between fingertip and surface — is invisible to a camera and unresolvable from joint position alone.</p>
+<p>In many world model implementations, contact is not even encoded by dedicated <a href="https://www.therobotreport.com/category/technologies/sensors-sensing/" target="_blank" rel="noopener">sensing</a>. Instead, it is inferred from motor currents in the robot’s joints. A proxy signal several steps removed from the actual contact event reflects the gross mechanical load on the drivetrain rather than the distributed physics at the fingertip.</p>
+<p>Some have augmented this with <a href="https://www.therobotreport.com/category/design-development/haptics/" target="_blank" rel="noopener">tactile</a> sensors, and the results show meaningful improvement. Tactile conditioning as currently implemented remains incomplete. The majority of tactile sensors encode contact as a deformation image, a pressure map, or at best a three-axis force distribution. These representations tell you that contact is occurring and how hard. They do not tell you the quantity that governs whether the contact will succeed or fail.</p>
+<p>In many world model implementations, contact is encoded by motor currents, a proxy several steps removed from the actual physics at the fingertip.</p>
+<div id="attachment_588848" style="width: 1010px" class="wp-caption aligncenter"><a href="https://www.therobotreport.com/wp-content/uploads/2026/07/contactilehand.jpg"><img loading="eager" decoding="async" aria-describedby="caption-attachment-588848" class="size-full wp-image-588848" src="https://www.therobotreport.com/wp-content/uploads/2026/07/contactilehand.jpg" alt="Contactile said its tactile sensors allow adaptive grip in real-time, slip correction, and task execution without customization." width="1000" height="709" srcset="https://www.therobotreport.com/wp-content/uploads/2026/07/contactilehand.jpg 1000w, https://www.therobotreport.com/wp-content/uploads/2026/07/contactilehand-300x213.jpg 300w, https://www.therobotreport.com/wp-content/uploads/2026/07/contactilehand-150x106.jpg 150w, https://www.therobotreport.com/wp-content/uploads/2026/07/contactilehand-768x545.jpg 768w, https://www.therobotreport.com/wp-content/uploads/2026/07/contactilehand-336x238.jpg 336w" sizes="auto, (max-width: 1000px) 100vw, 1000px"></a><p id="caption-attachment-588848" class="wp-caption-text">Contactile says its tactile sensors allow adaptive grip in real-time, slip correction, and task execution without customization. | Source: Contactile</p></div>
+<h2><b>What is missing from world models: μ</b></h2>
+<p>The missing quantity is μ, the coefficient of static friction. It is the physical parameter that determines whether a grasped object stays grasped and whether the grip force is sufficient given the surface properties, the load, and the contact geometry. It varies by material pairing, surface condition, temperature, and contamination. It cannot be seen by a camera, inferred from joint currents, or reconstructed from a pressure map.</p>
+<p>Without μ in the conditioning signal, a world model is still working from an incomplete description of physical reality. It can learn statistical associations between contact patterns and outcomes in training — but it cannot generalize reliably to novel surfaces, unfamiliar objects, or changed conditions, because the causal variable governing those outcomes is absent from its input space.</p>
+<p>A model conditioned on μ is in a qualitatively different position. Friction is not a learned proxy or an inferred signal — it is the physical cause of slip, the direct determinant of required grip force, and the quantity that changes when a surface is wet, worn, coated, or contaminated. Conditioning on μ shifts the world model from statistical pattern-matching towards something closer to causal physical understanding.</p>
+<p>Conditioning on μ shifts the world model from statistical pattern-matching towards causal physical understanding — and that changes what the model can generalize to.</p>
+<h2><b>This is where Contactile comes in</b></h2>
+<p>Contactile’s&nbsp;PapillArray&nbsp;Tactile Compute Module fills this gap. Unlike conventional tactile sensors that output deformation images or pressure maps, it computes — at the sensor edge, in real time, with no upstream processing latency — the full set of physical quantities&nbsp;required&nbsp;for complete contact conditioning:</p>
+<ul>
+<li>3D force vector at every taxel across the contact array</li>
+<li>Global 3D force and global 3D torque for the full contact patch</li>
+<li>The coefficient of static friction μ, derived from the live force distribution</li>
+<li>Per-taxel contact state: non-contact, static contact, or kinetic contact (slip)</li>
+<li>A physics-derived target grip force — the minimum force needed to prevent slip given current μ</li>
+</ul>
+<p>These outputs are grounded in contact mechanics, not learned inference. They are reproducible across objects, surfaces, and conditions. And critically, they serve the conditioning stack at both stages of the&nbsp;model&nbsp;lifecycle: enriching training data with causal physical&nbsp;signals, and&nbsp;providing live feedback during deployment.</p>
+<p><div class="fluid-width-video-wrapper" style="padding-top: 56.2162%;"></div></p>
+<h2><b>Introducing VμA: Vision–μ–action</b></h2>
+<p>Robot learning has a productive tradition of naming model classes at the point where a new input modality becomes sufficiently important to warrant its own designation. Vision–language–action (VLA) models crystallized a research direction around natural language as a conditioning signal. Vision–force–action (VFA) models did the same for force.</p>
+<p>We propose VμA — vision–μ–action — as the designation for world models that incorporate the full Contactile contact physics stack alongside vision and motor action. The μ symbol is not shorthand for “tactile” or “force.” It is the specific physical quantity that has been absent from every prior model class, and the one whose inclusion makes reliable generalization across contact-rich tasks possible for the first time.</p>
+<p>A VμA model ingests per-taxel 3D force, global 3D torque, real-time μ, and per-taxel slip state alongside visual observations, and it outputs motor actions conditioned on the complete physical state of every contact. The term is hardware-agnostic in principle, though in practice, the Contactile PapillArray is currently the only sensor that computes all of these quantities at the edge.</p>
+<p>VLA gave robots language. VFA gave robots force. VμA gives robots the physics of contact, and with it, world models that do not just see the physical world, but also genuinely understand what it feels like to interact with it.</p>
+<p>VLA and VFA define what robots learn from. World model conditioning defines what they reason with. VμA matters for both, and μ is missing from both.</p>
+<hr>
+
+<div style="text-align: center;"><a href="https://www.robobusiness.com/">
+<img loading="eager" decoding="async" class="aligncenter size-full wp-image-568305" src="https://www.therobotreport.com/wp-content/uploads/2026/07/ROBO26_728x90_SavetheDate_Vs1.png" alt="SITE AD for the 2026 RoboBusiness call for speakers" width="728" height="90"></a><b>Save the date for RoboBusiness 2026</b></div>
+
+<hr>
+<h2><b>Closing the loop: Execution beyond training</b></h2>
+<p>Training data quality is one half of the&nbsp;VμA&nbsp;value proposition. The other is real-time execution.</p>
+<p>The gap between <a href="https://www.therobotreport.com/category/software-simulation/" target="_blank" rel="noopener">simulation</a> and reality, the sim-to-real problem, is particularly acute for contact-rich tasks, and the reason is precisely the absence of friction physics in simulation. Robots trained in simulation encounter real surfaces with unpredictable μ values and fail in ways their training never prepared them for.</p>
+<p>The standard mitigation is domain randomization: Vary the simulated friction parameters widely during training and hope the real world falls somewhere in the distribution.</p>
+<p>VμA&nbsp;execution&nbsp;eliminates&nbsp;the need for this approximation. Because the&nbsp;PapillArray&nbsp;measures μ in real time during execution, a&nbsp;VμA-enabled robot does not need to guess the friction properties of what it is holding. It knows. The policy can condition on current μ as a live input, adapting grip force and manipulation strategy to the actual surface, not a simulated distribution of surfaces.</p>
+<p>The practical consequences are significant. A VμA robot handling a dry component in the morning and a wet one after a cleaning cycle does not need to be retrained or recalibrated. It measures the changed μ and adjusts.</p>
+<p>A robot <a href="https://www.therobotreport.com/category/assembly" target="_blank" rel="noopener">assembling</a> parts with variable surface finish across a production batch does not accumulate failures as μ drifts. It tracks the drift and compensates. The feedback loop is closed at the contact interface, at the speed of contact, using real physics.</p>
+<p>A VμA robot does not need to guess the friction properties of what it is holding. It measures μ in real time and adapts — to the actual surface, not a simulated distribution.</p>
+<p><div class="fluid-width-video-wrapper" style="padding-top: 56.2162%;"></div></p>
+<h2><b>Implications for the field</b></h2>
+<p>The manipulation ceiling the field has been hitting is not a model size problem. It is a conditioning problem — and specifically, an absence of the right physical data at the right point in the stack.&nbsp;VμA&nbsp;is the framework for solving it.</p>
+<p>For the research community,&nbsp;VμA&nbsp;establishes a clear benchmark threshold: a model that does not condition on real-time μ is not a complete contact model, regardless of its architecture or scale. For industry, it defines the <a href="https://www.therobotreport.com/category/technologies/sensors-sensing/" target="_blank" rel="noopener">sensor</a> specification&nbsp;required&nbsp;to close the manipulation reliability gap that has kept robots out of the most demanding contact-rich applications.</p>
+<p>We invite the robotics and machine learning community to adopt VμA as the standard designation for this class of model, and to recognize that the next step forward in manipulation is not a larger model — it is a more complete one.</p>
+<p><img loading="eager" decoding="async" class="alignleft wp-image-566236 size-thumbnail" src="https://www.therobotreport.com/wp-content/uploads/2023/07/Heba-Khamis-148x150.jpg" alt="Heba Khamis, Contactile" width="148" height="150" srcset="https://www.therobotreport.com/wp-content/uploads/2023/07/Heba-Khamis-148x150.jpg 148w, https://www.therobotreport.com/wp-content/uploads/2023/07/Heba-Khamis-296x300.jpg 296w, https://www.therobotreport.com/wp-content/uploads/2023/07/Heba-Khamis-235x238.jpg 235w, https://www.therobotreport.com/wp-content/uploads/2023/07/Heba-Khamis.jpg 348w" sizes="auto, (max-width: 148px) 100vw, 148px"></p>
+<h3><b>About the author</b></h3>
+<p><a href="https://www.linkedin.com/in/hebakhamis/" target="_blank" rel="noopener">Heba Khamis</a> is co-founder and CEO of <a href="http://www.contactile.com/" target="_blank" rel="noopener">Contactile</a>, a Sydney-based technology company focused on endowing robots with tactile intelligence. She has a Ph.D. in engineering from the University of Sydney.</p>
+<!--<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="https://www.therobotreport.com/friction-is-key-to-making-better-robot-world-models/"
+    dc:identifier="https://www.therobotreport.com/friction-is-key-to-making-better-robot-world-models/"
+    dc:title="Friction is key to making better robot world models"
+    trackback:ping="https://www.therobotreport.com/friction-is-key-to-making-better-robot-world-models/trackback/" />
+</rdf:RDF>-->
+</div><footer class="entry-footer"></footer></article>	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Tell Us What You Think! <small><a rel="nofollow" id="cancel-comment-reply-link" href="/friction-is-key-to-making-better-robot-world-models/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://www.therobotreport.com/wp-comments-post.php?wpe-comment-post=robottf" method="post" id="commentform" class="comment-form"><p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea placeholder="Enter your message here" id="comment" name="comment" cols="45" rows="8" maxlength="65525" required=""></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input placeholder="Your Name" id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required=""></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input placeholder="Your Email" id="email" name="email" type="email" value="" size="30" maxlength="100" autocomplete="email" required=""></p>
+<p class="comment-form-url"><label for="url">Website</label> <input placeholder="Your Website" id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Submit >"> <input type="hidden" name="comment_post_ID" value="588843" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="921a197da6"></p><p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>Δ<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="1784637657914">
+</p></form>	</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed.</a></p><div class="related-articles"><h4 class="block-header">Related Articles <a href="https://www.therobotreport.com/category/technologies/sensors-sensing/">Read More &gt;</a></h4><div class="article-listing"><div class="row"><article class="entry-summary"><a href="https://www.therobotreport.com/building-robots-for-unpredictable-infrastructure-free-environments/" class="entry-image-link"><img width="268" height="170" src="https://www.therobotreport.com/wp-content/uploads/2026/07/burro-sood-article-featured-268x170.jpg" class="attachment-ea_summary size-ea_summary wp-image-588844 wp-post-image" alt="a burro robot carries vegetables after harvest." decoding="async" loading="eager"></a><h5 class="entry-title"><a href="https://www.therobotreport.com/building-robots-for-unpredictable-infrastructure-free-environments/">Building robots for unpredictable, infrastructure-free environments</a></h5></article><article class="entry-summary"><a href="https://www.therobotreport.com/agibot-unveils-four-embodied-ai-products-real-world-operations-waic/" class="entry-image-link"><img width="268" height="170" src="https://www.therobotreport.com/wp-content/uploads/2026/07/AGIBOT-G2-for-Subway-Guidance-copy-268x170.jpg" class="attachment-ea_summary size-ea_summary wp-image-588832 wp-post-image" alt="The AGIBOT G2 wheeled robot provided subway guidance at WAIC 2026." decoding="async" loading="eager"></a><h5 class="entry-title"><a href="https://www.therobotreport.com/agibot-unveils-four-embodied-ai-products-real-world-operations-waic/">AGIBOT unveils four embodied AI products for real-world operations at WAIC</a></h5></article><article class="entry-summary"><a href="https://www.therobotreport.com/xpanner-rolls-out-x1-panel-lift-automated-solar-panel-installation/" class="entry-image-link"><img width="268" height="170" src="https://www.therobotreport.com/wp-content/uploads/2026/07/Xpanner_X1_Panel_Lift-268x170.jpg" class="attachment-ea_summary size-ea_summary wp-image-588795 wp-post-image" alt="The X1 Panel Lift kit is added to existing equipment for solar panel installation, says Xpanner." decoding="async" loading="eager"></a><h5 class="entry-title"><a href="https://www.therobotreport.com/xpanner-rolls-out-x1-panel-lift-automated-solar-panel-installation/">Xpanner rolls out X1 Panel Lift for automated solar panel installation</a></h5></article><article class="entry-summary"><a href="https://www.therobotreport.com/luxonis-closes-series-a-round-to-scale-physical-ai-perception-layer/" class="entry-image-link"><img width="268" height="170" src="https://www.therobotreport.com/wp-content/uploads/2026/07/Luxonis-Series-A-cover-268x170.jpg" class="attachment-ea_summary size-ea_summary wp-image-588643 wp-post-image" alt="Luxonis provides AI perception for a range of industrial use cases." decoding="async" loading="eager"></a><h5 class="entry-title"><a href="https://www.therobotreport.com/luxonis-closes-series-a-round-to-scale-physical-ai-perception-layer/">Luxonis closes Series A round to scale physical AI perception layer</a></h5></article></div></div></div></main><aside class="sidebar sidebar-primary widget-area" role="complementary" aria-label="Primary Sidebar"><section id="custom_html-6" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><div class="textwidget custom-html-widget">
+<center><div id="div-gpt-trr_sidebar1" data-google-query-id="COHZg6_l45UDFTYLDAIds6UVMA" style="display: none;">
+	
+<div id="google_ads_iframe_/5272491/robo_network/trr_sidebar1_0__container__" style="border: 0pt none; width: 300px; height: 0px;"></div></div> </center>
+</div></div></section>
+<section id="custom_html-2" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><h4 class="widget-title widgettitle">RBR50 Innovation Awards</h4>
+<div class="textwidget custom-html-widget"><center><a href="https://www.therobotreport.com/rbr50-2026-report/"><img src="https://www.therobotreport.com/wp-content/uploads/2026/05/rbr50-sidebar-promo.png" alt="“2026”" rbr50=""></a></center></div></div></section>
+<section id="custom_html-4" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><div class="textwidget custom-html-widget"><center>
+<div style="display: flex; flex-direction: column; justify-content: center; width: 300px;">
+<div align="center"><a href="https://www.therobotreport.com/the-robot-report-enewsletter/" target="_blank"><img src="https://www.therobotreport.com/wp-content/uploads/2023/04/RoboReport-300x100-1.jpg" alt="“rr" newsletter”=""></a></div>
+<div align="center" style="width: 300px; line-height: 20px; padding-top: 10px;"><span style="font-weight: bold; color: #0c506d; text-align: center; font-size: 20px;">EXPAND YOUR KNOWLEDGE AND STAY CONNECTED</span></div>
+<div align="center" style="line-height: 16px; padding-top: 5px;"><span style="text-align: center; font-size: 16px;">Get the latest info on technologies, tools and strategies for Robotics Professionals. </span></div>
+<div align="center" style="padding-top: 10px;"><a href="https://www.therobotreport.com/the-robot-report-enewsletter/" target="_blank"><button style="background-color: #d2262c; color: white; font-weight: bold; border: none; padding: 10px; font-size: 16px; cursor: pointer;">GET THE ENEWSLETTER</button></a></div>
+</div>
+</center></div></div></section>
+<section id="custom_html-7" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><div class="textwidget custom-html-widget"><div id="div-gpt-trr_sidebar2" data-google-query-id="COLZg6_l45UDFTYLDAIds6UVMA" style="display: none;">
+	
+<div id="google_ads_iframe_/5272491/robo_network/trr_sidebar2_0__container__" style="border: 0pt none; width: 300px; height: 0px;"></div></div></div></div></section>
+<section id="custom_html-16" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><h4 class="widget-title widgettitle">Latest Episode of The Robot Report Podcast</h4>
+<div class="textwidget custom-html-widget"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/07RByN6D8aJ68QjuspmeFs?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div></div></section>
+<section id="custom_html-19" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><div class="textwidget custom-html-widget"><center><a href="https://www.automatedwarehouseonline.com/category/reports"><img src="https://mobilerobotguide.com/wp-content/uploads/2024/05/300x250-AW-Reports.jpg" alt="Automated Warehouse Research Reports"></a></center>
+</div></div></section>
+<section id="category-posts-3" class="widget cat-post-widget"><div class="widget-wrap"><h4 class="widget-title widgettitle">Sponsored Content</h4>
+<ul id="category-posts-3-internal" class="category-posts-internal">
+<li class="cat-post-item"><div><a class="cat-post-thumbnail cat-post-dark" href="https://www.therobotreport.com/boston-dynamics-discuss-art-behind-human-robot-interaction/" title="Boston Dynamics to discuss the art behind human-robot interaction"><span class="cat-post-crop cat-post-format cat-post-format-standard"><img width="150" height="95" src="https://www.therobotreport.com/wp-content/uploads/2026/07/BD_webinar-150x97.jpg" class="attachment-thumbnail size-thumbnail wp-image-588840 wp-post-image" alt="Boston Dynamics will discuss human-machine interaction for humanoid robots in a webinar." data-cat-posts-width="150" data-cat-posts-height="95" loading="eager"></span></a> <a class="cat-post-title" href="https://www.therobotreport.com/boston-dynamics-discuss-art-behind-human-robot-interaction/" rel="bookmark">Boston Dynamics to discuss the art behind human-robot interaction</a></div></li><li class="cat-post-item"><div><a class="cat-post-thumbnail cat-post-dark" href="https://www.therobotreport.com/in-robotics-ruggedization-is-no-longer-optional/" title="In Robotics, Ruggedization Is No Longer Optional"><span class="cat-post-crop cat-post-format cat-post-format-standard"><img width="150" height="95" src="https://www.therobotreport.com/wp-content/uploads/2026/06/wibotic-sponsored-featured-image-july2026-v2-150x97.jpg" class="attachment-thumbnail size-thumbnail wp-image-588628 wp-post-image" alt="" data-cat-posts-width="150" data-cat-posts-height="95" loading="eager"></span></a> <a class="cat-post-title" href="https://www.therobotreport.com/in-robotics-ruggedization-is-no-longer-optional/" rel="bookmark">In Robotics, Ruggedization Is No Longer Optional</a></div></li><li class="cat-post-item"><div><a class="cat-post-thumbnail cat-post-dark" href="https://www.therobotreport.com/advantages-of-hypoid-gearing-over-worm-bevel-and-bevel-planetary/" title="Advantages of hypoid gearing over worm, bevel and bevel-planetary"><span class="cat-post-crop cat-post-format cat-post-format-standard"><img width="150" height="95" src="https://www.therobotreport.com/wp-content/uploads/2026/06/dyna-series-cutaway-150x133.jpg" class="attachment-thumbnail size-thumbnail wp-image-588561 wp-post-image" alt="" data-cat-posts-width="150" data-cat-posts-height="95" loading="eager"></span></a> <a class="cat-post-title" href="https://www.therobotreport.com/advantages-of-hypoid-gearing-over-worm-bevel-and-bevel-planetary/" rel="bookmark">Advantages of hypoid gearing over worm, bevel and bevel-planetary</a></div></li><li class="cat-post-item"><div><a class="cat-post-thumbnail cat-post-dark" href="https://www.therobotreport.com/daimon-robotics-and-galbot-jointly-launches-robomni-for-benchmarking-tactile-perception-and-dexterous-manipulation/" title="Daimon Robotics and Galbot jointly launches RobOmni for benchmarking tactile perception and dexterous manipulation"><span class="cat-post-crop cat-post-format cat-post-format-standard"><img width="150" height="95" src="https://www.therobotreport.com/wp-content/uploads/2026/06/schenzhen-sponsored-featured-image-june2026-article2-150x97.png" class="attachment-thumbnail size-thumbnail wp-image-588317 wp-post-image" alt="" data-cat-posts-width="150" data-cat-posts-height="95" loading="eager"></span></a> <a class="cat-post-title" href="https://www.therobotreport.com/daimon-robotics-and-galbot-jointly-launches-robomni-for-benchmarking-tactile-perception-and-dexterous-manipulation/" rel="bookmark">Daimon Robotics and Galbot jointly launches RobOmni for benchmarking tactile perception and dexterous manipulation</a></div></li><li class="cat-post-item"><div><a class="cat-post-thumbnail cat-post-dark" href="https://www.therobotreport.com/genisom-ai-debuts-deployable-robotics-platforms-icra-2026/" title="GENISOM AI debuts deployable robotics platforms at ICRA 2026"><span class="cat-post-crop cat-post-format cat-post-format-standard"><img width="150" height="95" src="https://www.therobotreport.com/wp-content/uploads/2026/06/genisom-sponsored-featured-image-june2026-150x97.jpg" class="attachment-thumbnail size-thumbnail wp-image-588344 wp-post-image" alt="genisom tradeshow booth with quadrupeds." data-cat-posts-width="150" data-cat-posts-height="95" loading="eager"></span></a> <a class="cat-post-title" href="https://www.therobotreport.com/genisom-ai-debuts-deployable-robotics-platforms-icra-2026/" rel="bookmark">GENISOM AI debuts deployable robotics platforms at ICRA 2026</a></div></li></ul>
+<a class="cat-post-footer-link" href="https://www.therobotreport.com/category/sponsored-content/">More Sponsored Content &gt;</a></div></section>
+<section id="custom_html-14" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><div class="textwidget custom-html-widget"><center>
+<div id="div-gpt-trr_sidebarbottom" data-google-query-id="COPZg6_l45UDFTYLDAIds6UVMA" style="display: none;">
+	
+<div id="google_ads_iframe_/5272491/robo_network/trr_sidebarbottom_0__container__" style="border: 0pt none; width: 300px; height: 0px;"></div></div>
+
+</center></div></div></section>
+</aside></div></div></div><div class="footer-socials"><div class="wrap"><label style="color:#ffffff">Connect with The Robot Report</label> <a href="https://www.facebook.com/TheRobotReport/" target="_blank" rel="noopener noreferrer"><i class="icon-facebook"></i></a><a href="https://twitter.com/therobotreport" target="_blank" rel="noopener noreferrer"><i class="icon-twitter"></i></a><a href="https://www.linkedin.com/company/the-robot-report" target="_blank" rel="noopener noreferrer"><i class="icon-linkedin"></i></a><a href="https://www.youtube.com/channel/UCFvPK74I5Hd5eVzZ_5t6FbQ" target="_blank" rel="noopener noreferrer"><i class="icon-youtube"></i></a><a href="https://instagram.com/therobotreport" target="_blank" rel="noopener noreferrer"><i class="icon-instagram"></i></a></div></div><footer class="site-footer"><div class="wrap"><div class="row"><div class="footer-logo"><a href="https://www.therobotreport.com">The Robot Report</a></div><div class="footer-menu"><div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-559347" class="menu-item"><a target="_blank" href="https://www.automatedwarehouseonline.com/">Automated Warehouse</a></li>
+<li id="menu-item-104268" class="menu-item"><a target="_blank" href="https://www.robobusiness.com/">RoboBusiness</a></li>
+<li id="menu-item-103031" class="menu-item"><a target="_blank" href="https://www.roboticssummit.com">Robotics Summit &amp; Expo</a></li>
+<li id="menu-item-76301" class="menu-item"><a href="https://www.therobotreport.com/about-the-robot-report/">About The Robot Report</a></li>
+<li id="menu-item-76268" class="menu-item"><a href="/the-robot-report-enewsletter/">Subscribe</a></li>
+<li id="menu-item-76302" class="menu-item"><a href="https://www.therobotreport.com/contact/">Contact Us</a></li>
+</ul></div></div><div class="footer-copyright"><p>Copyright © 2026 Arrowfly LLC. All Rights Reserved. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Arrowfly<br> <a href="http://www.arrowfly.com/privacy-policy/" target="_blank">Privacy Policy</a>  | <a href="https://mediakit.therobotreport.com/" target="_blank">Advertising</a>  | <a href="/about-the-robot-report/">About Us</a> </p></div></div></div></footer></div><div class="site-search"><div class="wrap"><div class="search-inner"><h2>Search The Robot Report</h2><form class="search-form" method="get" action="https://www.therobotreport.com/" role="search"><input class="search-form-input" type="search" name="s" id="searchform-1" placeholder="Search this website"><input class="search-form-submit" type="submit" value="GO"><meta content="https://www.therobotreport.com/?s={s}"></form></div></div></div>
+
+ 
+<div id="div-gpt-trr_wallpaper" data-google-query-id="CN7Zg6_l45UDFTYLDAIds6UVMA" style="display: none;">
+	
+<div id="google_ads_iframe_/5272491/robo_network/trr_wallpaper_0__container__" style="border: 0pt none;"></div></div>
+<div id="div-gpt-trr_allstreamflex" data-google-query-id="CN_Zg6_l45UDFTYLDAIds6UVMA" style="display: none;">
+	
+<div id="google_ads_iframe_/5272491/robo_network/trr_allstreamflex_0__container__" style="border: 0pt none;"></div></div>
+
+				
+<div id="div-gpt-trr_allstreamprelude" data-google-query-id="CODZg6_l45UDFTYLDAIds6UVMA" style="display: none;">
+	
+<div id="google_ads_iframe_/5272491/robo_network/trr_allstreamprelude_0__container__" style="border: 0pt none;"></div></div>
+
+
+
+<!-- Google Tag Manager (noscript) -->
+
+<!-- End Google Tag Manager (noscript) -->
+
+ 
+ 
+<!-- Google Tag Manager (noscript) Global -->
+
+<!-- End Google Tag Manager (noscript) -->
+
+ 
+
+<div id="sidr-mobile-menu" class="sidr right" style="transition: right 0.2s;"><a class="sidr-menu-close" href="#"><i class="icon-close"></i></a><div class="menu-main-nav-container"><ul id="menu-main-nav-1" class="menu"><li class="home menu-item"><a href="https://www.therobotreport.com/">Home</a></li>
+<li class="menu-item"><a href="https://www.therobotreport.com/category/news/">News</a></li>
+<li class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a href="https://www.therobotreport.com/category/technologies/">Technologies</a>
+<ul class="sub-menu">
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/technologies/batteries-power-supplies/">Batteries / Power Supplies</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/technologies/cameras-imaging-vision/">Cameras / Imaging / Vision</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/technologies/controllers/">Controllers</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/technologies/grippers-end-effectors/">End Effectors</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/technologies/microprocessors-socs/">Microprocessors / SoCs</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/robot-components/motioncontrol/">Motion Control</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/technologies/sensors-sensing/">Sensors</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/technologies/soft-robotics/">Soft Robotics</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/software-simulation/">Software / Simulation</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a href="https://www.therobotreport.com/category/design-development/">Development</a>
+<ul class="sub-menu">
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/design-development/ai-cognition/">Artificial Intelligence</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/design-development/haptics/">Human Robot Interaction / Haptics</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/design-development/mobility-navigation/">Mobility / Navigation</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/research-development/">Research</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a href="https://www.therobotreport.com/category/robots-platforms/">Robots</a>
+<ul class="sub-menu">
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/agv/">AGVs</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/amrs/">AMRs</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/consumer-robotics/">Consumer</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/collaborative-robot/">Collaborative Robots</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/uav-drones/">Drones</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/humanoids/">Humanoids</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/industrial-robots/">Industrial</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/self-driving-vehicles/">Self-Driving Vehicles</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/robots-platforms/ums/">Unmanned Maritime Systems</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a>Business</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a href="https://www.therobotreport.com/category/financial/">Financial</a>
+	<ul class="sub-menu">
+		<li class="menu-item"><a href="https://www.therobotreport.com/category/financial/investments-funding/">Investments</a></li>
+		<li class="menu-item"><a href="https://www.therobotreport.com/category/financial/mergers-acquisitions/">Mergers &amp; Acquisitions</a></li>
+		<li class="menu-item"><a href="https://www.therobotreport.com/category/financial/earnings/">Earnings</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a href="https://www.therobotreport.com/category/markets-industries/">Markets</a>
+	<ul class="sub-menu">
+		<li class="menu-item"><a href="https://www.therobotreport.com/category/markets-industries/ag/">Agriculture</a></li>
+		<li class="menu-item"><a href="https://www.therobotreport.com/category/markets-industries/biotechnology-medical-healthcare/">Healthcare</a></li>
+		<li class="menu-item"><a href="https://www.therobotreport.com/category/markets-industries/logistics-warehousing-asrs/">Logistics</a></li>
+		<li class="menu-item"><a href="https://www.therobotreport.com/category/markets-industries/manufacturing/">Manufacturing</a></li>
+		<li class="menu-item"><a href="https://www.therobotreport.com/category/markets-industries/mining/">Mining</a></li>
+		<li class="menu-item"><a href="https://www.therobotreport.com/category/markets-industries/defense-security/">Security</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a href="https://www.therobotreport.com/tag/rbr50/">RBR50</a>
+	<ul class="sub-menu">
+		<li class="menu-item"><a href="https://www.therobotreport.com/rbr50-2025/">RBR50 Winners 2025</a></li>
+		<li class="menu-item"><a href="https://www.therobotreport.com/rbr50-2024/">RBR50 Winners 2024</a></li>
+		<li class="menu-item"><a href="https://www.therobotreport.com/meet-2023-rbr50-robotics-innovation-awards/">RBR50 Winners 2023</a></li>
+		<li class="menu-item"><a href="https://www.therobotreport.com/2022-rbr50-robotics-innovation-award-honorees/">RBR50 Winners 2022</a></li>
+		<li class="menu-item"><a href="https://www.therobotreport.com/2021-rbr50-robotics-innovation-awards-digital-edition/">RBR50 Winners 2021</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a>Resources</a>
+<ul class="sub-menu">
+	<li class="menu-item"><a target="_blank" href="https://www.automatedwarehouseonline.com/category/reports/">Automated Warehouse Research Reports</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/digital-issues/">Digital Issues</a></li>
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/ebooks/">eBooks</a></li>
+	<li class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a>Publications</a>
+	<ul class="sub-menu">
+		<li class="menu-item"><a target="_blank" href="https://mobilerobotguide.com/category/logistics-warehouse-transportation/">Automated Warehouse</a></li>
+		<li class="menu-item"><a target="_blank" href="https://www.cobottrends.com">Collaborative Robotics Trends</a></li>
+	</ul>
+</li>
+	<li class="menu-item"><a target="_blank" href="https://search.therobotreport.com">Search Robotics Database</a></li>
+	<li class="menu-item"><a target="_blank" href="https://www.youtube.com/channel/UCFvPK74I5Hd5eVzZ_5t6FbQ/videos">Videos</a></li>
+	<li class="menu-item"><a target="_blank" href="https://gateway.on24.com/wcc/experience/elitewtwhmedia/2927718/4415911/robot-report">Webinars / Digital Events</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a href="https://www.therobotreport.com/category/events/">Events</a>
+<ul class="sub-menu">
+	<li class="menu-item"><a target="_blank" href="https://www.robobusiness.com/">RoboBusiness</a></li>
+	<li class="menu-item"><a target="_blank" href="https://www.roboticssummit.com">Robotics Summit &amp; Expo</a></li>
+	<li class="menu-item"><a target="_blank" href="https://www.devicetalks.com/">DeviceTalks</a></li>
+	<li class="menu-item"><a target="_blank" href="https://www.rd100conference.com">R&amp;D 100</a></li>
+	<li class="menu-item"><a target="_blank" href="https://roboweeks.com/">Robotics Weeks</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children"><span class="submenu-toggle"></span><a href="https://www.therobotreport.com/category/podcast/">Podcast</a>
+<ul class="sub-menu">
+	<li class="menu-item"><a href="https://www.therobotreport.com/category/podcast/">Episodes</a></li>
+</ul>
+</li>
+<li class="menu-item"><a target="_blank" href="https://www.arrowfly.com/robotics-network/">Advertise</a></li>
+<li class="site-header--subscribe menu-item"><a href="https://www.therobotreport.com/the-robot-report-enewsletter/">Subscribe</a></li>
+</ul></div></div>
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.1227a5674072e080ffb1ba14ac0c1079.html?origin=https%3A%2F%2Fwww.therobotreport.com" title="Twitter settings iframe" style="display: none;"></iframe>
+<div id="addtoany" style="position: static;"><div class="a2a_overlay a2a_localize" id="a2a_overlay" tabindex="0" aria-label="Close" data-a2a-localize="label,Close"></div><div id="a2a_modal" class="a2a_modal a2a_hide" role="dialog" tabindex="-1" aria-label="" aria-modal="true"><div class="a2a_modal_body a2a_menu a2a_hide" id="a2a_copy_link"><label for="a2a_copy_link_text" id="a2a_copy_link_icon" class="a2a_svg a2a_s_link a2a_logo_color"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>Copy link</title><path fill="#FFF" d="M7.591 21.177c0-.36.126-.665.377-.917l2.804-2.804a1.235 1.235 0 0 1 .913-.378c.377 0 .7.144.97.43-.026.028-.11.11-.255.25-.144.14-.24.236-.29.29a2.82 2.82 0 0 0-.2.256 1.056 1.056 0 0 0-.177.344 1.43 1.43 0 0 0-.046.37c0 .36.126.666.377.918a1.25 1.25 0 0 0 .918.377c.126.001.251-.015.373-.047.125-.037.242-.096.345-.175.09-.06.176-.127.256-.2.1-.094.196-.19.29-.29.14-.142.223-.23.25-.254.297.28.445.607.445.984 0 .36-.126.664-.377.916l-2.778 2.79a1.242 1.242 0 0 1-.917.364c-.36 0-.665-.118-.917-.35l-1.982-1.97a1.223 1.223 0 0 1-.378-.9l-.001-.004Zm9.477-9.504c0-.36.126-.665.377-.917l2.777-2.79a1.235 1.235 0 0 1 .913-.378c.35 0 .656.12.917.364l1.984 1.968c.254.252.38.553.38.903 0 .36-.126.665-.38.917l-2.802 2.804a1.238 1.238 0 0 1-.916.364c-.377 0-.7-.14-.97-.418.026-.027.11-.11.255-.25a7.5 7.5 0 0 0 .29-.29c.072-.08.139-.166.2-.255.08-.103.14-.22.176-.344.032-.12.048-.245.047-.37 0-.36-.126-.662-.377-.914a1.247 1.247 0 0 0-.917-.377c-.136 0-.26.015-.37.046-.114.03-.23.09-.346.175a3.868 3.868 0 0 0-.256.2c-.054.05-.15.148-.29.29-.14.146-.222.23-.25.258-.294-.278-.442-.606-.442-.983v-.003ZM5.003 21.177c0 1.078.382 1.99 1.146 2.736l1.982 1.968c.745.75 1.658 1.12 2.736 1.12 1.087 0 2.004-.38 2.75-1.143l2.777-2.79c.75-.747 1.12-1.66 1.12-2.737 0-1.106-.392-2.046-1.183-2.818l1.186-1.185c.774.79 1.708 1.186 2.805 1.186 1.078 0 1.995-.376 2.75-1.13l2.803-2.81c.751-.754 1.128-1.671 1.128-2.748 0-1.08-.382-1.993-1.146-2.738L23.875 6.12C23.13 5.372 22.218 5 21.139 5c-1.087 0-2.004.382-2.75 1.146l-2.777 2.79c-.75.747-1.12 1.66-1.12 2.737 0 1.105.392 2.045 1.183 2.817l-1.186 1.186c-.774-.79-1.708-1.186-2.805-1.186-1.078 0-1.995.377-2.75 1.132L6.13 18.426c-.754.755-1.13 1.672-1.13 2.75l.003.001Z"></path></svg></label><input id="a2a_copy_link_text" type="text" title="Copy link" readonly=""><div id="a2a_copy_link_copied">✓</div></div><div class="a2a_modal_body a2a_menu a2a_thanks a2a_hide" id="a2a_thanks" role="dialog" tabindex="0" aria-modal="true"><div class="a2a_localize" data-a2a-localize="inner,ThanksForSharing">Thanks for sharing!</div></div></div><div class="a2a_menu a2a_full a2a_localize" id="a2apage_full" role="dialog" tabindex="-1" aria-label="Share" data-a2a-localize="title,Share" aria-modal="true"><div class="a2a_full_header"><div id="a2apage_find_container" class="a2a_menu_find_container"><label for="a2apage_find" id="a2apage_find_icon" class="a2a_svg a2a_s_find"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><title>Find any service</title><path fill="#CCC" d="M19.7 18.2l-4.5-4.5c.7-1.1 1.2-2.3 1.2-3.6 0-3.5-2.8-6.3-6.3-6.3s-6.3 2.8-6.3 6.3 2.8 6.3 6.3 6.3c1.4 0 2.6-.4 3.6-1.2l4.5 4.5c.6.6 1.3.7 1.7.2.5-.4.4-1.1-.2-1.7zm-9.6-3.6c-2.5 0-4.5-2.1-4.5-4.5 0-2.5 2.1-4.5 4.5-4.5 2.5 0 4.5 2.1 4.5 4.5s-2 4.5-4.5 4.5z"></path></svg></label><input id="a2apage_find" class="a2a_menu_find a2a_localize" type="text" autocomplete="off" title="Find any service" data-a2a-localize="title,FindAnyServiceToAddTo"></div></div><div class="a2a_full_services" id="a2apage_full_services" role="list"></div><div class="a2a_full_footer"><a href="https://www.addtoany.com" title="Share Buttons" rel="noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_a2a a2a_logo_color"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span>AddToAny</a></div></div><div id="a2apage_dropdown" class="a2a_menu a2a_mini a2a_localize a2a_hide" tabindex="-1" aria-label="Share" data-a2a-localize="label,Share"><div class="a2a_mini_services" id="a2apage_mini_services" role="list"></div><div id="a2apage_cols_container" class="a2a_cols_container"><div class="a2a_col1" id="a2apage_col1"></div><div id="a2apage_2_col1" class="a2a_hide" role="list"></div><div class="a2a_clear"></div></div><div class="a2apage_wide a2a_wide"><a href="#addtoany" id="a2apage_show_more_less" class="a2a_more a2a_localize" title="Show all" data-a2a-localize="title,ShowAll"><span class="a2a_svg a2a_s__default a2a_s_a2a a2a_logo_color"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span><span class="a2a_localize" data-a2a-localize="inner,More">More…</span></a></div></div><div style="height: 1px; width: 1px; position: absolute; z-index: 100000; top: 0px; visibility: hidden;"><iframe id="a2a_sm_ifr" title="AddToAny Utility Frame" aria-hidden="true" src="https://static.addtoany.com/menu/sm.25.html#type=core&amp;event=load" style="height: 1px; width: 1px; border: 0px; left: 0px; top: 0px; position: absolute; z-index: 100000; display: none;"></iframe></div></div><p id="a11y-speak-intro-text" class="a11y-speak-intro-text" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" hidden="">Notifications</p><div id="a11y-speak-assertive" class="a11y-speak-region" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" aria-live="assertive" aria-relevant="additions text" aria-atomic="true"></div><div id="a11y-speak-polite" class="a11y-speak-region" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" aria-live="polite" aria-relevant="additions text" aria-atomic="true"></div>
+<style>
+  .ir-demo-disclaimer { position:fixed; bottom:0; left:0; right:0; z-index:2147483647;
+    background:#ffd60a; border-top:3px solid #b8960c; color:#1a1400;
+    font:800 13.5px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    text-align:center; padding:11px 18px; letter-spacing:.015em;
+    box-shadow:0 -2px 12px rgba(0,0,0,.18); }
+  .ir-demo-ribbon { position:fixed; top:50%; right:0; z-index:2147483647;
+    transform:translateY(-50%) rotate(180deg); writing-mode:vertical-rl;
+    background:#ffd60a; border:3px solid #b8960c; border-right:none; color:#1a1400;
+    font:800 12.5px/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    letter-spacing:.06em; padding:16px 9px; border-radius:0 8px 8px 0;
+    box-shadow:2px 0 12px rgba(0,0,0,.18); white-space:nowrap; }
+</style>
+<div class="ir-demo-disclaimer">⚠ DEMO ONLY — This page is a design mock-up created
+solely for demo purposes. Not affiliated with, endorsed by, or connected to any real
+service, publication, or person.</div>
+<div class="ir-demo-ribbon">⚠ DEMO — NOT A REAL PUBLICATION</div>
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest ? e.target.closest('a') : null;
+  if (a && !a.closest('#instaread-demo-player-wrap')) e.preventDefault();
+}, true);
+</script></body><style data-ir-clean="1">
+#onetrust-consent-sdk, #onetrust-banner-sdk, .onetrust-pc-dark-filter,
+.qc-cmp2-container, #qc-cmp2-container, [id^="sp_message_container"],
+.fc-consent-root, #usercentrics-root, #didomi-host, #cmpbox, #cmpbox2,
+#CybotCookiebotDialog, .truste_overlay, .truste_box_overlay, #cookie-notice,
+.cky-consent-container, #cookiescript_injected, .osano-cm-window,
+.pum, .pum-overlay, [class*="popmake"], .mfp-bg, .mfp-wrap, .modal-backdrop,
+.fancybox-overlay, [id^="om-"], .sgpb-popup-overlay, .elementor-popup-modal,
+.tve_p_lb_overlay, .mc-modal, .mc-modal-bg
+{ display: none !important; }
+</style></html>
