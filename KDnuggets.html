@@ -1,0 +1,1005 @@
+<!DOCTYPE html><html xmlns="https://www.w3.org/1999/xhtml" lang="en-US" class=""><head profile="https://gmpg.org/xfn/11"><base href="https://www.kdnuggets.com/a-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-adsense-account" content="ca-pub-3739583407805336">
+  <!--<meta name="robots" content="max-image-preview:large">-->
+  <title>  A Beginner’s Guide to Setting Up Claude Code for High Performance Agentic Programming - KDnuggets</title><link rel="preload" href="https://www.kdnuggets.com/wp-content/themes/kdn17/images/logo.svg" as="image" fetchpriority="high"><link rel="preload" href="https://www.kdnuggets.com/wp-content/themes/kdn17/images/menu.svg" as="image" fetchpriority="high"><link rel="preload" href="https://www.kdnuggets.com/wp-content/themes/kdn17/images/search.svg" as="image" fetchpriority="high"><link rel="preload" href="https://www.kdnuggets.com/wp-content/cache/perfmatters/www.kdnuggets.com/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2" as="font" type="font/woff2" crossorigin=""><style id="perfmatters-used-css">.wpp-list{}.wpp-list li{overflow:hidden;float:none;clear:both;margin-bottom:1rem;}.wpp-list li:last-of-type{margin-bottom:0;}.wpp-post-title{}*{margin:0px;padding:0px;}body{background:#fefefe;font-size:16px;font-family:"Open Sans",arial,verdana;color:#111;}[class]{padding:0;}a,img{border:0px;outline:0px;}a:link{color:#211f1f;text-decoration:none;}a:visited{color:#211f1f;text-decoration:none;}a:hover{text-decoration:underline;}hr{size:1px;width:96.8%;float:left;margin:8px;}.main_wrapper{width:100%;}#wrapper{width:1120px;margin:0px auto;background:#fff;}.clear{clear:both;}h1,h2,b,th{font-weight:700;}#content_wrapper ul li{list-style-type:none;list-style-image:url("https://www.kdnuggets.com/wp-content/themes/kdn17/./images/dot-6.png");}hr.grey-line{height:2px;width:100%;margin:8px 0;display:inline-block;background:#f2f2f2;border:none;}.author-link{padding-bottom:10px;}.author-link a{font-weight:700;}#spacer{height:100px;}.site-header{width:100%;max-width:1120px;height:80px;display:flex;align-items:center;position:fixed;top:0;background:#fff;border-bottom:2px solid #f0ae37;z-index:999;}.site-header__logo,.site-header__logo img{display:block;}.site-header__social{display:flex;align-items:center;margin-left:auto;list-style:none;}.site-header__social-item{width:20px;}.site-header__social-item:nth-child(n + 2){margin-left:15px;}.site-header__social-item img{width:100%;display:block;}.site-header__menu .menu{list-style:none;}.site-header__menu .menu > .menu-item a{font-size:17px;}.site-header__menu .menu > .menu-item a:link,.site-header__menu .menu > .menu-item a:visited{color:#211f1f;}.site-header__menu .menu-item-has-children{position:relative;}.site-header__menu .menu-item-has-children:after{content:"";width:9px;height:9px;display:inline-block;margin-left:5px;transform:translateY(4px);border-width:5px;border-style:solid;border-color:#211f1f transparent transparent;box-sizing:border-box;}.site-header__menu .sub-menu .menu-item a{font-size:14px;}.site-header__menu .sub-menu{list-style:none;}.site-header__btn{margin-left:30px;}.site-header__search{display:none;}.btn{padding:14px;background:#211f1f;text-transform:uppercase;font-size:13px;font-weight:700;letter-spacing:.175em;cursor:pointer;border:none;transition:background-color ease .25s;}.btn,.btn:link,.btn:visited{color:#f0ae37;}.btn:hover{text-decoration:none;background-color:#3c3939;}input[type="text"],input[type="email"]{width:100%;height:46px;padding-left:15px;border:1px solid #211f1f;box-sizing:border-box;font-size:15px;font-family:"Open Sans",arial,verdana;}input[type="text"]::placeholder,input[type="email"]::placeholder{opacity:1;font-style:normal;color:#211f1f;}.search form{position:relative;}.search input[type="text"]{padding-right:46px;}.search button{width:46px;height:46px;display:flex;align-items:center;justify-content:center;position:absolute;top:0;right:0;border:none;background:none;cursor:pointer;}.search button img{width:18px;opacity:.6;}.search button:hover img{opacity:1;}#ad_wrapper{float:left;padding:0px 2%;width:96%;height:135px;margin-bottom:30px;min-height:135px;}div[id^="kdnug-"] a p,div[id^="kdnug-"] a center{font-size:13px;color:#211f1f;text-decoration:underline;text-align:center;}.kdnug-med-rectangle-ros,.kdnug-med-rectangle-ros-sidebar-2{min-height:314px;}@media (min-width: 760px){.leaderboard-ros2 img{height:90px !important;width:728px;}}.kdnug-med-rectangle-ros img{aspect-ratio:auto 300/250;width:100%;object-fit:cover;}#post-header{width:100%;}#post-header-ad{margin-bottom:20px;}#post-header-ad a img{width:100%;}#content_wrapper{float:left;width:100%;padding:0 0;background:transparent;}#content{float:left;margin:12px 9px 16px 9px;width:70%;border:2px solid #ccc;box-sizing:border-box;}#content ul{padding-left:6px;padding-bottom:5px;clear:left;}#content ul b{font-size:15px;}.post p,.post li,.post address,.page p{font-size:18px;line-height:200%;}#content .thb ul,#content .latn ul{margin-left:0;padding-left:0;}#content .thb ul li,#content .latn ul li{list-style:none;padding-top:10px;padding-bottom:10px;padding-left:0;}#content .thb ul li:nth-child(n + 2),#content .latn ul li:nth-child(n + 2){border-top:2px solid #f2f2f2;}#content ul li{padding-bottom:0px;float:none;}#content h1:first-child{font-size:40px;text-align:left;}#content h2{float:left;font-size:26px;font-weight:700;line-height:26px;text-align:left;box-sizing:border-box;}#content h1{text-align:center;}.post,.sticky{float:left;width:98%;padding:5px 1% 0px 1%;}.post ul,.post ol{margin-bottom:10px;}.single img .size-full{border:4px solid red;}.post .size-full{max-width:99% !important;}.post p,.page p{margin-bottom:12px;}.post a{text-decoration:underline;}.post a:hover{text-decoration:none;}.page-link{clear:both;color:#000;font-weight:bold;line-height:48px;word-spacing:.5em;}.page-link a:link,.page-link a:visited{background:#f1f1f1;color:#333;font-weight:normal;padding:.5em .75em;text-decoration:none;}.page-link a:active,.page-link a:hover{color:#ff4b33;}h1#title{margin-bottom:25px;text-align:left;box-sizing:border-box;}.pagi-left{text-align:left;float:left;margin-left:1%;margin-bottom:13px;}.pagi-right{text-align:right;float:right;margin-right:1%;margin-bottom:13px;}#sidebar{float:right;width:26.78%;padding:12px 0 0 0;background:transparent;text-align:center;}#sidebar h2{font-size:18px;border-bottom:2px solid #f0ae37;padding-top:8px;box-sizing:border-box;}#sidebar h2 span{padding-bottom:15px;border-bottom:2px solid #f0ae37;display:inline-block;}#sidebar ul{float:left;width:100%;list-style-type:none;text-align:left;margin:0;}#sidebar ul li{float:left;width:100%;padding:4px 0px;padding-left:5px;border-bottom:1px solid #fff;}#sidebar .search{margin-bottom:20px;}#sidebar p,#sidebar li{line-height:150%;}#footer{float:left;width:100%;padding:1% 0;margin-bottom:90px;}#footer ul{float:left;width:100%;list-style-type:none;}#footer ul li{float:left;padding:0px 10px;background:url("https://www.kdnuggets.com/wp-content/themes/kdn17/images/line.png") left 4px no-repeat;}#footer ul li:first-child{background:none;}@media screen and (min-width: 0px) and (max-width: 730px){#footer{order:10;margin-bottom:20px;}}#content form{background:#fff !important;margin:6px !important;padding:6px;}.post table,.sticky table{border-collapse:collapse;}table.thb{border-color:#ccc;border-style:solid;border-width:2px;font-weight:normal;}th.thb{background:none;border-bottom:2px solid #f0ae37;text-align:left;}th.thb h2{display:inline-block;padding:8px 0 15px;text-align:left;border-bottom:2px solid #f0ae37;}p.excerpt{font-style:italic;float:left;width:99%;padding-bottom:12px;}.single ol,ul{margin-left:18px;}li{padding:5px;}#sidebar div ul,#sidebar ul.wpp-list{display:inline-block;float:none;text-align:left;margin:0;font-size:16px;list-style:none;}#sidebar div ul li,#sidebar ul.wpp-list li{list-style:none;padding-left:0;}#sidebar ul.wpp-list li{margin-bottom:0;}#sidebar div ul li:nth-child(n + 2),#sidebar ul.wpp-list li:nth-child(n + 2){margin-top:10px;padding-top:10px;border-top:2px solid #f2f2f2;}div.latn h2,div.latn h3{border-bottom:2px solid #f0ae37;margin-bottom:15px;box-sizing:border-box;text-align:left;}div.latn h2 a,div.latn h2 b,div.latn h3 a,div.latn h3 b{display:inline-block;padding-bottom:15px;border-bottom:2px solid #f0ae37;}div.latn > div span a{color:#211f1f;}div.latn,table.latn,table.thb{border-collapse:collapse;width:100%;border-color:#ccc;border-style:solid;}th.latn{background-color:#f0ae37;}table.latn p{padding:12px 0;}table.thb{table-layout:fixed;}.three_ul{margin-left:10px;margin-right:10px !important;margin-bottom:10px;list-style-position:inside;}.three_ol{margin-left:0 !important;}.three_ol li{float:none !important;list-style:none;counter-increment:three_ol;padding-top:12px;padding-bottom:12px;padding-left:40px;position:relative;}.three_ol li:nth-child(n + 2){border-top:2px solid #f2f2f2;}.three_ol li:before{content:counter(three_ol);width:30px;height:30px;display:flex;align-items:center;justify-content:center;position:absolute;top:8px;left:0;background:#211f1f;color:#f0ae37;}.three_ol img{width:100%;margin-top:5px;}[data-tooltip]:hover:before{content:attr(data-tooltip);position:absolute;top:50%;right:-5px;transform:translate(100%,calc(-50% - 2px));background:#211f1f;padding:5px;font-size:11px;color:#fff;font-weight:normal;white-space:nowrap;border-radius:3px;}.box-form{display:flex;justify-content:center;margin-bottom:30px;padding:20px;border:2px solid #f2f2f2;}.box-form form{max-width:400px;}.mc4wp-form-fields .header-container img{display:block;margin:0 auto 10px;}.mc4wp-form-fields .header-container p{margin-bottom:15px;font-size:15px;text-align:center;}.mc4wp-form-fields .header-container p a{color:#211f1f;}.mc4wp-form-fields input[type="submit"]{width:100%;margin-top:10px;}#header .search,#header #pull:not(.site-header__mobile) .search-icon{display:none;}#header .site-header__search .search{display:block;}#header .navigation .menu:not(#menu-header){list-style:none;display:none;}@media (min-width: 1001px){#header #pull:not(.site-header__mobile){display:none;}#header .navigation .menu:not(#menu-header){display:flex;justify-content:center;margin:0;}}@media screen and (max-width: 1140px){#content,#sidebar{padding-left:20px;padding-right:20px;box-sizing:border-box;}}@media screen and (min-width: 1001px){.site-header__logo,.site-header__logo img{width:174px;}.site-header__mobile{display:none;}.site-header__menu .menu{display:flex;margin-left:30px;}.site-header__menu,.site-header__menu .navigation,.site-header__menu .menu,.site-header__menu .menu > .menu-item{height:100%;}.site-header__menu .menu > .menu-item{display:flex;align-items:center;}.site-header__menu .menu > .menu-item:nth-child(n + 2){margin-left:30px;}.site-header__menu .menu-item-has-children:not(:hover) .sub-menu{transition:opacity ease .25s,visibility ease 0s .25s;}.site-header__menu .menu-item-has-children:hover .sub-menu{opacity:1;visibility:visible;transition:opacity ease .25s;}.site-header__menu .sub-menu{min-width:120px;position:absolute;bottom:0;left:50%;transform:translate(-50%,100%);margin-left:0;padding:20px;background:#fff;box-shadow:0px 10px 20px rgba(0,0,0,.15);opacity:0;visibility:hidden;text-align:center;}.site-header__menu .sub-menu .menu-item:nth-child(n + 2){margin-top:10px;padding-top:10px;border-top:2px solid #f7d69a;}.site-header__menu
+    .menu-item-has-children.sub-menu--2-col
+    .sub-menu
+    .menu-item{width:45%;display:flex;align-items:center;justify-content:center;}.site-header__menu
+    .menu-item-has-children.sub-menu--2-col
+    .sub-menu
+    .menu-item:nth-child(even){margin-left:10%;}.site-header__menu
+    .menu-item-has-children.sub-menu--2-col
+    .sub-menu
+    .menu-item:nth-child(2){margin-top:0;padding-top:0;border-top:none;}.site-header__menu .menu-item-has-children.sub-menu--2-col .sub-menu{min-width:300px;display:flex;flex-wrap:wrap;}}@media screen and (max-width: 1000px){#post-header{float:left;width:100%;}#post-header-ad{float:none;width:100%;max-width:300px;margin:auto;}.site-header__mobile{display:flex;align-items:center;}img.search-icon{margin-left:auto;}.main_wrapper{width:100%;}#header{margin-left:0;max-width:100%;width:100%;}#wrapper{max-width:100%;width:100%;}#header{max-width:100%;width:100%;}.site-header__logo,.site-header__logo img{width:130px;}.site-header__logo{position:absolute;top:50%;left:50%;transform:translate(-50%,calc(-50% + 4px));}.site-header__mobile{width:100%;padding:0 20px;}.site-header__menu{width:100%;height:calc(100vh - 80px);display:none;position:absolute;top:100%;left:0;background:#fff;overflow:auto;}.site-header__menu .menu{margin-left:0;padding-bottom:100px;}.site-header__menu .menu > .menu-item{padding:20px;box-sizing:border-box;}.site-header__menu .menu-item:nth-child(n + 2){border-top:2px solid #f7d69a;}.site-header__menu .sub-menu{display:none;}.site-header__social,.site-header__btn{display:none;}.site-header__menu .menu-item-has-children{position:relative;}.site-header__menu .menu-item-has-children:after{position:absolute;top:25px;right:20px;}.site-header__menu .sub-menu{margin-left:0;}.site-header__menu .sub-menu .menu-item{padding:15px 15px 15px 0;box-sizing:border-box;}.site-header__search{width:100%;position:absolute;top:100%;left:0;padding:20px;background:#fff;border-bottom:2px solid #f0ae37;box-sizing:border-box;}#ad_wrapper table,#ad_wrapper table td,#ad_wrapper table img{width:100% !important;}.slposts-widget ul li a,.thb .three_ol a b{font-size:14px;}#content{width:97%;}#sidebar{width:100%;}}@media screen and (min-width: 1001px) and (max-width: 1100px){#content{margin:12px .8% 1.5% 3%;width:65%;}}@media screen and (min-width: 1001px) and (max-width: 1120px){#wrapper,#header{width:100%;max-width:100%;}}@media screen and (min-width: 781px) and (max-width: 1000px){#wrapper{max-width:100%;width:100%;}#spacer{height:125px !important;}#content{width:calc(100% - 380px) !important;float:left;}#sidebar{width:350px !important;}}@media screen and (min-width: 751px) and (max-width: 780px){#content{width:57%;float:right;margin:1.5% 0px 0px 0px;}ol.three_ul{float:none !important;}}@media screen and (min-width: 731px) and (max-width: 750px){#content{width:55%;float:right;margin:1.5% 0;}ol.three_ul{float:none !important;}}@media screen and (min-width: 0px) and (max-width: 1000px){#header{padding:0;}#header .navigation{overflow:hidden;}#header .logo h1 a{float:none;}#header .logo{float:left;width:138px;margin-bottom:8px;}}@media screen and (min-width: 0px) and (max-width: 730px){#content_wrapper{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-moz-box-orient:vertical;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:start;-moz-box-align:start;-ms-flex-align:start;-webkit-align-items:flex-start;align-items:flex-start;}#content_wrapper #content{-webkit-box-ordinal-group:1;-moz-box-ordinal-group:1;-ms-flex-order:1;-webkit-order:1;order:1;}#content_wrapper #sidebar{-webkit-box-ordinal-group:3;-moz-box-ordinal-group:3;-ms-flex-order:3;-webkit-order:3;order:3;}#content_wrapper #footer{-webkit-box-ordinal-group:4;-moz-box-ordinal-group:4;-ms-flex-order:4;-webkit-order:4;order:4;}ol.three_ul{float:none !important;}#header .navigation ul li{font-size:17px;}}@media screen and (max-width: 780px){#content{width:100% !important;float:left;margin:1.5% 0;}#sidebar,#sidebar-left{width:100% !important;}ol.three_ul{float:none !important;}}@media screen and (min-width: 561px){.kdnug-leaderboard-ros{min-height:auto;}}@media screen and (max-width: 560px){.kdnug-leaderboard-ros{min-height:80px;margin-top:20px;}#pull{width:400px;margin-top:5px;margin-bottom:10px;display:block;}#header .navigation ul li a{text-align:center;}h1#title{font-size:28px;}#ad_wrapper{height:90px !important;min-height:90px !important;}}@media screen and (max-width: 460px){#pull{width:98%;margin:0 1% 5px;box-sizing:border-box;}#pull .logo{display:block !important;margin:0 auto 10px;float:none !important;}#pull .menu{padding:0;float:left;}#pull .search-icon{padding:0;float:right;}#header .search{height:75px;}#header .navigation{width:98%;margin:0 1%;box-sizing:border-box;}#header .navigation ul li a{text-align:center;}#header .navigation ul li{width:100%;}#pull .logo a{background-size:cover;height:35px;width:100px;}}#header:not(.site-header) ~ #content_wrapper #ad_wrapper{margin-bottom:0;}#header:not(.site-header) ~ #spacer{height:20px !important;}.kdnug-after-first-paragraph > .kdnug-after-first-paragraph{min-height:300px;padding:30px 0;}.addtoany_list{display:inline;line-height:16px;}.a2a_kit a:empty,.a2a_kit a[class^="a2a_button_"]:has(.a2a_s_undefined){display:none;}.addtoany_list a,.widget .addtoany_list a{border:0;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;}.addtoany_list a img{border:0;display:inline-block;opacity:1;overflow:hidden;vertical-align:baseline;}.addtoany_list a span{display:inline-block;float:none;}.addtoany_list a:not(.addtoany_special_service)>span{border-radius:4px;display:inline-block;opacity:1;}.site .a2a_kit.addtoany_list a:focus,.addtoany_list a:hover,.widget .addtoany_list a:hover{background:none;border:0;box-shadow:none;}.addtoany_list a:hover img,.addtoany_list a:hover span{opacity:.7;}a.addtoany_share img{border:0;width:auto;height:auto;}</style>
+  <link rel="shortcut icon" href="/wp-content/themes/kdn17/images/favicon.ico">
+  <!-- <link type="text/css" rel="stylesheet" href="/wp-content/themes/kdn17/style.css" media="screen" /> -->
+ <!-- <script type="text/javascript" src="/wp-content/themes/kdn17/js/jquery-1.9.1.min.js" ></script>-->
+ <!--<script type="text/javascript" src="/aps/kda_all.js?upd=210208"></script> -->
+  <link rel="alternate" type="application/rss+xml" title="KDnuggets: AI, Analytics, Data Science, Machine Learning Feed" href="/feed/">
+<!-- RSOC 
+<script async="async" src="https://www.google.com/adsense/search/ads.js"></script>
+<script type="text/javascript" charset="utf-8">
+(function(g,o){g[o]=g[o]||function(){(g[o]['q']=g[o]['q']||[]).push(
+  arguments)},g[o]['t']=1*new Date})(window,'_googCsa');
+</script>
+RSOC end -->
+	
+	<!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+<!-- used for conversion tracking don't remove -->	
+	
+	
+ 
+
+<style data-no-optimize="1" data-cfasync="false">
+	.adthrive-ad {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		text-align: center;
+		overflow-x: visible;
+		clear: both;
+		line-height: 0;
+	}
+	.adthrive-sidebar-9 {
+top: 4.7rem !important;
+}
+
+body:not(.home) .adthrive-content {
+padding-bottom:20px !important;
+}
+
+.adthrive-device-phone .adthrive-sticky-outstream {
+min-height: 100px !important;
+}
+
+.adthrive-sticky-outstream-desktop {
+min-height: 150px !important;
+}</style>
+
+
+
+<link rel="dns-prefetch" href="https://ads.adthrive.com/"><link rel="preconnect" href="https://ads.adthrive.com/"><link rel="preconnect" href="https://ads.adthrive.com/" crossorigin=""><meta name="description" content="This article walks through the actual configuration, permissions, hooks, and command habits that separate a fresh install from a setup that holds up under real, sustained agentic work, verified against Anthropic's current documentation rather than assumed from an older version of the tool.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://www.kdnuggets.com/a-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming">
+<meta property="og:url" content="https://www.kdnuggets.com/a-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming">
+<meta property="og:site_name" content="KDnuggets">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="article:author" content="https://www.facebook.com/kdnuggets">
+<meta property="article:publisher" content="https://www.facebook.com/kdnuggets">
+<meta property="article:section" content="Originals">
+<meta property="article:tag" content="Programming">
+<meta property="og:title" content="A Beginner's Guide to Setting Up Claude Code for High Performance Agentic Programming">
+<meta property="og:description" content="This article walks through the actual configuration, permissions, hooks, and command habits that separate a fresh install from a setup that holds up under real, sustained agentic work, verified against Anthropic's current documentation rather than assumed from an older version of the tool.">
+<meta property="og:image" content="https://www.kdnuggets.com/wp-content/uploads/KDN-Shittu-A-Beginners-Guide-to-Setting-Up-Claude-Code-for-High-Performance-Agentic-Programming-scaled.png">
+<meta property="og:image:secure_url" content="https://www.kdnuggets.com/wp-content/uploads/KDN-Shittu-A-Beginners-Guide-to-Setting-Up-Claude-Code-for-High-Performance-Agentic-Programming-scaled.png">
+<meta property="og:image:width" content="2560">
+<meta property="og:image:height" content="1387">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@kdnuggets">
+<meta name="twitter:creator" content="@kdnuggets">
+<meta name="twitter:title" content="A Beginner's Guide to Setting Up Claude Code for High Performance Agentic Programming">
+<meta name="twitter:description" content="This article walks through the actual configuration, permissions, hooks, and command habits that separate a fresh install from a setup that holds up under real, sustained agentic work, verified against Anthropic's current documentation rather than assumed from an older version of the tool.">
+<meta name="twitter:image" content="https://www.kdnuggets.com/wp-content/uploads/KDN-Shittu-A-Beginners-Guide-to-Setting-Up-Claude-Code-for-High-Performance-Agentic-Programming-scaled.png">
+<link rel="dns-prefetch" href="//static.addtoany.com">
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+
+<link rel="alternate" type="application/rss+xml" title="KDnuggets » Feed" href="https://www.kdnuggets.com/feed">
+<link rel="alternate" type="application/rss+xml" title="KDnuggets » Comments Feed" href="https://www.kdnuggets.com/comments/feed">
+
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v11.0.1 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							
+			
+							<!-- / Google Analytics by MonsterInsights -->
+		<!-- www.kdnuggets.com is managing ads with Advanced Ads 2.0.25 – https://wpadvancedads.com/ -->
+		<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="wordpress-popular-posts-css-css" media="all" data-pmdelayedstyle="https://www.kdnuggets.com/wp-content/cache/perfmatters/www.kdnuggets.com/minify/b0c5380115a7.wpp.min.css?ver=7.4.0">
+<link rel="stylesheet" id="kd-style-css" media="all" data-pmdelayedstyle="https://www.kdnuggets.com/wp-content/cache/perfmatters/www.kdnuggets.com/minify/dc4fb110b7c1.style.min.css?ver=1.0.349">
+<style id="perfmatters-google-font-1">@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://www.kdnuggets.com/wp-content/cache/perfmatters/www.kdnuggets.com/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://www.kdnuggets.com/wp-content/cache/perfmatters/www.kdnuggets.com/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style>
+<link rel="stylesheet" id="tablepress-default-css" media="all" data-pmdelayedstyle="https://www.kdnuggets.com/wp-content/plugins/tablepress/css/build/default.css?ver=3.3.3">
+<link rel="stylesheet" id="addtoany-css" media="all" data-pmdelayedstyle="https://www.kdnuggets.com/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16">
+<style id="addtoany-inline-css">
+@media screen and (max-width:980px){
+.a2a_floating_style.a2a_vertical_style{display:none;}
+}
+/*# sourceURL=addtoany-inline-css */
+</style>
+<style id="kadence-blocks-global-variables-inline-css">
+:root {--global-kb-font-size-sm:clamp(0.8rem, 0.73rem + 0.217vw, 0.9rem);--global-kb-font-size-md:clamp(1.1rem, 0.995rem + 0.326vw, 1.25rem);--global-kb-font-size-lg:clamp(1.75rem, 1.576rem + 0.543vw, 2rem);--global-kb-font-size-xl:clamp(2.25rem, 1.728rem + 1.63vw, 3rem);--global-kb-font-size-xxl:clamp(2.5rem, 1.456rem + 3.26vw, 4rem);--global-kb-font-size-xxxl:clamp(2.75rem, 0.489rem + 7.065vw, 6rem);}:root {--global-palette1: #3182CE;--global-palette2: #2B6CB0;--global-palette3: #1A202C;--global-palette4: #2D3748;--global-palette5: #4A5568;--global-palette6: #718096;--global-palette7: #EDF2F7;--global-palette8: #F7FAFC;--global-palette9: #ffffff;}
+/*# sourceURL=kadence-blocks-global-variables-inline-css */
+</style>
+<link rel="stylesheet" id="boxzilla-css" media="all" data-pmdelayedstyle="https://www.kdnuggets.com/wp-content/cache/perfmatters/www.kdnuggets.com/minify/394622c89809.styles.min.css?ver=3.4.11">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="https://api.w.org/" href="https://www.kdnuggets.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.kdnuggets.com/wp-json/wp/v2/posts/206252">
+            <style id="wpp-loading-animation-styles">@-webkit-keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}@keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}.wpp-widget-block-placeholder,.wpp-shortcode-placeholder{margin:0 auto;width:60px;height:3px;background:#dd3737;background:linear-gradient(90deg,#dd3737 0%,#571313 10%,#dd3737 100%);background-size:200% auto;border-radius:3px;-webkit-animation:bgslide 1s infinite linear;animation:bgslide 1s infinite linear}</style>
+                
+    		
+		<style>.kdnug-parallax-container { position: relative; display: block; overflow: hidden; clear: both; margin: 0; padding: 0; z-index: 1; }
+        .kdnug-parallax-clip { position: absolute; top: 0; right: 0; bottom: 0; left: 0; clip-path: inset(0); -webkit-clip-path: inset(0); }
+        .kdnug-parallax-inner { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; will-change: transform; visibility: hidden; z-index: -1; pointer-events: none; }
+        .kdnug-parallax-content-block { width: 100%; height: auto; pointer-events: auto; }
+        .kdnug-parallax-content-block img { display: block; margin: 0 auto; max-width: 100%; height: auto; object-fit: contain; }
+        .kdnug-parallax-content-block .unslider { overflow: visible !important; }
+        .kdnug-parallax-content-block .unslider-wrap { display: flex !important; }</style>		
+		<style id="wp-custom-css">
+div.latn, table.latn, table.thb {
+    border-width: 0px;
+    border-color: #ffffff;
+}
+#content {
+    border: 0px solid #ccc;
+}
+#custom_html-3 {
+	min-height:300px;
+}
+
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+</style>
+<style>.perfmatters-lazy.pmloaded,.perfmatters-lazy.pmloaded>img,.perfmatters-lazy>img.pmloaded,.perfmatters-lazy[data-ll-status=entered]{animation:500ms pmFadeIn}@keyframes pmFadeIn{0%{opacity:0}100%{opacity:1}}body .perfmatters-lazy-css-bg:not([data-ll-status=entered]),body .perfmatters-lazy-css-bg:not([data-ll-status=entered]) *,body .perfmatters-lazy-css-bg:not([data-ll-status=entered])::before,body .perfmatters-lazy-css-bg:not([data-ll-status=entered])::after,body .perfmatters-lazy-css-bg:not([data-ll-status=entered]) *::before,body .perfmatters-lazy-css-bg:not([data-ll-status=entered]) *::after{background-image:none!important;will-change:transform;transition:opacity 0.025s ease-in,transform 0.025s ease-in!important;}</style>	
+<meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><link href="https://securepubads.g.doubleclick.net/pagead/managed/dict/m202606180101/gpt" rel="compression-dictionary"><style data-injected="css-inject">.adthrive-act25-overlay{z-index:2147483646;background:#0006;width:100%;height:100%;display:none;position:fixed;top:0;left:0}.adthrive-act25-overlay.show{display:block}.adthrive-act25-modal{z-index:2147483647;background:#fff;border-radius:28px;flex-direction:column;width:600px;max-width:95%;padding:32px;animation:.3s cubic-bezier(.4,0,.2,1) scaleFadeIn;display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);box-shadow:0 12px 36px #00000040}.adthrive-act25-modal.show{display:flex}.adthrive-act25-modal-close-btn{cursor:pointer;color:#666;background:0 0;border:none;font-size:28px;position:absolute;top:14px;right:20px}.adthrive-act25-modal-header{align-items:center;gap:12px;margin-bottom:20px;display:flex}.adthrive-act25-modal-icon{font-size:28px}.adthrive-act25-modal-header h2{color:#212121;margin:0;font-size:22px;font-weight:600}.adthrive-act25-modal-body{max-height:50vh;padding-right:8px;overflow-y:auto}.adthrive-act25-modal-body p{color:#333;margin:0 0 16px;font-size:15px;line-height:1.7}.adthrive-act25-modal-footer{text-align:center;border-top:1px solid #eee;margin-top:20px;padding-top:20px}.adthrive-act25-button-group{flex-wrap:wrap;justify-content:center;gap:16px;display:flex}.adthrive-act25-btn{cursor:pointer;border:none;border-radius:40px;padding:14px 30px;font-size:16px;font-weight:600;transition:background .2s,box-shadow .2s}.adthrive-act25-btn.primary{color:#fff;background:#4caf50;min-width:200px;box-shadow:0 4px 12px #00000026}.adthrive-act25-btn.primary:hover{background:#43a047;transform:translateY(-1px);box-shadow:0 6px 16px #0003}.adthrive-act25-btn.secondary{color:#666;background:0 0;border:2px solid #ccc;min-width:120px}.adthrive-act25-btn.secondary:hover{background:#f9f9f9}@keyframes scaleFadeIn{0%{opacity:0;transform:translate(-50%,-50%)scale(.9)}to{opacity:1;transform:translate(-50%,-50%)scale(1)}}@media (max-width:600px){.adthrive-act25-modal{border-radius:20px;width:95%;padding:24px}.adthrive-act25-btn{width:100%}.adthrive-act25-button-group{flex-direction:column}}.adthrive-act25-footer{margin-bottom:30px}.adthrive-act25-footer-text{color:#a9a9a9;font-size:14px}.adthrive-act25-footer-text p{color:#a9a9a9;text-decoration:underline}.adthrive-act25-footer-link{cursor:pointer;font-size:14px;text-decoration:underline}.adthrive-ad{text-align:center;clear:both;margin-top:10px;margin-bottom:10px;line-height:0;overflow-x:visible}.adthrive-ad-cls{flex-wrap:wrap;justify-content:center;align-items:center;display:flex}.adthrive-ad-cls>div,.adthrive-ad-cls>iframe{flex-basis:100%}.adthrive-interstitial{margin-top:0;margin-bottom:0}.adthrive-native-recipe{display:inline-block}.adthrive-recipe{z-index:1;min-width:300px;position:relative}.adthrive-footer-mobile,.adthrive-header-mobile,.adthrive-footer-phone,.adthrive-header-phone{min-height:50px}.adthrive-footer-desktop,.adthrive-header-desktop,.adthrive-header-tablet,.adthrive-footer-tablet{min-height:90px}.adthrive-content,.adthrive-recipe,.adthrive-sidebar,.adthrive-below-post{min-height:250px}.adthrive-sidebar9-fallback{flex-direction:column;justify-content:flex-start;align-items:center;margin:10px 0;display:flex}.adthrive-sidebar9-fallback>div{flex-basis:unset;top:5px;position:sticky!important}.adthrive-fit-content .adthrive-content{min-height:250px;width:-moz-fit-content!important;width:fit-content!important;min-width:300px!important;max-width:-moz-fit-content!important;max-width:fit-content!important;margin-left:auto!important;margin-right:auto!important}.adthrive-fit-content .adthrive-ad.adthrive-content:has(.raptive-sales-mural){width:100%!important;max-width:100%!important}.adthrive-ad-cls.adthrive-content:has(.celtra-ad-inline-host.raptive-sales){width:100%!important;max-width:100%!important;display:block!important}.adthrive-device-desktop .adthrive-fit-content.adthrive-fit-content-expanded .adthrive-ad.adthrive-recipe,.adthrive-device-desktop .adthrive-fit-content.adthrive-fit-content-expanded .adthrive-ad.adthrive-below-post{width:-moz-fit-content!important;width:fit-content!important;min-width:300px!important;max-width:-moz-fit-content!important;max-width:fit-content!important;margin-left:auto!important;margin-right:auto!important}.adthrive-device-desktop .adthrive-fit-content.adthrive-fit-content-expanded .adthrive-ad.adthrive-recipe:has(.raptive-sales-mural){width:100%!important;max-width:100%!important}.adthrive-device-desktop .adthrive-fit-content.adthrive-fit-content-expanded .adthrive-ad.adthrive-below-post:has(.raptive-sales-mural){width:100%!important;max-width:100%!important}.adthrive-device-desktop .adthrive-recipe,.adthrive-device-tablet .adthrive-recipe{max-width:320px}.adthrive-stuck.adthrive-sticky.adthrive-sidebar,.adthrive-stuck.adthrive-sticky.adthrive-header{z-index:9999;position:fixed;top:0}.adthrive-stuck.adthrive-header{margin-top:0}.adthrive-stuck.adthrive-sticky-outstream{z-index:2147483644;display:none;position:fixed}.adthrive-sticky.adthrive-footer{text-align:center;z-index:1000001;box-sizing:content-box;background-color:#fffc;width:100%;max-height:100px;margin:0;position:fixed;bottom:0;left:0;overflow:hidden}.adthrive-sticky.adthrive-footer>.adthrive-close{cursor:pointer;color:#b2b2b2;background:#fff;border:1px solid #b2b2b2;border-radius:20px;padding:0 5px;font-family:Arial,sans-serif;font-size:20px;line-height:20px;display:inline-block;position:absolute;top:5px;right:5px}.adthrive-device-desktop .adthrive-sticky.adthrive-footer>.adthrive-close{top:10px;right:10px}.adthrive-footer-message,.adthrive-privacy-preferences,.adthrive-ccpa-link{text-align:center;margin-top:5px}.adthrive-footer>div,.adthrive-header>div{max-width:1200px}.raptive-player-reset>*{box-sizing:border-box;float:none;clear:both;box-shadow:none;font-variant:normal;letter-spacing:normal;overflow-wrap:normal;text-align:left;text-transform:none;word-spacing:normal;white-space:normal;color:inherit;direction:ltr;background-color:#0000;border:0;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-style:normal;font-weight:400;font-stretch:100%;line-height:1.2;text-decoration:none;display:block}.adthrive-visually-hidden{clip:rect(0, 0, 0, 0)!important;white-space:nowrap!important;border:0!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;position:absolute!important;overflow:hidden!important}#next-video,#stay-video{opacity:.9;text-align:center;cursor:pointer;color:#fff;text-transform:capitalize;-webkit-appearance:none;-moz-appearance:none;appearance:none;width:100px;height:40px;font:inherit;background-color:#333;border:none;margin:5px;padding:0;line-height:40px;position:relative}.adthrive-collapse-mobile #next-video,.adthrive-collapse-mobile #stay-video,.adthrive-player-position-mobile #next-video,.adthrive-player-position-mobile #stay-video,.raptive-player-container-mobile #next-video,.raptive-player-container-mobile #stay-video{width:75px;height:30px;line-height:30px}#next-stay-container{z-index:1;flex-flow:column;justify-content:center;margin:12px;display:flex;position:absolute;top:0;bottom:0;right:0}.adthrive-collapse-mobile #next-stay-container,.adthrive-player-position-mobile #next-stay-container,.raptive-player-container-mobile #next-stay-container{margin:0}#next-video:before{content:"";z-index:1;will-change:transform, opacity;transform-origin:0;background-color:red;width:100%;height:100%;display:block;position:absolute}#next-stay-container.active>#next-video:before{animation:5s linear scaleInFromLeft}#next-video span{z-index:2;position:relative}@keyframes scaleInFromLeft{0%{opacity:0;transform:scaleX(0)}to{opacity:1;transform:scaleX(1)}}.video-box-shadow{box-shadow:0 0 10px #00000080}.adthrive-wrapper-bar{background-color:#595959;border-top-left-radius:5px;border-top-right-radius:5px;height:36px;font-family:Arial,Helvetica,sans-serif;display:none}.adthrive-video-title{color:#fff;font-size:13px;font-weight:700;text-decoration:none}.adthrive-wrapper-title-wrapper{min-width:0;box-shadow:none;border:none;justify-content:center;align-items:center;margin-left:10px;margin-right:10px;display:inline-flex}.adthrive-wrapper-title-wrapper>a>svg,.adthrive-wrapper-title-wrapper>div>svg{vertical-align:middle;fill:#fff;margin-right:5px}.adthrive-wrapper-title-wrapper>a{text-decoration:none}.adthrive-video-text-cutoff{text-overflow:ellipsis;white-space:nowrap;color:#fff;overflow:hidden}.adthrive-collapse-player{border-top:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;width:90%;margin-left:auto;margin-right:auto;padding:8px!important}.adthrive-outstream-container{margin:0 auto;position:relative;flex-basis:unset!important}.adthrive-player-idle{transition:all .5s ease-out .5s;display:none}.raptive-player-ad-container-idle{display:none}.adthrive-player-playing{transition:all .5s ease-in .5s;display:block}.adthrive-sticky-outstream-active.adthrive-new-outstream-player{opacity:1;animation-name:adthrive-fade-in;animation-duration:.5s;animation-timing-function:ease-in;animation-iteration-count:1}.adthrive-sticky-outstream-idle.adthrive-new-outstream-player{opacity:0;animation-name:adthrive-fade-out;animation-duration:.5s;animation-timing-function:ease-out;animation-iteration-count:1;display:block}@keyframes adthrive-fade-in{0%{opacity:0}to{opacity:1}}@keyframes adthrive-fade-out{0%{opacity:1}to{opacity:0}}.adthrive-player-ad-controls-play{z-index:1001;margin:-5px 4px}.adthrive-player-icon-play>svg:nth-child(2){margin-left:4px}.adthrive-player-ad-controls-volume-container{z-index:1001;border-radius:36px;flex-direction:column-reverse;height:36px;display:flex;position:relative}.adthrive-player-ad-controls-volume-container-with-bar{top:-5px}.adthrive-player-ad-controls-volume-container>.adthrive-player-ad-controls-volume{flex-direction:column-reverse;height:55px;display:flex;position:relative}.adthrive-player-ad-controls>.adthrive-player-ad-controls-volume-container,.adthrive-player-ad-controls-volume>.adthrive-player-volume-control{margin-top:0}.adthrive-player-icon-volume{z-index:2}.adthrive-player-volume-control{z-index:1}.adthrive-player-ad-controls-play,.adthrive-player-ad-controls-volume{border-radius:36px;width:36px;height:36px;display:inline-block}.adthrive-player-icon:hover,.adthrive-player-icon-fullscreen:hover,.adthrive-player-icon-fullscreen:focus{background:#0000004d!important}.adthrive-player-ad-controls-volume-container .adthrive-player-icon:hover{background:0 0}.adthrive-player-ad-controls-volume-container.active{z-index:1001}.adthrive-player-icon{cursor:pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none;width:36px;height:36px;font:inherit;border:none;border-radius:100%;justify-content:center;align-items:center;margin-right:4px;padding:0;display:flex;background:0 0!important}.adthrive-player-icon:focus-visible{outline-offset:2px;outline:2px solid #fff}.adthrive-player-big-play-button:focus-visible{outline-offset:2px;outline:2px solid #fff}.adthrive-player-progress-bar-container:focus-visible{outline-offset:2px;outline:2px solid #fff}.adthrive-player-volume-control input[type=range]:focus-visible{outline-offset:2px;outline:2px solid #fff}.raptive-player-settings-header>button:focus-visible{outline-offset:2px;outline:2px solid #fff}.raptive-player-settings-page-item:focus-visible{outline-offset:2px;outline:2px solid #fff}.raptive-player-captions-button:focus-visible{outline-offset:2px;outline:2px solid #fff}.adthrive-video-close:focus-visible{outline-offset:2px;outline:2px solid #fff}#next-video:focus-visible{outline-offset:2px;outline:2px solid #fff}#stay-video:focus-visible{outline-offset:2px;outline:2px solid #fff}.adthrive-hidden{display:none!important}.adthrive-count-down{z-index:1;pointer-events:none;color:#fff;text-shadow:0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000;background:#00000080;border-bottom-right-radius:4px;outline:none;width:auto;height:auto;padding:4px;font-size:12px;line-height:1.2;position:absolute;top:0;left:0}.adthrive-collapse-medium>.adthrive-count-down,.adthrive-collapse-small>.adthrive-count-down{padding:2px}.raptive-player-container.raptive-player-rounded-borders>.adthrive-count-down{border-radius:4px;top:8px;left:8px}.adthrive-player-icon svg{pointer-events:none;filter:drop-shadow(3px 5px 3px #00000080)}.adthrive-player-icon-play svg:nth-child(2),.raptive-player-paused .adthrive-player-icon-play svg:first-child{display:none}.raptive-player-paused .adthrive-player-icon-play svg:nth-child(2){display:block}.adthrive-player-icon-volume svg:first-child{display:none}.adthrive-player-icon-volume svg:nth-child(2),.raptive-player-muted .adthrive-player-icon-volume svg:first-child{display:block}.raptive-player-muted .adthrive-player-icon-volume svg:nth-child(2){display:none}.adthrive-player-ad-container{margin:0;position:absolute;bottom:0}.adthrive-player-ad-container-loading{justify-content:center;align-items:center;height:100%;display:flex}.adthrive-player-ad-container{overflow:hidden}.adthrive-loading-spinner-container{z-index:2147483647;background-color:#000;justify-content:center;align-items:center;position:absolute;top:0;bottom:0;left:0;right:0}.raptive-player-container.raptive-player-content-playing .adthrive-loading-spinner-container{display:none!important}.adthrive-loading-spinner{border:3px solid #ffffff4d;border-top-color:#fff;border-radius:50%;width:50px;height:50px;animation:1s ease-in-out infinite spin}@keyframes spin{to{-webkit-transform:rotate(360deg)}}.adthrive-title-overlay{box-sizing:border-box;z-index:1;color:#fff;background:#0006;border-radius:0;flex-direction:row;justify-content:flex-start;align-items:center;height:0;transition:background .3s ease-out;display:flex;position:absolute;top:0;left:0;right:0}.adthrive-title-overlay.active{height:36px}.adthrive-title-overlay>.adthrive-wrapper-title-wrapper{flex-direction:row-reverse;align-items:center;width:100%;height:100%;text-decoration:none;display:none;overflow:hidden}.adthrive-title-overlay.active>.adthrive-wrapper-title-wrapper{display:flex}.raptive-player-ad-loading>.adthrive-title-overlay,.adthrive-title-overlay.active>.adthrive-wrapper-title-wrapper:after{display:none}.adthrive-wrapper-bar a[target=_blank]:after{display:none!important}.adthrive-no-pointer-events{pointer-events:none}.adthrive-display-none{display:none}.adthrive-small-text{font-size:13px}.adthrive-video-title-description-container{flex-direction:column;flex:1;height:100%;font-size:1.2em;line-height:1.1em;display:flex}#adthrive-video-title-text{flex:1;align-items:center;display:flex}.adthrive-player-position-mobile #adthrive-video-title-text,.raptive-player-container-mobile #adthrive-video-title-text{font-size:.85em}#adthrive-video-description-text{text-overflow:ellipsis;white-space:nowrap;flex:1;align-items:center;margin:-4px 0 0;font-size:1vw;display:flex;overflow:hidden}.adthrive-video-play-button{cursor:pointer;z-index:1;border-top:30px solid #0000;border-bottom:30px solid #0000;border-left:60px solid #fff;width:0;height:0}.raptive-player-position{clear:both;background-color:#000;width:100%;padding-top:56.25%;position:relative}.raptive-player-position.raptive-player-position-rounded-borders{background-color:#0000}.raptive-player-vertical{aspect-ratio:9/16;padding-top:initial;background-color:initial;width:50%;margin-left:auto;margin-right:auto}.raptive-player-mobile .raptive-player-vertical{width:100%}.raptive-player-stage,.raptive-player-container{z-index:1;height:100%;position:absolute;top:0;bottom:0;left:0;right:0}.raptive-player-container.raptive-player-rounded-borders{border-radius:20px}.raptive-player-clip-layer{z-index:0;position:absolute;top:0;bottom:0;left:0;right:0}.raptive-player-container.raptive-player-rounded-borders>.raptive-player-clip-layer{border-radius:inherit;overflow:hidden}.raptive-player-container.raptive-player-rounded-borders>.adthrive-title-overlay,.raptive-player-container.raptive-player-rounded-borders>.adthrive-wrapper-bar{border-top-left-radius:inherit;border-top-right-radius:inherit}.raptive-player-container.raptive-player-rounded-borders>.adthrive-loading-spinner-container{border-radius:inherit;overflow:hidden}.raptive-player-hidden{display:none}.raptive-player-ios .raptive-player-video{aspect-ratio:16/9;height:auto}.raptive-player-container>.adthrive-wrapper-float-close,.raptive-player-position>.adthrive-wrapper-float-close{z-index:2}.raptive-player-vertical .raptive-player-ios .raptive-player-video{aspect-ratio:9/16}.raptive-player-video{width:100%;height:100%;margin-top:0!important;margin-bottom:0!important}.raptive-player-collapse{z-index:2147483644;max-height:169px}.adthrive-video-overlay{cursor:pointer;z-index:4;background-color:#00000080;justify-content:center;align-items:center;margin-top:unset;display:flex;position:absolute;top:0;bottom:0;left:0;right:0}.adthrive-player-big-play-button{color:#6b65ff;-webkit-appearance:none;-moz-appearance:none;appearance:none;font-size:48px;font:inherit;background:0 0;border:none;padding:0}@media (max-width:480px){.adthrive-player-big-play-button{font-size:44px}}@media (min-width:481px) and (max-width:768px){.adthrive-player-big-play-button{font-size:77px}}@media (min-width:769px){.adthrive-player-big-play-button{font-size:88px}}.adthrive-sticky-outstream.adthrive-sticky-outstream-mobile .adthrive-player-ad-container{margin-top:2px;margin-bottom:2px}.adthrive-player-ad-controls.adthrive-player-ad-controls-hidden{pointer-events:none;opacity:0!important;transition:opacity .5s!important}.adthrive-player-ad-controls{text-align:left;z-index:1000000;opacity:1;width:100%;height:50px;padding:0;line-height:18px;transition:opacity .5s ease-out,transform .2s ease-out;display:flex;position:absolute;bottom:0;left:0;transform:translateY(12px)}.adthrive-full-width{width:100%}.adthrive-player-ad-controls.adthrive-player-progress-bar-visible{transform:translateY(0)}.adthrive-player-progress-bar-container{cursor:pointer;z-index:1000;pointer-events:all;width:96%;height:20px;display:none;position:absolute;bottom:0;left:2%}.adthrive-collapse-mobile .adthrive-player-progress-bar-container{width:94%;left:3%}.adthrive-player-progress-bar-container.active{display:initial}.adthrive-player-progress-bar{background-color:#ccc;border-radius:36px;width:100%;height:6px;margin:auto 0;position:absolute;top:0;bottom:0;overflow:hidden}.adthrive-player-progress-bar div{transform-origin:0;content:"";background-color:#6b65ff;width:100%;height:100%;display:block}.adthrive-player-progress-bar-handle{touch-action:none;z-index:1001;background-color:#6b65ff;border-radius:50%;width:12px;height:12px;position:absolute;top:50%;left:0;transform:translate(-50%,-50%)scale(1);box-shadow:0 0 10px #0006}.adthrive-player-progress-bar-handle:before{content:"";width:20px;height:20px;display:block;transform:translate(-4px,-4px)}.adthrive-player-volume-control{opacity:0;z-index:1;transform-origin:18px;background:#00000080;border-radius:36px;justify-content:center;align-items:center;width:120px;height:36px;margin:auto;padding-left:30px;display:flex;position:absolute;transform:rotate(270deg)}.adthrive-player-volume-control.adPlaying{top:20px}.adthrive-player-volume-control input[type=range]{-webkit-appearance:none;vertical-align:bottom;cursor:pointer;width:65px;height:10px;box-shadow:none;z-index:1001;background-color:#777;border:0;border-radius:20px;outline:0;margin:0;padding:0;position:relative;overflow:hidden}.adthrive-player-volume-control input[type=range]::-webkit-slider-runnable-track{-webkit-appearance:none;color:#777;height:10px;margin-top:-1px}.adthrive-player-volume-control input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#fff;border-radius:50%;width:10px;height:10px;position:relative;top:.5px;box-shadow:-325px 0 0 320px #6b65ff,inset 0 0 0 40px #fff}.adthrive-player-volume-control input[type=range]:active::-webkit-slider-thumb{background:#fff;box-shadow:-325px 0 0 320px #6b65ff,inset 0 0 0 3px #fff}.adthrive-player-volume-control input[type=range]::-moz-range-thumb{width:10px;height:10px}.adthrive-player-volume-control input[type=range]::-moz-range-progress{background-color:#ddd;box-shadow:-325px 0 0 320px #6b65ff,inset 0 0 0 3px #6b65ff}.adthrive-player-volume-control input[type=range]::-moz-range-track{background-color:#777}.adthrive-player-volume-control input[type=range]::-ms-fill-lower{background-color:#ddd;box-shadow:-325px 0 0 320px #6b65ff,inset 0 0 0 3px #6b65ff}.adthrive-player-volume-control input[type=range]::-ms-fill-upper{background-color:#777}.adthrive-jw-player-collapse{z-index:2147483644}.adthrive-player-position.adthrive-collapse-float,.raptive-player-container.adthrive-collapse-float{position:fixed;width:300px!important}.adthrive-player-position.adthrive-collapse-float #adthrive-video-description-text,.raptive-player-container.adthrive-collapse-float #adthrive-video-description-text{display:none}.adthrive-player-position.adthrive-collapse-float.adthrive-collapse-right,.raptive-player-container.adthrive-collapse-float.adthrive-collapse-right{top:0;bottom:auto;left:auto;right:5px}.adthrive-player-position.adthrive-collapse-float.adthrive-collapse-bottom-right,.raptive-player-container.adthrive-collapse-float.adthrive-collapse-bottom-right{top:auto;bottom:100px;left:auto;right:5px}.adthrive-player-position.adthrive-collapse-float.adthrive-collapse-bottom-left,.raptive-player-container.adthrive-collapse-float.adthrive-collapse-bottom-left{top:auto;bottom:100px;left:auto}.adthrive-player-position.adthrive-collapse-float>.adthrive-player-title,.raptive-player-container.adthrive-collapse-float>.adthrive-player-title{display:none}.adthrive-player-position.adthrive-collapse-sticky,.raptive-player-container.adthrive-collapse-sticky{z-index:9999;padding-top:20px;padding-bottom:20px;position:fixed}.adthrive-player-position.adthrive-collapse-sticky>.adthrive-player-title,.raptive-player-container.adthrive-collapse-sticky>.adthrive-player-title{display:none}.adthrive-sticky-outstream.adthrive-sticky-outstream-top-center.adthrive-sticky-outstream-mobile{top:0;bottom:auto!important;transform:translate(0)!important}body.adthrive-device-phone .adthrive-sticky-outstream.adthrive-sticky-outstream-active.adthrive-sticky-outstream-top-center{bottom:auto!important}.adthrive-collapse-mobile-background{z-index:99990;position:fixed;top:0;left:0}.adthrive-collapse-mobile-background.extra-height{height:163px!important}.adthrive-top-collapse-close{z-index:1;position:fixed;top:5px;left:-30px}.adthrive-sticky-outstream-top-center>.adthrive-top-collapse-close{position:fixed;top:48px;left:10px}.adthrive-sticky-outstream-top-center.adthrive-sticky-outstream-mobile>.adthrive-top-collapse-close{top:10px}.adthrive-top-collapse-wrapper-bar>* .adthrive-top-collapse-close{position:relative;top:0;left:0}.adthrive-top-collapse-wrapper-bar>* .adthrive-wrapper-float-close{float:none;margin-bottom:0;display:none}.adthrive-top-collapse-close-spacer{line-height:1.2}.adthrive-player-position.adthrive-collapse-mobile,.raptive-player-container.adthrive-collapse-mobile{z-index:99998;width:300px;position:fixed}.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-small,.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-medium{width:178px}.raptive-player-container.adthrive-collapse-mobile.adthrive-collapse-small,.raptive-player-container.adthrive-collapse-mobile.adthrive-collapse-medium{width:178px;height:101px;left:unset;right:unset;bottom:unset;top:unset}.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-top-right,.raptive-player-container.adthrive-collapse-mobile.adthrive-collapse-top-right{top:26px;right:10px}.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-top-left,.raptive-player-container.adthrive-collapse-mobile.adthrive-collapse-top-left{top:26px;left:5px}.raptive-player-container.raptive-player-rounded-borders.adthrive-collapse-mobile.adthrive-collapse-top-left,.raptive-player-container.raptive-player-rounded-borders.adthrive-collapse-mobile.adthrive-collapse-top-right,.raptive-player-container.raptive-player-rounded-borders.adthrive-collapse-mobile.adthrive-collapse-top-center{border-radius:0}.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-bottom-left,.raptive-player-container.adthrive-collapse-mobile.adthrive-collapse-bottom-left{bottom:52px;left:5px}.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-bottom-right,.raptive-player-container.adthrive-collapse-mobile.adthrive-collapse-bottom-right{bottom:52px;right:10px}.adthrive-player-position.adthrive-collapse-mobile>.adthrive-player-title,.raptive-player-container.adthrive-collapse-mobile>.adthrive-player-title{display:none}.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-top-center>.adthrive-wrapper-bar,.raptive-player-container.adthrive-collapse-mobile.adthrive-collapse-top-center>.adthrive-wrapper-bar{display:none!important}.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-top-center>.adthrive-top-collapse-wrapper-bar,.raptive-player-container.adthrive-collapse-mobile.adthrive-collapse-top-center>.adthrive-top-collapse-wrapper-bar{display:block}.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-top-center.adthrive-player-without-wrapper-text,.raptive-player-container.adthrive-collapse-mobile.adthrive-collapse-top-center.adthrive-player-without-wrapper-text{top:0;bottom:auto;left:50%;right:auto;transform:translate(-50%);padding-top:0!important;padding-bottom:1px!important}.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-top-center.adthrive-player-with-wrapper-text,.raptive-player-container.adthrive-collapse-mobile.adthrive-collapse-top-center.adthrive-player-with-wrapper-text{top:0;bottom:auto;left:auto;right:5px;padding-top:0!important;padding-bottom:1px!important}.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-top-center,.raptive-player-container.adthrive-collapse-mobile.adthrive-collapse-top-center{transition:none!important}.adthrive-top-collapse-wrapper-bar{color:#fff;z-index:99998;width:-webkit-calc(100% - 178px - 10px);width:-moz-calc(100% - 178px - 10px);width:calc(100% - 188px);padding-top:5px;padding-bottom:5px;display:none;position:fixed;top:0;left:5px}.adthrive-top-collapse-wrapper-video-title{color:#fff;text-overflow:ellipsis;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;font-size:13px;font-weight:700;text-decoration:none;display:-webkit-box;overflow:hidden}.adthrive-top-collapse-wrapper-bar a .adthrive-learn-more-link{font-size:13px;display:inline-block}.adthrive-top-collapse-wrapper-bar a .raptive-player-learn-more-link{display:none}.adthrive-top-collapse-wrapper-bar a .raptive-player-learn-more-link.raptive-player-learn-more-link-active{display:inline-block}h3.adthrive-player-title{margin:10px 0}.adthrive-wrapper-close{color:#fff;justify-content:center;align-items:center;min-width:36px;height:36px;margin-left:auto;margin-right:0;font-size:36px}.adthrive-wrapper-float-close{float:right;cursor:pointer;margin-bottom:5px;display:none}.adthrive-top-left-outer{width:78px;height:78px;position:absolute;top:-55px;left:-30px}.adthrive-top-right-outer{width:78px;height:78px;position:absolute;top:-55px;right:-30px}.adthrive-top-left-outer>svg{position:absolute;bottom:30px;left:30px}.adthrive-top-right-outer>svg{position:absolute;bottom:30px;right:30px}.adthrive-top-left-inner{position:absolute;top:0}.adthrive-top-left-inner.adthrive-wrapper-float-close{color:#fff;pointer-events:none;z-index:99;background:#00000080;width:100%;padding:2px}.adthrive-new-outstream-player .adthrive-top-left-inner.adthrive-wrapper-float-close{z-index:10000}.adthrive-new-outstream-player .adthrive-ad{margin-top:0;margin-bottom:0}.adthrive-top-left-inner-wrapper.adthrive-wrapper-float-close{color:#fff;pointer-events:none;z-index:10000;background:#00000080;width:100%;padding:2px;position:absolute;top:36px}.adthrive-sticky-outstream>.adthrive-wrapper-float-close.adthrive-wrapper-close-outside-left{left:2px}.adthrive-sticky-outstream>.adthrive-wrapper-float-close.adthrive-wrapper-close-bkgd-50{color:#fff;pointer-events:none;background:#00000080;padding:2px 0;top:0;left:0}.adthrive-new-outstream-player{margin-bottom:20px;padding:0!important}.adthrive-new-outstream-player>.adthrive-wrapper-float-close.adthrive-wrapper-close-bkgd-50{top:0}.adthrive-close-in-container{line-height:0;position:relative}#adthrive-sticky-outstream-close.adthrive-top-collapse-close{position:inherit}.adthrive-sticky-outstream-idle>.adthrive-close-in-container{pointer-events:none}.adthrive-sticky-outstream-active>.adthrive-close-in-container{pointer-events:all}.adthrive-wrapper-close-bkgd-50>.adthrive-close-in-container{pointer-events:all;padding:2px 0 0 4px}.adthrive-sticky-outstream.adthrive-sticky-outstream-mobile,.raptive-player-container.raptive-player-collapse.raptive-player-sticky-bottom-right,.raptive-player-container.raptive-player-collapse.raptive-player-sticky-bottom-left{transition-property:transform;transition-duration:.25s;transition-delay:0s;bottom:52px}.adthrive-sticky-outstream.adthrive-sticky-outstream-mobile-right,.raptive-player-container.raptive-player-collapse.raptive-player-sticky-bottom-right{right:10px}.adthrive-sticky-outstream.adthrive-sticky-outstream-mobile-left,.raptive-player-container.raptive-player-collapse.raptive-player-sticky-bottom-left{left:10px;transform:none!important}.adthrive-sticky-outstream.adthrive-sticky-outstream-active.adthrive-sticky-outstream-top-center{background:#000;top:0;bottom:auto;left:0;right:0;transform:none}.adthrive-sticky-outstream.adthrive-sticky-outstream-desktop{bottom:100px;right:5px}.adthrive-sticky-outstream.adthrive-sticky-outstream-top-center.adthrive-sticky-outstream-desktop,.adthrive-sticky-outstream.adthrive-sticky-outstream-top-center.adthrive-sticky-outstream-mobile{bottom:auto}.adthrive-sticky-outstream.adthrive-sticky-outstream-top-center.adthrive-sticky-outstream-mobile .adthrive-stickyoutstream-container{background-color:#000;margin:0 auto}.adthrive-sticky-outstream.adthrive-sticky-outstream-active{display:block}.adthrive-video-stickyoutstream{z-index:1;margin-top:0;position:relative}.adthrive-video-stickyoutstream div:first-of-type{margin:-1px}.adthrive-video-stickyoutstream-new-player div:first-of-type{margin:0}.adthrive-video-stickyoutstream-new-player>div:first-child{position:absolute}.adthrive-video-close{cursor:pointer;pointer-events:all;box-shadow:none;color:inherit;-webkit-appearance:none;-moz-appearance:none;appearance:none;font:inherit;min-width:0;text-align:inherit;text-transform:none;border:none;border-radius:0;margin:0;padding:0;line-height:0;background:0 0!important}.adthrive-video-close>svg{display:block}.adthrive-video-close-float-left{float:left}.adthrive-video-close-float-right{float:right}.adthrive-footer-message span,.adthrive-privacy-preferences a,.adthrive-ccpa-link,.adthrive-ccpa-link span{color:#a9a9a9;font-family:Arial,Helvetica Neue,Helvetica,sans-serif;font-size:13px}.adthrive-ccpa-link a{cursor:pointer;text-decoration:underline}.adthrive-device-phone .adthrive-footer-message{margin-bottom:60px}.adthrive-footer-message{margin-bottom:100px}.adthrive-footer-message>span{text-transform:uppercase;border-top:1px solid #b2b2b2;padding-top:5px}.adthrive-parallax-slot{height:400px;padding-top:5px;overflow:hidden}.adthrive-parallax-ad{transition:transform .3s ease-out;transform:translateY(0)}.adthrive-sticky-container.adthrive-parallax-slot{flex-direction:row;justify-content:center;padding-top:10px}#_inv_voicefive___{display:none}.adthrive-ad-debug{background-color:#ff000080!important;outline:1px solid red!important}.adthrive-ad-debug:hover{cursor:pointer;background-color:#f00c!important;outline:1px solid red!important}.adthrive-player-ad-controls-volume-container:hover .adthrive-player-volume-control,.adthrive-player-ad-controls-volume-container:focus-within .adthrive-player-volume-control,.adthrive-player-volume-control:focus{opacity:1}@media print{div[data-gg-moat],body[data-gg-moat],iframe[data-gg-moat-ifr],div[class*=kargo-ad],#ogy-ad-slot,.adthrive-sticky-outstream,.adthrive-ad,.adthrive-comscore,.adthrive-native-recipe,.raptive-sales{visibility:hidden;width:0;height:0;display:none!important}}.raptive-player-captions{text-align:center;color:#fff;--raptive-player-captions-font-opacity:100%;--raptive-player-captions-background-opacity:0%;--raptive-player-captions-window-opacity:0%;border-radius:5px;width:90%;margin:0 auto;line-height:1.5;transition:transform .5s;display:none;position:absolute;bottom:60px;left:0;right:0;font-size:16px!important}.raptive-player-captions span{white-space:pre-wrap;background:#00000080;border-radius:5px;padding:2px 4px}.raptive-player-captions-button{border-style:unset;color:#fff;cursor:pointer;background-color:#0000;border-radius:9999px;width:36px;height:36px;margin:-5px 4px -5px auto;padding:0;font-size:.75em;font-weight:700;display:none}.raptive-player-captions-button:hover{background:#0000004d}.adthrive-full-width .raptive-player-captions-button.raptive-player-captions-button--visible{display:block}.adthrive-player-ad-controls-hidden+.raptive-player-captions{transform:translateY(40px)}.raptive-player-container-mobile .raptive-player-captions,.raptive-player-collapse .raptive-player-captions{font-size:10px!important}.raptive-player-container-mobile.raptive-player-collapse .raptive-player-captions{font-size:6px!important}.raptive-player-container-mobile.raptive-player-collapse .raptive-player-captions-button{display:none}.raptive-player-settings{color:#fff;z-index:999999999;background:#000;border-radius:5px;width:288px;height:192px;font-size:14px;display:none;position:absolute;bottom:60px;right:2%;text-transform:none!important;font-family:Arial,sans-serif!important;font-weight:400!important}.raptive-player-settings--active{display:block}.raptive-player-settings-header{box-sizing:content-box;background:#404040;border-radius:5px 5px 0 0;align-items:center;gap:4px;height:40px;padding:4px;display:flex}.raptive-player-settings-header>button{color:#fff;cursor:pointer;background:0 0;border:none;border-radius:5px;justify-content:center;align-items:center;width:40px;height:40px;padding:0;font-weight:700;position:relative}.raptive-player-settings-header>button.active{border-radius:5px 5px 0 0}.raptive-player-settings-header>button.active:after{content:"";background-color:#fff;width:100%;height:4px;position:absolute;bottom:-4px;left:0}.raptive-player-settings-header>button:hover{background:#000}.raptive-player-settings-header-title{margin-left:8px;font-weight:700}.raptive-player-settings--nested .raptive-player-settings-header-title{margin-left:0}.raptive-player-settings-body{scrollbar-color:#fff #646464;height:144px;overflow:scroll}.raptive-player-settings-body>div{display:none}.raptive-player-settings-body>div.raptive-player-settings-page--active{display:block}.raptive-player-settings-body::-webkit-scrollbar-thumb{background:#fff!important}.raptive-player-settings-close{margin:0 0 0 auto;display:flex}.raptive-player-settings-back{display:none}.raptive-player-settings-back>svg{margin-right:2px}.raptive-player-settings--nested .raptive-player-settings-back{display:flex}.raptive-player-settings-page{padding:4px}.raptive-player-settings-page>button:hover{background:#404040}.raptive-player-settings-page-item{cursor:pointer;background:unset;text-align:left;border:none;border-radius:5px;align-items:center;width:100%;margin:4px 0;padding:4px 8px;display:flex;color:#fff!important;letter-spacing:normal!important;text-transform:none!important;font-family:Arial,sans-serif!important;font-weight:400!important;line-height:1!important}.raptive-player-settings-page-item>span:nth-child(2){text-transform:capitalize;margin-left:auto}.raptive-player-settings-page-item>span:nth-child(3){display:flex}.raptive-player-settings-page-item--selected{background:#6b65ff!important}.raptive-player-settings-page-item--unavailable{display:none}.raptive-player-container-mobile .raptive-player-settings,.raptive-player-collapse .raptive-player-settings{border-radius:0;width:100%;height:100%;position:absolute;top:0;bottom:0;left:0;right:0}.raptive-player-container-mobile .raptive-player-settings-body,.raptive-player-collapse .raptive-player-settings-body{height:auto;position:absolute;top:48px;bottom:0;left:0;right:0}.raptive-player-container-mobile .raptive-player-settings-header,.raptive-player-collapse .raptive-player-settings-header{border-radius:0}.raptive-player-container-mobile.raptive-player-collapse .raptive-player-settings{display:none}.raptive-player-container.raptive-player-fullscreen{background-color:#000;width:100%;height:100%;position:relative}.raptive-player-container:-webkit-full-screen{background-color:#000;width:100%;height:100%;position:relative}.raptive-player-container:fullscreen{background-color:#000;width:100%;height:100%;position:relative}.raptive-player-container.raptive-player-fullscreen .raptive-player-video{object-fit:contain;width:100%;height:100%}.raptive-player-container:-webkit-full-screen .raptive-player-video{object-fit:contain;width:100%;height:100%}.raptive-player-container:fullscreen .raptive-player-video{object-fit:contain;width:100%;height:100%}.raptive-player-container.raptive-player-fullscreen .adthrive-player-ad-container{width:100%;height:100%}.raptive-player-container:-webkit-full-screen .adthrive-player-ad-container{width:100%;height:100%}.raptive-player-container:fullscreen .adthrive-player-ad-container{width:100%;height:100%}.adthrive-player-icon-fullscreen .raptive-player-primary-icon,.raptive-player-fullscreen .adthrive-player-icon-fullscreen .raptive-player-secondary-icon{display:block}.adthrive-player-icon-fullscreen .raptive-player-secondary-icon,.raptive-player-fullscreen .adthrive-player-icon-fullscreen .raptive-player-primary-icon,.raptive-player-ios .adthrive-player-icon-fullscreen{display:none}.raptive-player-ios .adthrive-full-width .adthrive-player-icon-fullscreen{display:flex}.adthrive-player-ad-controls>.adthrive-player-icon-fullscreen,.adthrive-player-ad-controls.adthrive-full-width .raptive-player-captions-button.raptive-player-captions-button--visible+.adthrive-player-icon-fullscreen{margin:-5px 4px}.raptive-player-container-mobile .adthrive-player-ad-controls.adthrive-full-width>.adthrive-player-icon-fullscreen,.adthrive-player-ad-controls.adthrive-full-width .raptive-player-captions-button+.adthrive-player-icon-fullscreen{margin:-5px 4px -5px auto}.adthrive-preference-footer-link,.raptive-content-terms-footer-link{cursor:pointer;font-family:Arial,Helvetica Neue,Helvetica,sans-serif;font-size:13px;text-decoration:underline}.raptive-content-terms-modal{background:0 0;border:none;max-width:none;max-height:none;padding:0;overflow:visible}.raptive-content-terms-modal[open]{justify-content:center;align-items:center;margin:auto;display:flex;position:fixed;top:0;bottom:0;left:0;right:0}.raptive-content-terms-modal:focus{outline:none}.raptive-content-terms-modal::backdrop{background-color:#00000080}.raptive-content-terms-modal-content{background-color:#fff;border-radius:8px;flex-direction:column;width:50vw;min-width:300px;max-width:800px;max-height:85vh;display:flex}.raptive-content-terms-modal-header{border-bottom:1px solid #e0e0e0;flex-shrink:0;justify-content:space-between;align-items:center;padding:16px 24px;display:flex}.raptive-content-terms-modal-title{color:#333;margin:0;font-size:20px;font-weight:600}.raptive-content-terms-modal-close{-webkit-appearance:none;-moz-appearance:none;appearance:none;color:#757575;cursor:pointer;background:0 0;border:none;padding:0;font-family:inherit;font-size:24px;line-height:1}.raptive-content-terms-modal-close:focus{outline-offset:2px;outline:2px solid #000}.raptive-content-terms-modal-close:hover{color:#000}.raptive-content-terms-modal-body{color:#555;padding:24px;overflow-y:auto}.raptive-content-terms-modal-body p{margin-top:0;margin-bottom:1em}.raptive-content-terms-modal-body p:last-child{margin-bottom:0}.raptive-content-terms-modal-body a{color:#007bff;text-decoration:none}.raptive-content-terms-modal-body a:hover{text-decoration:underline}@media (max-width:768px){.raptive-content-terms-modal-content{width:90vw}}.raptive-player--native.adthrive-stickyoutstream-container{box-sizing:content-box;background:#fff;border:1px solid #000}.raptive-player--native #adthrive-stickyoutstream-ad-container{position:absolute;top:41px}html:has(.celtra-expanded-ad)>ins[id^=gpt_unit_][id*=AdThrive_Interstitial]{clip-path:inset(100%)!important}.adthrive-ccpa-modal{z-index:2147483647;background-color:#0006;width:100%;height:100%;display:none;position:fixed;top:0;left:0;overflow:auto}.adthrive-ccpa-modal-content{background-color:#fefefe;border:1px solid #888;border-radius:10px;width:80%;max-width:592px;margin:0 auto;padding:20px 24px 24px;font-family:Verdana,Geneva,Tahoma,sans-serif;position:relative;top:50%;transform:translateY(-50%);box-shadow:0 0 10px #00000080}#adthrive-ccpa-modal-close-btn-container,#adthrive-ccpa-modal-cancel-btn,#adthrive-ccpa-modal-continue-btn{font:inherit;background:0 0;border:0;padding:0}#adthrive-ccpa-modal-title{color:#000000de;font-size:20px;line-height:26px}.adthrive-ccpa-modal-btn:hover,.adthrive-ccpa-modal-btn:focus{color:#000;cursor:pointer;text-decoration:none}#adthrive-ccpa-modal-language{color:#000000de;margin:16px 0 32px;font-size:14px;line-height:20px;display:block}#adthrive-ccpa-modal-language:focus{outline-offset:2px;outline:2px solid #000}.adthrive-ccpa-privacy-policy-url{text-decoration:underline}#adthrive-ccpa-modal-close-btn-container:hover,#adthrive-ccpa-modal-close-btn-container:focus,#adthrive-ccpa-modal-cancel-btn:hover,#adthrive-ccpa-modal-cancel-btn:focus{color:#000c;cursor:pointer;text-decoration:none}#adthrive-ccpa-modal-continue-btn:hover,#adthrive-ccpa-modal-continue-btn:focus{color:#fffc;cursor:pointer;text-decoration:none}#adthrive-ccpa-modal-close-btn-container{color:#000;font-size:20px;font-weight:700;line-height:20px;position:absolute;top:8px;right:8px}.adthrive-ccpa-lower-buttons-container{color:#000;font-size:18px}#adthrive-ccpa-modal-cancel-btn{text-align:left;width:calc(100% - 150px);display:inline-block}#adthrive-ccpa-modal-continue-btn{color:#fff;text-align:center;background-color:#010044;border-radius:10px;width:150px;height:44px;line-height:44px;display:inline-block}@media screen and (max-width:896px){.adthrive-ccpa-modal-content{width:calc(100% - 80px);margin:0 auto;position:relative}#adthrive-ccpa-modal-title{font-size:16px;line-height:24px}#adthrive-ccpa-modal-language{text-align:left;font-size:12px;line-height:16px}.adthrive-ccpa-lower-buttons-container{font-size:14px}#adthrive-ccpa-modal-close-btn-container{font-size:14px;line-height:14px}}@media screen and (max-width:350px){#adthrive-ccpa-modal-title{font-size:14px;line-height:24px}#adthrive-ccpa-modal-language{text-align:left;font-size:10px;line-height:14px}.adthrive-ccpa-lower-buttons-container{text-align:center;width:100%;font-size:12px;display:block}#adthrive-ccpa-modal-close-btn-container{font-size:12px;line-height:12px;display:block}#adthrive-ccpa-modal-continue-btn{text-align:center;width:100%;display:block}#adthrive-ccpa-modal-cancel-btn{text-align:center;width:100%;margin-bottom:10px;display:block}}.raptive-gated-print-modal-container{--raptive-gated-print-primary-color:#6e55f2;--raptive-gated-print-primary-hover-color:#5a45d6;--raptive-gated-print-disabled-color:#c5c5c5;--raptive-gated-print-border-color:#c5c5c5;--raptive-gated-print-placeholder-color:#c5c5c5;--raptive-gated-print-text-color:#333;--raptive-gated-print-title-color:#000;--raptive-gated-print-background-color:#fff;--raptive-gated-print-overlay-color:#000000b3;--raptive-gated-print-checkbox-check-color:#fff;background-color:var(--raptive-gated-print-overlay-color);z-index:999;overscroll-behavior:contain;width:100vw;height:100vh;display:none;position:fixed;top:0;left:0;overflow:hidden}.raptive-gated-print-modal-container .raptive-gated-print-modal-content{background-color:var(--raptive-gated-print-background-color);z-index:1000;border-radius:12px;flex-direction:column;align-items:start;gap:24px;width:550px;max-width:550px;padding:24px;display:flex;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);box-shadow:0 4px 12px #00000026}.raptive-gated-print-modal-container .raptive-gated-print-modal-content:not(:-webkit-any(:lang(ae),:lang(ar),:lang(arc),:lang(bcc),:lang(bqi),:lang(ckb),:lang(dv),:lang(fa),:lang(glk),:lang(he),:lang(ku),:lang(mzn),:lang(nqo),:lang(pnb),:lang(ps),:lang(sd),:lang(ug),:lang(ur),:lang(yi))){text-align:left}.raptive-gated-print-modal-container .raptive-gated-print-modal-content:not(:is(:lang(ae),:lang(ar),:lang(arc),:lang(bcc),:lang(bqi),:lang(ckb),:lang(dv),:lang(fa),:lang(glk),:lang(he),:lang(ku),:lang(mzn),:lang(nqo),:lang(pnb),:lang(ps),:lang(sd),:lang(ug),:lang(ur),:lang(yi))){text-align:left}.raptive-gated-print-modal-container .raptive-gated-print-modal-content:-webkit-any(:lang(ae),:lang(ar),:lang(arc),:lang(bcc),:lang(bqi),:lang(ckb),:lang(dv),:lang(fa),:lang(glk),:lang(he),:lang(ku),:lang(mzn),:lang(nqo),:lang(pnb),:lang(ps),:lang(sd),:lang(ug),:lang(ur),:lang(yi)){text-align:right}.raptive-gated-print-modal-container .raptive-gated-print-modal-content:is(:lang(ae),:lang(ar),:lang(arc),:lang(bcc),:lang(bqi),:lang(ckb),:lang(dv),:lang(fa),:lang(glk),:lang(he),:lang(ku),:lang(mzn),:lang(nqo),:lang(pnb),:lang(ps),:lang(sd),:lang(ug),:lang(ur),:lang(yi)){text-align:right}.raptive-gated-print-modal-close{color:var(--raptive-gated-print-text-color);cursor:pointer;z-index:1001;text-align:center;background:0 0;border:none;border-radius:50%;justify-content:center;align-items:center;width:32px;height:32px;padding:0;font-size:24px;font-weight:700;transition:background-color .2s;display:flex;position:absolute;top:12px;right:12px}.raptive-gated-print-modal-close:hover,.raptive-gated-print-modal-close:focus{color:var(--raptive-gated-print-text-color);background-color:#0000001a;outline:none;text-decoration:none}.raptive-gated-print-modal-container #raptive-gated-print-modal-form{flex-direction:column;gap:16px;width:100%;display:flex}.raptive-gated-print-modal-container .raptive-gated-print-modal-title{color:var(--raptive-gated-print-title-color);font-size:1.5rem;font-weight:700}.raptive-gated-print-modal-container .raptive-gated-print-modal-body{color:var(--raptive-gated-print-text-color);font-size:1.1rem}.raptive-gated-print-modal-container label.raptive-gated-print-modal-body{color:var(--raptive-gated-print-text-color);cursor:pointer;font-size:1.1rem}.raptive-gated-print-modal-container .raptive-gated-print-modal-input-label{clip:rect(0, 0, 0, 0);white-space:nowrap;border:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.raptive-gated-print-modal-container .raptive-gated-print-modal-input{box-sizing:border-box;border:1px solid var(--raptive-gated-print-border-color);border-radius:5px;outline:none;width:100%;padding:12px;font-size:1.1rem}.raptive-gated-print-modal-container .raptive-gated-print-modal-input::placeholder{color:var(--raptive-gated-print-placeholder-color)}.raptive-gated-print-modal-container .raptive-gated-print-modal-input:focus{border:1px solid var(--raptive-gated-print-primary-color);box-shadow:0 0 2px var(--raptive-gated-print-primary-hover-color)}.raptive-gated-print-modal-container .raptive-gated-print-modal-actions{justify-content:space-between;align-items:center;width:100%;margin-top:8px;display:flex}.raptive-gated-print-modal-container .raptive-gated-print-modal-checkbox-container{align-items:center;display:flex}.raptive-gated-print-modal-container .raptive-gated-print-modal-checkbox{-webkit-appearance:none;-moz-appearance:none;appearance:none;border:2px solid var(--raptive-gated-print-border-color);cursor:pointer;background-color:var(--raptive-gated-print-background-color);border-radius:4px;outline:none;width:20px;height:20px;margin-right:8px;position:relative}.raptive-gated-print-modal-container .raptive-gated-print-modal-checkbox:checked{background-color:var(--raptive-gated-print-primary-color);border-color:var(--raptive-gated-print-primary-color)}.raptive-gated-print-modal-container .raptive-gated-print-modal-checkbox:checked:after{content:"✓";color:var(--raptive-gated-print-checkbox-check-color);font-size:14px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}.raptive-gated-print-modal-container .raptive-gated-print-modal-button{width:auto;color:var(--raptive-gated-print-checkbox-check-color);cursor:pointer;background-color:var(--raptive-gated-print-primary-color);border:none;border-radius:12px;padding:12px 24px;font-size:1.1rem;font-weight:700;transition:background-color .3s}.raptive-gated-print-modal-container .raptive-gated-print-modal-button:hover{background-color:var(--raptive-gated-print-primary-hover-color)}.raptive-gated-print-modal-container .raptive-gated-print-modal-button:disabled{background-color:var(--raptive-gated-print-disabled-color);cursor:not-allowed}@media screen and (max-width:896px){.raptive-gated-print-modal-container .raptive-gated-print-modal-content{width:90%;padding:16px}}@media screen and (max-width:350px){.raptive-gated-print-modal-container .raptive-gated-print-modal-content{width:95%;padding:12px}}@media print{.raptive-gated-print-modal-container .raptive-gated-print-modal-content{display:none!important}}.raptive-player-triplelift-branded-video,.raptive-player-triplelift-branded-video-mobile{cursor:pointer;background:#fff;border:1px solid #000;grid-template-areas:". . .aside"".main.aside"".footer.aside";display:grid}.raptive-player-triplelift-branded-video{grid-template-rows:16px auto minmax(0,1fr);grid-template-columns:16px 7fr 16px 3fr}.raptive-player-triplelift-branded-video-mobile{grid-template-rows:8px auto minmax(0,1fr);grid-template-columns:8px 7fr 8px 3fr}.raptive-player-triplelift-branded-video .raptive-player-container,.raptive-player-triplelift-branded-video-mobile .raptive-player-container{aspect-ratio:16/9;grid-area:main;position:relative}.raptive-player-triplelift-branded-video-overlay{z-index:1;grid-area:1/1/-1/-1;display:none}.raptive-player-triplelift-branded-video-aside{grid-area:aside;display:none}.raptive-player-triplelift-branded-video-footer{grid-area:footer;width:100%;display:none}.raptive-player-triplelift-branded-video .raptive-player-triplelift-branded-video-aside,.raptive-player-triplelift-branded-video .raptive-player-triplelift-branded-video-footer,.raptive-player-triplelift-branded-video .raptive-player-triplelift-branded-video-overlay,.raptive-player-triplelift-branded-video-mobile .raptive-player-triplelift-branded-video-aside,.raptive-player-triplelift-branded-video-mobile .raptive-player-triplelift-branded-video-footer,.raptive-player-triplelift-branded-video-mobile .raptive-player-triplelift-branded-video-overlay{display:block}.adthrive-us-cmp-modal{z-index:2147483647;background-color:#0006;width:100%;height:100%;display:none;position:fixed;top:0;left:0;overflow:auto}.adthrive-us-cmp-modal.show{display:block}.adthrive-us-cmp-modal-content{background:#fff;border-radius:28px;flex-direction:column;width:600px;max-width:95%;padding:32px;font-family:Roboto,Arial,sans-serif;animation:.3s cubic-bezier(.4,0,.2,1) scaleFadeIn;display:flex;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);box-shadow:0 12px 36px #00000040}.adthrive-us-cmp-modal-close{cursor:pointer;color:#666;background:0 0;border:none;font-size:28px;position:absolute;top:14px;right:20px}.adthrive-us-cmp-modal-close:hover,.adthrive-us-cmp-modal-close:focus{color:#333;cursor:pointer;text-decoration:none}.adthrive-us-cmp-modal-header{align-items:center;gap:12px;margin-bottom:20px;display:flex}.adthrive-us-cmp-modal-icon{font-size:28px}.adthrive-us-cmp-modal-header h2{color:#212121;margin:0;font-size:22px;font-weight:600}.adthrive-us-cmp-modal-body{position:relative}.adthrive-us-cmp-modal-body p{color:#333;margin:0 0 16px;font-size:15px;line-height:1.7}.adthrive-us-cmp-modal-footer{text-align:center;border-top:1px solid #eee;margin-top:20px;padding-top:20px}.adthrive-us-cmp-button-group{flex-wrap:wrap;justify-content:flex-end;gap:12px;width:100%;display:flex}.adthrive-us-cmp-modal-accept,.adthrive-us-cmp-modal-decline{cursor:pointer;border:none;border-radius:40px;padding:14px 30px;font-size:16px;font-weight:600;transition:background .2s,box-shadow .2s,transform .2s}.adthrive-us-cmp-modal-accept{color:#fff;background:#4caf50;min-width:160px;box-shadow:0 4px 12px #00000026}.adthrive-us-cmp-modal-accept:hover{background:#43a047;transform:translateY(-1px);box-shadow:0 6px 16px #0003}.adthrive-us-cmp-modal-accept.adthrive-us-cmp-modal-accept-strict-mode{min-width:200px;background:#4caf50!important}.adthrive-us-cmp-modal-decline{color:#666;background:0 0;border:2px solid #ccc;min-width:120px}.adthrive-us-cmp-modal-decline:hover{background:#f9f9f9}@media (max-width:600px){.adthrive-us-cmp-modal-content{border-radius:20px;width:95%;padding:24px}.adthrive-us-cmp-modal-accept,.adthrive-us-cmp-modal-decline{width:100%}.adthrive-us-cmp-button-group{flex-direction:column}.adthrive-us-cmp-modal-accept.adthrive-us-cmp-modal-accept-strict-mode{width:100%;min-width:unset}}.adthrive-us-cmp-footer{margin-bottom:30px}.adthrive-us-cmp-footer-text{color:#a9a9a9;font-size:14px}.adthrive-us-cmp-footer-text p{color:#a9a9a9;text-decoration:underline}.adthrive-us-cmp-footer-link{cursor:pointer;font-size:14px;text-decoration:underline}</style><style type="text/css">
+    .rp-sticky-sidebar, .adthrive-ad.adthrive-sticky-sidebar {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 1800px !important;
+      padding-bottom: 0px;
+      margin: 10px 0 10px 0;
+    }
+    .rp-sticky-sidebar > div, .adthrive-ad.adthrive-sticky-sidebar > div {
+      flex-basis: unset;
+      position: sticky !important;
+      top: 5px;
+    }
+  </style><link rel="stylesheet" type="text/css" href="https://ads.adthrive.com/sites/6580aa6286340b3292ce8665/ads.min.css"><style type="text/css">
+  .adthrive-recipe.adthrive-sticky {
+    position: -webkit-sticky;
+    position: sticky !important;
+    top: 42px !important;
+    margin-top: 42px !important;
+  }
+  .adthrive-recipe-sticky-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height:400px !important;
+    margin: 10px 0 10px 0;
+    background-color: #FAFAFA;
+    padding-bottom:0px;
+  }
+  </style><style type="text/css">
+      .adthrive-recipe-sticky-container > div {
+        flex-basis: unset;
+        position: sticky !important;
+        display: block;
+        flex-direction: column;
+        top: 5px;
+      }
+    </style></head>
+ 
+<!-- Google Tag Manager (noscript) -->
+<div id="AdThrive_Interstitial_1_desktop" class="adthrive-ad  adthrive-interstitial adthrive-interstitial-1"></div><body class="wp-singular post-template-default single single-post postid-206252 single-format-standard wp-theme-kdn17 aa-prefix-kdnug- adthrive-device-desktop">
+<!-- End Google Tag Manager (noscript) -->	
+
+
+<div class="main_wrapper"><!-- publ: 20-Jul, 2026  -->
+    <div id="wrapper">
+        <div class="site-header" id="header">
+            <div class="site-header__logo">
+                <div class="logo">
+                    <a href="/" aria-label="KDnuggets home" data-google-interstitial="false">
+                        <img data-perfmatters-preload="" src="https://www.kdnuggets.com/wp-content/themes/kdn17/images/logo.svg" alt="KDnuggets logo" width="174" height="52" fetchpriority="high">
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-header__mobile" id="pull">
+                <img data-perfmatters-preload="" class="menu" src="https://www.kdnuggets.com/wp-content/themes/kdn17/images/menu.svg" width="28" height="28" fetchpriority="high">
+                <img data-perfmatters-preload="" class="search-icon" src="https://www.kdnuggets.com/wp-content/themes/kdn17/images/search.svg" width="28" height="28" fetchpriority="high">
+            </div>
+
+            <div class="site-header__menu" id="pull-menu">
+                <div class="navigation"><ul id="menu-header" class="menu"><li id="menu-item-138099" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-138099"><a href="/news/index.html" data-google-interstitial="false">Blog</a>
+<ul class="sub-menu">
+	<li id="menu-item-138102" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-138102"><a href="/news/top-stories.html" data-google-interstitial="false">Top Posts</a></li>
+	<li id="menu-item-140650" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-140650"><a href="https://www.kdnuggets.com/about/index.html" data-google-interstitial="false">About</a></li>
+</ul>
+</li>
+<li id="menu-item-138105" class="sub-menu--2-col menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-138105"><a href="https://www.kdnuggets.com/topic" data-google-interstitial="false">Topics</a>
+<ul class="sub-menu">
+	<li id="menu-item-138109" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-138109"><a href="https://www.kdnuggets.com/tag/artificial-intelligence" data-google-interstitial="false">AI</a></li>
+	<li id="menu-item-138106" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-138106"><a href="https://www.kdnuggets.com/tag/career-advice" data-google-interstitial="false">Career Advice</a></li>
+	<li id="menu-item-138113" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-138113"><a href="https://www.kdnuggets.com/tag/computer-vision" data-google-interstitial="false">Computer Vision</a></li>
+	<li id="menu-item-141991" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141991"><a href="https://www.kdnuggets.com/tags/data-engineering" data-google-interstitial="false">Data Engineering</a></li>
+	<li id="menu-item-138107" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-138107"><a href="https://www.kdnuggets.com/tag/data-science" data-google-interstitial="false">Data Science</a></li>
+	<li id="menu-item-160818" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-160818"><a href="https://www.kdnuggets.com/tag/language-models" data-google-interstitial="false">Language Models</a></li>
+	<li id="menu-item-138108" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-138108"><a href="https://www.kdnuggets.com/tag/machine-learning" data-google-interstitial="false">Machine Learning</a></li>
+	<li id="menu-item-141990" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141990"><a href="https://www.kdnuggets.com/tag/mlops" data-google-interstitial="false">MLOps</a></li>
+	<li id="menu-item-138112" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-138112"><a href="https://www.kdnuggets.com/tag/natural-language-processing" data-google-interstitial="false">NLP</a></li>
+	<li id="menu-item-138111" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-138111"><a href="https://www.kdnuggets.com/tag/programming" data-google-interstitial="false">Programming</a></li>
+	<li id="menu-item-138110" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-138110"><a href="https://www.kdnuggets.com/tag/python" data-google-interstitial="false">Python</a></li>
+	<li id="menu-item-138115" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-138115"><a href="https://www.kdnuggets.com/tag/sql" data-google-interstitial="false">SQL</a></li>
+</ul>
+</li>
+<li id="menu-item-138117" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-138117"><a href="https://www.kdnuggets.com/datasets/index.html" data-google-interstitial="false">Datasets</a></li>
+<li id="menu-item-138123" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-138123"><a href="/meetings/index.html" data-google-interstitial="false">Events</a></li>
+<li id="menu-item-138122" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-138122"><a href="https://www.kdnuggets.com/" data-google-interstitial="false">Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-152029" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-152029"><a href="https://www.kdnuggets.com/cheat-sheets/index.html" data-google-interstitial="false">Cheat Sheets</a></li>
+	<li id="menu-item-164293" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-164293"><a href="https://www.kdnuggets.com/kdnuggets-recommends" data-google-interstitial="false">Recommendations</a></li>
+	<li id="menu-item-164292" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-164292"><a href="https://www.kdnuggets.com/tech-briefs/index.html" data-google-interstitial="false">Tech Briefs</a></li>
+</ul>
+</li>
+<li id="menu-item-191989" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-191989"><a href="https://www.kdnuggets.com/media-kit" data-google-interstitial="false">Advertise</a></li>
+</ul></div>            </div>
+
+            <ul class="site-header__social">
+                <li class="site-header__social-item">
+                    <a href="https://www.facebook.com/kdnuggets" target="_blank" onclick="ga('send','pageview','/x/top/fb');">
+                        <img src="https://www.kdnuggets.com/wp-content/themes/kdn17/images/facebook.svg" alt="Facebook" width="20" height="20" class="perfmatters-lazy entered error" data-src="https://www.kdnuggets.com/wp-content/themes/kdn17/images/facebook.svg" data-ll-status="error">
+                    </a>
+                </li>
+
+                <li class="site-header__social-item">
+                    <a href="https://twitter.com/kdnuggets" target="_blank" onclick="ga('send','pageview','/x/top/twt');">
+                        <img src="https://www.kdnuggets.com/wp-content/themes/kdn17/images/twitter.svg" alt="Twitter" width="20" height="20" class="perfmatters-lazy entered error" data-src="https://www.kdnuggets.com/wp-content/themes/kdn17/images/twitter.svg" data-ll-status="error">
+                    </a>
+                </li>
+
+                <li class="site-header__social-item">
+                    <a href="https://www.linkedin.com/groups/54257/" target="_blank" onclick="ga('send','pageview','/x/top/in');">
+                        <img src="https://www.kdnuggets.com/wp-content/themes/kdn17/images/linkedin.svg" alt="LinkedIn" width="20" height="20" class="perfmatters-lazy entered error" data-src="https://www.kdnuggets.com/wp-content/themes/kdn17/images/linkedin.svg" data-ll-status="error">
+                    </a>
+                </li>
+
+            </ul>
+      
+            <a class="site-header__btn btn" href="#boxzilla-138215" onclick="event.preventDefault();" target="_blank" data-google-interstitial="false">Join Newsletter</a>
+
+            <div class="site-header__search">
+                <div class="search">
+    <form method="get" id="searchform" action="/">
+        <input value="" name="s" id="s" placeholder="Search KDnuggets…" type="text">
+        <button>
+            <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='0'%20height='0'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Search" class="perfmatters-lazy" data-src="https://www.kdnuggets.com/wp-content/themes/kdn17/images/search.svg">
+        </button>
+    </form>
+</div>
+            </div>
+        </div> <!--#header end-->
+
+        <div id="spacer">
+            &nbsp;
+        </div>
+        <div id="content_wrapper">
+            <div id="ad_wrapper">
+            
+	<div class="leaderboard-ros2" style="height: 95px;">
+    <div class="kdnug-af85ef968882fd98726aea118bf96b75 kdnug-leaderboard-ros" id="kdnug-af85ef968882fd98726aea118bf96b75"></div>		</div>
+        </div><!-- /ad_wrapper -->
+	
+
+<div id="content" class="single">
+<div id="post-header" class="">
+      <h1 id="title">A Beginner’s Guide to Setting Up Claude Code for High Performance Agentic Programming</h1>
+  <div id="instaread-demo-player-wrap">
+<style>
+  #instaread-demo-player-wrap { margin:20px 0 26px; width:100%;
+    min-width:min(520px, 92vw); max-width:100%; clear:both; flex:1 1 100%; }
+  #instaread-demo-player-wrap .instaread-player { background:#ffffff; border:1px solid #ececec;
+    border-radius:14px; box-shadow:0 2px 10px rgba(0,0,0,.08); padding:18px 20px 12px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    text-align:left; color:#1b1b1b; line-height:1.4; box-sizing:border-box; }
+  #instaread-demo-player-wrap * { box-sizing:border-box; margin:0; padding:0; }
+  #instaread-demo-player-wrap .irp-top { display:flex; justify-content:space-between;
+    align-items:baseline; gap:16px; margin:0 0 10px; }
+  #instaread-demo-player-wrap .irp-label { font-size:15px; font-weight:700; color:#1b1b1b; }
+  #instaread-demo-player-wrap .irp-sponsor-tag { font-size:11.5px; color:#9a9a9a; white-space:nowrap; }
+  #instaread-demo-player-wrap .irp-mid { display:flex; align-items:center; gap:14px; }
+  #instaread-demo-player-wrap .irp-btn { flex:0 0 46px; width:46px; height:46px;
+    border-radius:50%; border:none; background:#f0ae37; cursor:pointer; display:flex;
+    align-items:center; justify-content:center; transition:transform .12s ease; }
+  #instaread-demo-player-wrap .irp-btn:hover { transform:scale(1.06); }
+  #instaread-demo-player-wrap .irp-btn svg { width:18px; height:18px; fill:#fff; display:block; }
+  #instaread-demo-player-wrap .irp-wave { flex:1 1 auto; height:44px; display:flex;
+    align-items:center; gap:1.5px; cursor:pointer; min-width:0; }
+  #instaread-demo-player-wrap .irp-wave span { flex:1 1 auto; min-width:1px;
+    background:#d6d6d6; border-radius:1px; transition:background .15s linear; }
+  #instaread-demo-player-wrap .irp-wave span.played { background:#3d3d3d; }
+  #instaread-demo-player-wrap .irp-ad { flex:0 0 190px; }
+  #instaread-demo-player-wrap .irp-ad img { display:block; width:190px; height:52px;
+    border-radius:4px; }
+  #instaread-demo-player-wrap .irp-bottom { display:flex; justify-content:flex-end;
+    align-items:center; gap:6px; margin-top:8px; }
+  #instaread-demo-player-wrap .irp-time { font-size:11.5px; color:#a5a5a5;
+    margin-right:auto; font-variant-numeric:tabular-nums; }
+  #instaread-demo-player-wrap .irp-brand { display:flex; align-items:center; gap:4px;
+    font-size:10.5px; font-weight:600; color:#6a6a6a; }
+  #instaread-demo-player-wrap .irp-brand svg { width:8px; height:13px; }
+  @media (max-width: 700px) { #instaread-demo-player-wrap .irp-ad { display:none; } }
+</style>
+<div class="instaread-player">
+  <div class="irp-top">
+    <div class="irp-label">Listen to audio version of this article</div>
+    <div class="irp-sponsor-tag">Sponsored by</div>
+  </div>
+  <div class="irp-mid">
+    <button class="irp-btn" id="irp-btn" aria-label="Play">
+      <svg id="irp-icon-play" viewBox="0 0 24 24" style="margin-left:2px"><path d="M8 5v14l11-7z"></path></svg>
+      <svg id="irp-icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"></path></svg>
+    </button>
+    <div class="irp-wave" id="irp-wave"><span style="height:67%"></span><span style="height:46%"></span><span style="height:30%"></span><span style="height:30%"></span><span style="height:30%"></span><span style="height:36%"></span><span style="height:54%"></span><span style="height:34%"></span><span style="height:58%"></span><span style="height:31%"></span><span style="height:46%"></span><span style="height:51%"></span><span style="height:33%"></span><span style="height:38%"></span><span style="height:66%"></span><span style="height:64%"></span><span style="height:79%"></span><span style="height:100%"></span><span style="height:100%"></span><span style="height:100%"></span><span style="height:97%"></span><span style="height:100%"></span><span style="height:86%"></span><span style="height:79%"></span><span style="height:57%"></span><span style="height:51%"></span><span style="height:36%"></span><span style="height:16%"></span><span style="height:14%"></span><span style="height:24%"></span><span style="height:24%"></span><span style="height:52%"></span><span style="height:39%"></span><span style="height:19%"></span><span style="height:14%"></span><span style="height:14%"></span><span style="height:28%"></span><span style="height:14%"></span><span style="height:28%"></span><span style="height:55%"></span><span style="height:52%"></span><span style="height:44%"></span><span style="height:66%"></span><span style="height:55%"></span><span style="height:61%"></span><span style="height:33%"></span><span style="height:37%"></span><span style="height:37%"></span><span style="height:15%"></span><span style="height:36%"></span><span style="height:21%"></span><span style="height:24%"></span><span style="height:39%"></span><span style="height:51%"></span><span style="height:54%"></span><span style="height:35%"></span><span style="height:21%"></span><span style="height:32%"></span><span style="height:17%"></span><span style="height:27%"></span><span style="height:14%"></span><span style="height:14%"></span><span style="height:14%"></span><span style="height:37%"></span><span style="height:37%"></span><span style="height:30%"></span><span style="height:37%"></span><span style="height:63%"></span><span style="height:61%"></span><span style="height:86%"></span><span style="height:70%"></span><span style="height:47%"></span><span style="height:26%"></span><span style="height:29%"></span><span style="height:40%"></span><span style="height:61%"></span><span style="height:89%"></span><span style="height:93%"></span><span style="height:100%"></span><span style="height:100%"></span><span style="height:96%"></span><span style="height:100%"></span><span style="height:98%"></span><span style="height:100%"></span><span style="height:100%"></span><span style="height:100%"></span><span style="height:100%"></span><span style="height:100%"></span></div>
+    <div class="irp-ad"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzODAiIGhlaWdodD0iMTA0IiB2aWV3Qm94PSIwIDAgMzgwIDEwNCI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgo8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxNTE2MWQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM2ZjU2MmEiLz4KPC9saW5lYXJHcmFkaWVudD48L2RlZnM+CjxyZWN0IHdpZHRoPSIzODAiIGhlaWdodD0iMTA0IiByeD0iOCIgZmlsbD0idXJsKCNnKSIvPgo8dGV4dCB4PSIyNCIgeT0iNDciIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjkwMCIKIGZpbGw9IiNmZmZmZmYiIGxldHRlci1zcGFjaW5nPSIxIj5OT1ZBKzwvdGV4dD4KPHRleHQgeD0iMjQiIHk9Ijc2IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiNjZmQzZTAiPgpOZXcgc2Vhc29uIMK3IFN0cmVhbSBub3c8L3RleHQ+CjxjaXJjbGUgY3g9IjMzMCIgY3k9IjUyIiByPSIyNiIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC45MiIvPgo8cGF0aCBkPSJNMzIyIDM4IEwzNDYgNTIgTDMyMiA2NiBaIiBmaWxsPSIjMTUxNjFkIi8+CjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSIzMCIgaGVpZ2h0PSIxNiIgcng9IjMiIGZpbGw9IiMwMDAiIG9wYWNpdHk9IjAuMzUiLz4KPHRleHQgeD0iMjEiIHk9IjE4IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiNmZmYiCiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BRDwvdGV4dD4KPC9zdmc+" alt="Advertisement"></div>
+  </div>
+  <div class="irp-bottom">
+    <div class="irp-time"><span id="irp-cur">0:00</span> / 17:52</div>
+    <div class="irp-brand">
+      <svg viewBox="0 0 15 26" fill="none">
+        <path fill="#3a3a3a" d="M0.5 0 H14.5 V16.8 A4.2 4.2 0 0 1 10.3 21 H4.7 A4.2 4.2 0 0 1 0.5 16.8 Z"></path>
+        <rect x="1.7" y="1.9" width="11.6" height="1.5" fill="#ffffff"></rect>
+        <rect x="1.7" y="4.5" width="11.6" height="1.5" fill="#ffffff"></rect>
+        <circle cx="7.5" cy="9.9" r="2.3" fill="#ffffff"></circle>
+        <rect x="5.7" y="13.2" width="3.6" height="7.8" fill="#ffffff"></rect>
+        <path fill="#3a3a3a" d="M4.9 21 H10.1 V26 L7.5 24.2 L4.9 26 Z"></path>
+      </svg>
+      Instaread
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var DURATION = 1072;
+  var btn = document.getElementById('irp-btn');
+  var iconPlay = document.getElementById('irp-icon-play');
+  var iconPause = document.getElementById('irp-icon-pause');
+  var wave = document.getElementById('irp-wave');
+  var cur = document.getElementById('irp-cur');
+  var bars = wave.getElementsByTagName('span');
+  var playing = false, elapsed = 0, timer = null, last = 0;
+
+  function fmt(s) {
+    s = Math.max(0, Math.round(s));
+    return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2);
+  }
+  function render() {
+    var frac = Math.min(1, elapsed / DURATION);
+    var n = Math.round(frac * bars.length);
+    for (var i = 0; i < bars.length; i++) {
+      bars[i].className = i < n ? 'played' : '';
+    }
+    cur.textContent = fmt(elapsed);
+  }
+  function tick() {
+    if (!playing) return;
+    var now = performance.now();
+    elapsed += (now - last) / 1000;
+    last = now;
+    if (elapsed >= DURATION) { elapsed = DURATION; stop(); }
+    render();
+  }
+  function start() {
+    if (elapsed >= DURATION) elapsed = 0;
+    playing = true;
+    iconPlay.style.display = 'none';
+    iconPause.style.display = 'block';
+    btn.setAttribute('aria-label', 'Pause');
+    last = performance.now();
+    timer = setInterval(tick, 100);
+  }
+  function stop() {
+    playing = false;
+    if (timer) { clearInterval(timer); timer = null; }
+    iconPlay.style.display = 'block';
+    iconPause.style.display = 'none';
+    btn.setAttribute('aria-label', 'Play');
+  }
+  btn.addEventListener('click', function (e) {
+    e.preventDefault(); e.stopPropagation();
+    playing ? stop() : start();
+  });
+  wave.addEventListener('click', function (e) {
+    e.preventDefault(); e.stopPropagation();
+    var r = wave.getBoundingClientRect();
+    elapsed = DURATION * Math.min(1, Math.max(0, (e.clientX - r.left) / r.width));
+    render();
+    if (!playing) start();
+  });
+  render();
+})();
+</script>
+</div><p class="excerpt">
+     This article walks through the actual configuration, permissions, hooks, and command habits that separate a fresh install from a setup that holds up under real, sustained agentic work.
+  </p>
+	
+     <div class="author-link">By <strong><a href="https://www.kdnuggets.com/author/shittu-olumide" rel="author" data-google-interstitial="false">Shittu Olumide</a></strong>, Technical Content Specialist on July 20, 2026 in <a href="https://www.kdnuggets.com/tag/programming" data-google-interstitial="false">Programming</a></div>  
+	<div style="height: 45px;">  <!---->
+<!-- -->
+<!-- <div class="addthis_native_toolbox"></div> -->
+<div class="addtoany_shortcode"><div class="a2a_kit a2a_kit_size_28 addtoany_list" data-a2a-url="https://www.kdnuggets.com/a-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming" data-a2a-title="A Beginner’s Guide to Setting Up Claude Code for High Performance Agentic Programming"><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.kdnuggets.com%2Fa-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming&amp;linkname=A%20Beginner%E2%80%99s%20Guide%20to%20Setting%20Up%20Claude%20Code%20for%20High%20Performance%20Agentic%20Programming" title="Facebook" rel="nofollow noopener" target="_blank" data-google-interstitial="false"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.kdnuggets.com%2Fa-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming&amp;linkname=A%20Beginner%E2%80%99s%20Guide%20to%20Setting%20Up%20Claude%20Code%20for%20High%20Performance%20Agentic%20Programming" title="Twitter" rel="nofollow noopener" target="_blank" data-google-interstitial="false"></a><a class="a2a_button_linkedin" href="https://www.addtoany.com/add_to/linkedin?linkurl=https%3A%2F%2Fwww.kdnuggets.com%2Fa-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming&amp;linkname=A%20Beginner%E2%80%99s%20Guide%20to%20Setting%20Up%20Claude%20Code%20for%20High%20Performance%20Agentic%20Programming" title="LinkedIn" rel="nofollow noopener" target="_blank" data-google-interstitial="false"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=https%3A%2F%2Fwww.kdnuggets.com%2Fa-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming&amp;linkname=A%20Beginner%E2%80%99s%20Guide%20to%20Setting%20Up%20Claude%20Code%20for%20High%20Performance%20Agentic%20Programming" title="Reddit" rel="nofollow noopener" target="_blank" data-google-interstitial="false"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fwww.kdnuggets.com%2Fa-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming&amp;linkname=A%20Beginner%E2%80%99s%20Guide%20to%20Setting%20Up%20Claude%20Code%20for%20High%20Performance%20Agentic%20Programming" title="Email" rel="nofollow noopener" target="_blank" data-google-interstitial="false"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a></div></div> </div>
+</div>  
+  <hr class="grey-line"><br>
+  <div id="post-" class="post-206252 post type-post status-publish format-standard has-post-thumbnail hentry category-kdnuggets-originals tag-programming">
+  
+	  
+    <p><img decoding="async" src="https://www.kdnuggets.com/wp-content/uploads/KDN-Shittu-A-Beginners-Guide-to-Setting-Up-Claude-Code-for-High-Performance-Agentic-Programming-scaled.png" alt="A Beginner's Guide to Setting Up Claude Code for High-Performance Agentic Programming" width="100%" class="perfmatters-lazy entered error" data-src="https://www.kdnuggets.com/wp-content/uploads/KDN-Shittu-A-Beginners-Guide-to-Setting-Up-Claude-Code-for-High-Performance-Agentic-Programming-scaled.png" data-ll-status="error"><br>
+&nbsp;</p>
+<h2><font color="#f3ac35">#&nbsp;</font>Introduction</h2>
+<p>&nbsp;<br>
+Most people's <strong><a href="https://claude.com/product/claude-code" target="_blank">Claude Code</a></strong> setup never gets past day one. They run the installer, log in, type a prompt, get something useful back, and never touch a config file again. Weeks later, sessions start losing track of earlier decisions, the same permission prompt shows up fifty times a day, and every long task ends the same way: a wall of context warnings and a conversation that has to be abandoned and restarted from scratch.</p><div class="kdnug-676c1bf5ca006a92d75478d32ef48175 kdnug-after-first-paragraph" id="kdnug-676c1bf5ca006a92d75478d32ef48175"></div>
+<p>None of that is a limitation of the model. It's a limitation of the setup. Claude Code ships with sensible defaults, but <strong>sensible defaults</strong> and <strong>high performance</strong> are different bars, and the gap between them is almost entirely made up of a handful of files most beginners never open. This guide closes that gap. It walks through the actual configuration, permissions, hooks, and command habits that separate a fresh install from a setup that holds up under real, sustained agentic work, verified against Anthropic's current documentation rather than assumed from an older version of the tool.</p><div style="padding-bottom:180px;padding-top:20px;" class="kdnug-bc63986df2ee551ffd93e3b23cef983e kdnug-in-content-1" id="kdnug-bc63986df2ee551ffd93e3b23cef983e"></div>
+<p>&nbsp;</p>
+<div id="AdThrive_Content_1_desktop" class="adthrive-ad adthrive-content adthrive-content-1 adthrive-ad-cls" style="min-height: 250px;"></div><h2><font color="#f3ac35">#&nbsp;</font>Installing Claude Code the Right Way</h2>
+<p>&nbsp;<br>
+Claude Code installs as a standalone command-line interface (CLI), and the <strong><a href="https://docs.claude.com/en/docs/claude-code/overview" target="_blank">current recommended path</a></strong> is the native installer rather than npm, though npm still works as a fallback:</p>
+<div style="width: 98%; overflow: auto; padding-left: 10px; padding-bottom: 10px; padding-top: 10px; background: #F5F5F5;">
+<pre><code># macOS, Linux, or WSL
+curl -fsSL https://claude.ai/install.sh | bash
+
+# Windows PowerShell
+irm https://claude.ai/install.ps1 | iex
+
+# Or, via npm, if you'd rather manage it with your existing Node toolchain
+npm install -g @anthropic-ai/claude-code</code></pre>
+</div>
+<p>&nbsp;</p>
+<p>Once installed, <code style="background: #F5F5F5;">cd</code> into an actual project directory before running <code style="background: #F5F5F5;">claude</code> for the first time. This matters more than it sounds like it should: Claude Code scopes its project memory and settings to the directory you launch it from, so starting it from your home folder or your desktop means it never picks up the right context for anything you're working on.</p>
+<div style="width: 98%; overflow: auto; padding-left: 10px; padding-bottom: 10px; padding-top: 10px; background: #F5F5F5;">
+<pre><code>cd your-project-directory
+claude</code></pre>
+</div>
+<p>&nbsp;</p>
+<p>The first run walks you through authentication — either OAuth login with a Claude subscription (Pro, Max, or Team) or an application programming interface (API) key tied to a Console account. Beyond the terminal, Claude Code is also available through a VS Code extension, a JetBrains plugin, a desktop app, and a web-based version at claude.ai for sessions you want to pick up from a browser rather than a terminal. All of them read from the same underlying settings and project files, so nothing you set up in the terminal is wasted if you later switch to an integrated development environment (IDE) panel.</p>
+<p>With that done, the install itself is the easy part. What actually determines whether Claude Code performs well from here is the set of three files most tutorials skip past.</p>
+<p>&nbsp;</p>
+<div id="AdThrive_Content_2_desktop" class="adthrive-ad adthrive-content adthrive-content-1 adthrive-ad-cls" style="min-height: 270px;"></div><h2><font color="#f3ac35">#&nbsp;</font>The Three Files That Actually Run the Show</h2>
+<p>&nbsp;<br>
+Claude Code reads configuration from two places: your project's <code style="background: #F5F5F5;">.claude/</code> directory (and a <code style="background: #F5F5F5;">CLAUDE.md</code> at the project root), and a global <code style="background: #F5F5F5;">~/.claude/</code> directory that applies across every project on your machine. Understanding what lives where is the single biggest lever on whether the tool performs well or drifts, according to <strong><a href="https://code.claude.com/docs/en/claude-directory" target="_blank">Anthropic's own documentation on the .claude directory structure</a></strong>.</p>
+<ol>
+<li><strong>CLAUDE.md</strong> is project memory — instructions Claude reads at the start of every session in that repository: architecture notes, build and test commands, code style rules, and anything else that would otherwise need re-explaining every single time. Run <code style="background: #F5F5F5;">/init</code> in a fresh project, and Claude Code will scan the codebase and generate a starting <code style="background: #F5F5F5;">CLAUDE.md</code> for you, which you then refine with <code style="background: #F5F5F5;">/memory</code>. Keep it lean. Anthropic's guidance is to treat it as a living reference under roughly 2,500 tokens, and to push anything long or path-specific into <code style="background: #F5F5F5;">.claude/rules/*.md</code> files instead, which can be scoped to load only when Claude touches matching files.</li>
+<li><strong>settings.json</strong>, living at <code style="background: #F5F5F5;">.claude/settings.json</code> for project-level config or <code style="background: #F5F5F5;">~/.claude/settings.json</code> for personal defaults, is where permissions, hooks, environment variables, and model defaults actually live. This is the file most beginners never open, and it's directly responsible for two of the most common complaints about the tool: constant permission interruptions and Claude reaching for a more expensive model than a task actually needs.</li>
+<li><strong><a href="https://code.claude.com/docs/en/memory#auto-memory" target="_blank">Auto memory</a></strong> is the newer, quieter layer: Claude can write and read its own working notes across a session without you managing a file directly, toggled with the <code style="background: #F5F5F5;">autoMemoryEnabled</code> setting or the <code style="background: #F5F5F5;">CLAUDE_CODE_DISABLE_AUTO_MEMORY</code> environment variable if you'd rather keep memory fully manual and auditable through <code style="background: #F5F5F5;">CLAUDE.md</code> alone.</li>
+</ol>
+<p>The practical rule that ties these together, echoed across Anthropic's documentation and independent breakdowns of the config system alike, is this: stable rules belong in <code style="background: #F5F5F5;">CLAUDE.md</code>, because instructions buried only in conversation history get lost the moment a long session triggers automatic compaction. If a rule needs to survive past today's session, write it down.</p>
+<p>&nbsp;</p>
+<div id="AdThrive_Content_3_desktop" class="adthrive-ad adthrive-content adthrive-content-1 adthrive-ad-cls" style="min-height: 250px; align-content: start;"></div><h2><font color="#f3ac35">#&nbsp;</font>Setting Up Permissions and Hooks Before Needed</h2>
+<p>&nbsp;<br>
+Claude Code runs in one of three permission modes, cycled with <strong>Shift+Tab</strong>:</p>
+<ul>
+<li><strong>Default</strong>, which asks before every potentially risky tool call.</li>
+<li><strong>Auto-Accept Edits</strong>, which lets file edits through without prompting while still gating other tools.</li>
+<li><strong>Plan Mode</strong>, which is read-only — no edits, no shell commands — until you approve a plan. Plan Mode is worth defaulting to for your first sessions in an unfamiliar codebase, since it forces Claude to propose before it acts.</li>
+</ul>
+<p>Beyond the interactive modes, <code style="background: #F5F5F5;">settings.json</code> lets you write actual permission rules, so you're not manually approving the same safe command fifty times a session:</p>
+<div style="width: 98%; overflow: auto; padding-left: 10px; padding-bottom: 10px; padding-top: 10px; background: #F5F5F5;">
+<pre><code>{
+  "permissions": {
+    "allow": [
+      "Bash(npm test:*)",
+      "Bash(npm run lint:*)",
+      "Read(**)"
+    ],
+    "ask": [
+      "Bash(git push:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf /*)",
+      "Bash(sudo:*)",
+      "Read(.env)"
+    ]
+  }
+}</code></pre>
+</div>
+<p>&nbsp;</p>
+<p><strong>What this does</strong>: anything matching <code style="background: #F5F5F5;">allow</code> runs without a prompt, anything matching <code style="background: #F5F5F5;">deny</code> is blocked outright regardless of what else matches, and anything left unlisted falls back to asking you directly. That deny-first ordering matters: a deny rule always wins even if a broader allow rule would otherwise cover it, which is what makes it safe to grant fairly broad read and test-running access without also opening the door to destructive commands.</p>
+<p>Hooks go a step further than permission rules, since a rule can only allow or block a call, while a hook can actually run something in response to one. A <code style="background: #F5F5F5;">PostToolUse</code> hook that auto-formats every file Claude edits is one of the most commonly recommended starting points:</p>
+<div style="width: 98%; overflow: auto; padding-left: 10px; padding-bottom: 10px; padding-top: 10px; background: #F5F5F5;">
+<pre><code>{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx prettier --write \"$CLAUDE_TOOL_INPUT_FILE_PATH\""
+          }
+        ]
+      }
+    ]
+  }
+}</code></pre>
+</div>
+<p>&nbsp;</p>
+<p><strong>What this does</strong>: every time Claude writes or edits a file, this hook fires afterward and runs Prettier against exactly the file that changed, using the path Claude Code passes in through the <code style="background: #F5F5F5;">$CLAUDE_TOOL_INPUT_FILE_PATH</code> environment variable. You stop manually reformatting after every edit, and your style rules apply consistently whether Claude wrote the file or you did.</p>
+<p>A <code style="background: #F5F5F5;">PreToolUse</code> hook can go further and actually block a dangerous command before it runs, which is a stronger guarantee than a permission rule alone since it can inspect the exact command text rather than just matching a pattern:</p>
+<div style="width: 98%; overflow: auto; padding-left: 10px; padding-bottom: 10px; padding-top: 10px; background: #F5F5F5;">
+<pre><code>#!/usr/bin/env python3
+# .claude/hooks/block-dangerous-bash.py
+import json, re, sys
+
+DANGEROUS_PATTERNS = [
+    r'\brm\s+.*-[a-z]*r[a-z]*f',
+    r'sudo\s+rm',
+    r'chmod\s+777',
+    r'git\s+push\s+--force.*main',
+]
+
+input_data = json.load(sys.stdin)
+if input_data.get('tool_name') == 'Bash':
+    command = input_data.get('tool_input', {}).get('command', '')
+    for pattern in DANGEROUS_PATTERNS:
+        if re.search(pattern, command, re.IGNORECASE):
+            print("BLOCKED: matches a dangerous command pattern", file=sys.stderr)
+            sys.exit(2)
+sys.exit(0)</code></pre>
+</div>
+<p>&nbsp;</p>
+<p><strong>What this does</strong>: Claude Code pipes the tool call's details to this script as JSON on stdin before the command runs. If the <code style="background: #F5F5F5;">bash</code> tool is about to execute something matching a recursive force-delete, a <code style="background: #F5F5F5;">sudo rm</code>, a world-writable chmod, or a forced push to main, the script prints a reason and exits with code 2, which Claude Code's hook system treats as a hard block — stopping the command before it ever runs. Register it in <code style="background: #F5F5F5;">settings.json</code> under <code style="background: #F5F5F5;">PreToolUse</code> with a <code style="background: #F5F5F5;">Bash</code> matcher, and this becomes a permanent safety net rather than something you have to remember to check for manually.</p>
+<p>&nbsp;</p>
+<div id="AdThrive_Content_4_desktop" class="adthrive-ad adthrive-content adthrive-content-1 adthrive-ad-cls" style="min-height: 250px; align-content: start;"></div><h2><font color="#f3ac35">#&nbsp;</font>The Commands Worth Learning First</h2>
+<p>&nbsp;<br>
+Claude Code ships with more than sixty built-in commands as of this writing, and trying to memorize all of them on day one is a waste of time. The table below covers the ones that actually change how a session performs, organized by what they're for, pulled directly from <strong><a href="https://code.claude.com/docs/en/commands" target="_blank">Claude Code's official command reference</a></strong>.</p>
+<p>&nbsp;</p>
+<table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+<thead>
+<tr style="background-color: #ffd29a;">
+<th style="padding: 12px; border: 1px solid #ddd; text-align: left;"><strong>Command</strong></th>
+<th style="padding: 12px; border: 1px solid #ddd; text-align: left;"><strong>Category</strong></th>
+<th style="padding: 12px; border: 1px solid #ddd; text-align: left;"><strong>What It Does</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/init</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Setup</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Scans your codebase and generates a starting CLAUDE.md</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/memory</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Setup</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Opens CLAUDE.md for editing directly</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/clear</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Context</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Starts a fresh conversation while keeping project memory</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/compact [focus]</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Context</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Summarizes conversation history to free up context; accepts instructions on what to preserve</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/context</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Context</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Shows current context window usage</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/plan</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Planning</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Toggles Plan Mode; Claude proposes before it acts, nothing executes until you approve</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/diff</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Review</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Opens an interactive diff of every change made this session</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/code-review [--fix]</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Review</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Checks the current diff for correctness bugs; <code style="background: #F5F5F5;">--fix</code> applies the findings</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/security-review</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Review</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Checks the current diff specifically for security vulnerabilities</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/review</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Review</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Gives a read-only review of a GitHub pull request</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/resume [session]</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Navigation</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Resumes a previous conversation by name or ID</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/branch [name] (alias /fork)</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Navigation</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Forks the current conversation into a new session</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/rewind</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Navigation</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Rolls code and/or conversation back to an earlier checkpoint</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/model</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Cost &amp; Performance</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Switches the active model mid-session without losing context</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/effort</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Cost &amp; Performance</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Sets reasoning depth (low through max) to match task complexity</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/cost</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Cost &amp; Performance</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Shows token usage and spend for API-key users</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/agents</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Delegation</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Manages subagents — view, create, or invoke specialized agents</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/permissions</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Configuration</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Manages permission rules interactively</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/hooks</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Configuration</td>
+<td style="padding: 12px; border: 1px dodge #ddd;">Manages hooks interactively</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>/doctor</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Diagnostics</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Checks your install for configuration problems</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>A useful habit for a beginner</strong>: build fluency with <code style="background: #F5F5F5;">/compact</code>, <code style="background: #F5F5F5;">/plan</code>, and <code style="background: #F5F5F5;">/diff</code> first, since those three alone solve the majority of early frustration — sessions that degrade from context bloat, edits that go further than intended, and not knowing exactly what changed. Everything else in the table earns its place once those three are muscle memory.</p>
+<p>&nbsp;</p>
+<div id="AdThrive_Content_5_desktop" class="adthrive-ad adthrive-content adthrive-content-1 adthrive-ad-cls" style="min-height: 250px;"></div><h2><font color="#f3ac35">#&nbsp;</font>Building Your Own <code style="background: #F5F5F5;">/truth</code> Command</h2>
+<p>&nbsp;<br>
+Here's a fair note before this section: <code style="background: #F5F5F5;">/truth</code> isn't a command that ships with Claude Code. It doesn't appear in the official command reference, and it's not something I could confirm across any current documentation or community guide while researching this article. What's genuinely useful, though — and likely what prompted the idea — is a command that makes Claude check its own recent claims against the actual codebase before you trust them and move on. That's a real gap worth closing, and it's a perfect example of Claude Code's custom command system, so here's how to build it yourself.</p>
+<p>Custom commands are defined as skills — a folder with a <code style="background: #F5F5F5;">SKILL.md</code> file. Create one at <code style="background: #F5F5F5;">.claude/skills/truth/SKILL.md</code>:</p>
+<div style="width: 98%; overflow: auto; padding-left: 10px; padding-bottom: 10px; padding-top: 10px; background: #F5F5F5;">
+<pre><code>---
+description: Verify Claude's most recent claims and edits against the actual codebase
+allowed-tools: Read, Grep, Glob, Bash(git diff:*)
+---
+
+Re-examine everything you just told me in this conversation against what
+actually exists in the codebase right now. Specifically:
+
+1. For every file you claim to have edited, read it again and confirm the
+   change is actually present and matches what you described.
+2. For every claim about existing code (a function's behavior, a config
+   value, an import, a dependency version), verify it against the real
+   file rather than your memory of reading it earlier in the session.
+3. Run `git diff` and compare the actual diff against what you described
+   changing.
+4. Report back plainly: which claims checked out, which didn't, and
+   exactly what the discrepancy was for anything that failed. Do not
+   soften or hedge a discrepancy you find, state it directly.</code></pre>
+</div>
+<p>&nbsp;</p>
+<p><strong>What this does</strong>: the YAML frontmatter restricts this command to read-only tools plus a scoped <code style="background: #F5F5F5;">git diff</code>, so running <code style="background: #F5F5F5;">/truth</code> can never itself modify anything — which matters since a verification step that can also make changes isn't a trustworthy verification step. The instruction body is deliberately specific about what "verify" means: re-reading actual files rather than trusting the model's own prior description of them, and explicitly telling Claude not to soften a discrepancy if it finds one, since a self-check that's incentivized to sound reassuring isn't actually checking anything.</p>
+<p>Once the file is saved, <code style="background: #F5F5F5;">/truth</code> becomes available in any session in that project — the same way any other custom command works — and it shows up if you type <code style="background: #F5F5F5;">/</code> and start filtering. Run it after Claude finishes a multi-step task, especially one where it touched several files or made claims about existing code it hadn't re-read recently, and before you commit anything based on those claims. This is the same grounding principle behind self-correcting agents generally: a check is only worth something if it's forced to look at something outside its own prior output, and pointing <code style="background: #F5F5F5;">/truth</code> at the actual files and the actual <code style="background: #F5F5F5;">git diff</code> is what makes it more than a model agreeing with itself.</p>
+<p>&nbsp;</p>
+<div id="AdThrive_Content_6_desktop" class="adthrive-ad adthrive-content adthrive-content-1 adthrive-ad-cls" style="min-height: 250px;"></div><h2><font color="#f3ac35">#&nbsp;</font>Using Subagents and Parallel Work for Real Speed Gains</h2>
+<p>&nbsp;<br>
+Everything so far makes a single Claude Code session more reliable. Subagents are what make it faster on the kind of work that doesn't need to happen sequentially. A subagent is a specialized instance with its own context window, its own system prompt, and its own tool permissions, and <strong><a href="https://code.claude.com/docs/en/claude-directory" target="_blank">Anthropic's subagent documentation</a></strong> describes them as running isolated from the main session, returning a summary rather than dragging every intermediate file read and tool call back into your primary conversation.</p>
+<p>That isolation is the actual performance win. Large codebase exploration, dependency audits, and test-writing are all verbose work that would otherwise eat heavily into your main session's context budget. Delegate them to a subagent instead, and only the finished result comes back.</p>
+<div style="width: 98%; overflow: auto; padding-left: 10px; padding-bottom: 10px; padding-top: 10px; background: #F5F5F5;">
+<pre><code># Inside a session, ask Claude to create a subagent
+/agents</code></pre>
+</div>
+<p>&nbsp;</p>
+<p>Running <code style="background: #F5F5F5;">/agents</code> opens an interactive menu for creating, viewing, and managing subagents, or you can define one directly as a file at <code style="background: #F5F5F5;">.claude/agents/&lt;name&gt;.md</code> with its own frontmatter for model selection and tool access, similar in structure to the skill file above. A common starting pattern is a narrowly scoped <code style="background: #F5F5F5;">code-reviewer</code> or <code style="background: #F5F5F5;">test-runner</code> subagent with read-only access, so it can inspect and report without ever being able to make the change it's reviewing — the same separation-of-concerns idea covered in the hooks section above, just applied to delegation instead of permissions.</p>
+<p>&nbsp;<br>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%'%20height='0'%20viewBox='0%200%20100%%200'%3E%3C/svg%3E" alt="A diagram showing a single Lead session box at the top, with three arrows fanning down to boxes labeled Subagent: test-runner, Subagent: code-reviewer, and Subagent: dependency-auditor, each with a small isolated context label, and all three arrows converging back up into a Summary merged into lead session box." width="100%" class="perfmatters-lazy" data-src="https://www.kdnuggets.com/wp-content/uploads/KDN-Shittu-A-diagram-showing-a-single-Lead-session-box-at-the-top-with-three-arrows-fanning-down-to-boxes.png"><br>
+&nbsp;</p>
+<p>For genuinely parallel work — editing several unrelated parts of a codebase at once without one change blocking another — <code style="background: #F5F5F5;">/batch</code> and <code style="background: #F5F5F5;">--worktree</code> sessions let multiple Claude Code instances work in isolated git worktrees simultaneously, each with its own working directory so they can't step on each other's changes. That's a more advanced pattern than a beginner setup strictly needs on day one, but it's worth knowing it exists once single-session work stops being the bottleneck.</p>
+<p>&nbsp;</p>
+<div id="AdThrive_Content_7_desktop" class="adthrive-ad adthrive-content adthrive-content-1 adthrive-ad-cls" style="min-height: 250px;"></div><h2><font color="#f3ac35">#&nbsp;</font>A Starter <code style="background: #F5F5F5;">CLAUDE.md</code> and <code style="background: #F5F5F5;">settings.json</code> You Can Actually Use</h2>
+<p>&nbsp;<br>
+Pulling everything above together, here's a reasonable starting point for a new project. Save this as <code style="background: #F5F5F5;">CLAUDE.md</code> at your project root:</p>
+<div style="width: 98%; overflow: auto; padding-left: 10px; padding-bottom: 10px; padding-top: 10px; background: #F5F5F5;">
+<pre><code># Project Context
+
+## Stack
+- [Your language/framework here, e.g. Node.js, TypeScript, React]
+
+## Commands
+- Test: `npm test`
+- Lint: `npm run lint`
+- Dev server: `npm run dev`
+
+## Conventions
+- [Your code style rules, naming conventions, folder structure]
+
+## Before finishing any task
+- Run the test suite and confirm it passes
+- Run `/truth` if the task involved editing more than one file</code></pre>
+</div>
+<p>&nbsp;</p>
+<p>And a starting <code style="background: #F5F5F5;">.claude/settings.json</code>:</p>
+<div style="width: 98%; overflow: auto; padding-left: 10px; padding-bottom: 10px; padding-top: 10px; background: #F5F5F5;">
+<pre><code>{
+  "permissions": {
+    "allow": ["Bash(npm test:*)", "Bash(npm run lint:*)", "Read(**)"],
+    "ask": ["Bash(git push:*)"],
+    "deny": ["Bash(rm -rf /*)", "Bash(sudo:*)", "Read(.env)"]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [{ "type": "command", "command": "python3 .claude/hooks/block-dangerous-bash.py" }]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [{ "type": "command", "command": "npx prettier --write \"$CLAUDE_TOOL_INPUT_FILE_PATH\"" }]
+      }
+    ]
+  }
+}</code></pre>
+</div>
+<p>&nbsp;</p>
+<p>That's the entire foundation from this article in two files: sensible permissions that don't interrupt safe, repeated commands, a hard block on the genuinely dangerous ones, automatic formatting on every edit, and a project memory file that points Claude at your actual test and lint commands instead of guessing at them. Commit both to your repository (leaving anything containing secrets out, and using <code style="background: #F5F5F5;">.claude/settings.local.json</code> for personal overrides that shouldn't be shared), and every teammate who clones the project starts from the same high-performance baseline instead of rebuilding it from scratch.</p>
+<p>&nbsp;</p>
+<div id="AdThrive_Content_8_desktop" class="adthrive-ad adthrive-content adthrive-content-1 adthrive-ad-cls" style="min-height: 250px;"></div><h2><font color="#f3ac35">#&nbsp;</font>Wrapping Up</h2>
+<p>&nbsp;<br>
+The difference between a beginner's Claude Code setup and a high-performance one isn't a secret feature or a hidden command; it's whether you spent twenty minutes on <code style="background: #F5F5F5;">CLAUDE.md</code>, <code style="background: #F5F5F5;">settings.json</code>, and one or two hooks before diving into real work, or whether you're still running on whatever the installer gave you by default three weeks in. Everything in this guide — the memory files, the permission rules, the hooks, the commands worth learning first — exists to remove friction you'd otherwise hit repeatedly and never fix. Set it up once, commit it to the repository, and every session after that starts from a stronger baseline than the one before it.<br>
+&nbsp;<br>
+&nbsp;</p>
+<p><a href="https://www.linkedin.com/in/olumide-shittu"><strong><strong></strong></strong></a><strong><strong><a href="https://www.linkedin.com/in/olumide-shittu/" target="_blank" rel="noopener noreferrer">Shittu Olumide</a></strong></strong> is a software engineer and technical writer passionate about leveraging cutting-edge technologies to craft compelling narratives, with a keen eye for detail and a knack for simplifying complex concepts. You can also find Shittu on <a href="https://twitter.com/Shittu_Olumide_">Twitter</a>.</p><div class="crp_related     crp-text-only"><br><h3>More On This Topic</h3><ul><li><a href="https://www.kdnuggets.com/local-agentic-programming-on-the-cheap-claude-code-ollama-gemma4" class="crp_link post-205514" data-google-interstitial="false"><span class="crp_title">Local Agentic Programming on the Cheap: Claude Code + Ollama + Gemma4</span></a></li><li><a href="https://www.kdnuggets.com/top-5-mcp-servers-for-high-performance-agentic-development" class="crp_link post-206449" data-google-interstitial="false"><span class="crp_title">Top 5 MCP Servers for High-Performance Agentic Development</span></a></li><li><a href="https://www.kdnuggets.com/qwen-code-leverages-qwen3-as-a-cli-agentic-programming-tool" class="crp_link post-196881" data-google-interstitial="false"><span class="crp_title">Qwen Code Leverages Qwen3 as a CLI Agentic Programming Tool</span></a></li><li><a href="https://www.kdnuggets.com/5-powerful-python-decorators-for-high-performance-data-pipelines" class="crp_link post-203154" data-google-interstitial="false"><span class="crp_title">5 Powerful Python Decorators for High-Performance Data Pipelines</span></a></li><li><a href="https://www.kdnuggets.com/vibe-coding-high-performance-data-tools-in-rust" class="crp_link post-194031" data-google-interstitial="false"><span class="crp_title">Vibe Coding High-Performance Data Tools in Rust</span></a></li><li><a href="https://www.kdnuggets.com/building-high-performance-machine-learning-models-rust" class="crp_link post-189507" data-google-interstitial="false"><span class="crp_title">Building High-Performance Machine Learning Models in Rust</span></a></li></ul><div class="crp_clear"></div></div>
+  </div><br>
+<!--<hr class="grey-line"><br>	
+  <div><h3>Our Top 5 Free Course Recommendations</h3><br>
+	  	</div>	
+-->	
+<div class="box-form">
+    <!-- Mailchimp for WordPress v4.13.1 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-3" class="mc4wp-form mc4wp-form-138095 mc4wp-ajax" method="post" data-id="138095" data-name="Subscribe to KDnuggets News (Article)"><div class="mc4wp-form-fields"><div class="header-container">
+  <div><img width="100" height="111" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100'%20height='111'%20viewBox='0%200%20100%20111'%3E%3C/svg%3E" class="perfmatters-lazy" data-src="/wp-content/uploads/newsletter-alt.png"></div>
+  <p>Get the <a href="/news/subscribe.html" data-google-interstitial="false"><strong>FREE ebook 'KDnuggets Artificial Intelligence Pocket Dictionary'</strong></a> along with the leading newsletter on Data Science, Machine Learning, AI &amp; Analytics straight to your inbox.</p>
+</div>  
+<div class="form-fields">
+  <div class="field-container"><input type="email" name="EMAIL" size="30" maxlength="60" placeholder="Your Email" required=""></div>
+  <div class="field-container submit-container" "form-button"="">
+    <input class="btn" type="submit" value="Sign Up"></div>
+    <p style="font-size:11px; margin-top: 10px;">By subscribing you accept KDnuggets <a style="font-size:10px" target="_blank" href="https://www.kdnuggets.com/news/privacy-policy.html" data-google-interstitial="false">Privacy Policy</a></p>
+  	<input type="hidden" name="Form Signup Location" value="popup_button">
+  </div></div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off"></label><input type="hidden" name="_mc4wp_timestamp" value="1784634654"><input type="hidden" name="_mc4wp_form_id" value="138095"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-3"><div class="mc4wp-response"></div></form><!-- / Mailchimp for WordPress Plugin --></div>
+
+<!-- You can start editing here. -->
+<div id="comment_wrapper">
+	<p></p>
+							<!-- If comments are closed. -->
+			
+	<p></p>
+	</div>
+<div class="page-link"></div>
+
+  <div class="pagi">
+  <hr class="grey-line">
+<br>
+<div class="pagi-left">
+<a href="https://www.kdnuggets.com/top-5-mcp-servers-for-high-performance-agentic-development" rel="prev" data-google-interstitial="false">&lt;= Previous post</a></div>
+<div class="pagi-right">
+</div>
+
+<br><br>
+
+  </div>
+  <!--#content end--></div>
+
+<div id="sidebar">
+
+    <div class="search">
+    <form method="get" id="searchform" action="/">
+        <input value="" name="s" id="s" placeholder="Search KDnuggets…" type="text">
+        <button>
+            <img src="https://www.kdnuggets.com/wp-content/themes/kdn17/images/search.svg" alt="Search" class="perfmatters-lazy entered error" data-src="https://www.kdnuggets.com/wp-content/themes/kdn17/images/search.svg" data-ll-status="error">
+        </button>
+    </form>
+</div>
+
+    <div id="post-header-ad2" style="min-height:255px;">
+        <div class="kdnug-bc1f007c9fff80b75f9e2cbd9a6d7397 kdnug-med-rectangle-ros" id="kdnug-bc1f007c9fff80b75f9e2cbd9a6d7397"></div>    </div>
+
+	<div>
+    <!--<script type="text/javascript">kda_sid_write(kda_sid_n);</script>-->	
+    <!--	-->	
+    </div>
+    
+    <div class="latn">
+        <h3><a href="/news/index.html" data-google-interstitial="false">Latest Posts</a></h3> 
+        <ul style="font-size:16px;">
+<li> <a href="https://www.kdnuggets.com/a-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming" data-google-interstitial="false">A Beginner’s Guide to Setting Up Claude Code for High Performance Agentic Programming</a></li><li> <a href="https://www.kdnuggets.com/top-5-mcp-servers-for-high-performance-agentic-development" data-google-interstitial="false">Top 5 MCP Servers for High-Performance Agentic Development</a></li><li> <a href="https://www.kdnuggets.com/2026/07/airia/could-your-ai-systems-already-be-high-risk-under-the-eu-ai-act" data-google-interstitial="false">Could Your AI Systems Already Be High-Risk Under the EU AI Act?</a></li><li> <a href="https://www.kdnuggets.com/kdnuggets-weekly-roundup-2026-07-13" data-google-interstitial="false">KDnuggets Weekly Roundup: Week of July 13, 2026</a></li><li> <a href="https://www.kdnuggets.com/git-worktrees-for-ai-development" data-google-interstitial="false">Git Worktrees for AI Development</a></li><li> <a href="https://www.kdnuggets.com/5-free-resources-on-agentic-ai" data-google-interstitial="false">5 FREE Resources on Agentic AI</a></li></ul>
+
+              
+    </div>
+
+    <br><br>  
+    <table class="thb" cellpadding="3" width="100%">
+<tbody><tr><th class="thb"><h2 size="+1">Top Posts</h2></th></tr>
+</tbody></table>
+<br>
+
+<ul class="wpp-list">
+<li><a href="https://www.kdnuggets.com/stop-using-if-else-chains-use-the-registry-pattern-in-python-instead" class="wpp-post-title" target="_self" data-google-interstitial="false">Stop Using If-Else Chains: Use the Registry Pattern in Python Instead</a></li>
+<li><a href="https://www.kdnuggets.com/10-youtube-channels-keeping-you-ahead-in-ai" class="wpp-post-title" target="_self" data-google-interstitial="false">10 YouTube Channels Keeping You Ahead in AI</a></li>
+<li><a href="https://www.kdnuggets.com/5-real-world-sql-projects-to-build-your-data-portfolio" class="wpp-post-title" target="_self" data-google-interstitial="false">5 Real-World SQL Projects to Build Your Data Portfolio</a></li>
+<li><a href="https://www.kdnuggets.com/7-python-frameworks-for-orchestrating-local-ai-agents" class="wpp-post-title" target="_self" data-google-interstitial="false">7 Python Frameworks for Orchestrating Local AI Agents</a></li>
+<li><a href="https://www.kdnuggets.com/2023/n03.html" class="wpp-post-title" target="_self" data-google-interstitial="false">KDnuggets News, January 25: ChatGPT as a Python Programming Assistant • Python and Machine Learning to Predict Football Match Winners</a></li>
+<li><a href="https://www.kdnuggets.com/working-with-pi-coding-agents" class="wpp-post-title" target="_self" data-google-interstitial="false">Working with Pi Coding Agents</a></li>
+<li><a href="https://www.kdnuggets.com/12-ways-to-reduce-llm-latency-and-inference-costs-in-production" class="wpp-post-title" target="_self" data-google-interstitial="false">12 Ways to Reduce LLM Latency and Inference Costs in Production</a></li>
+<li><a href="https://www.kdnuggets.com/git-worktrees-for-ai-development" class="wpp-post-title" target="_self" data-google-interstitial="false">Git Worktrees for AI Development</a></li>
+<li><a href="https://www.kdnuggets.com/5-free-resources-on-agentic-ai" class="wpp-post-title" target="_self" data-google-interstitial="false">5 FREE Resources on Agentic AI</a></li>
+<li><a href="https://www.kdnuggets.com/a-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming" class="wpp-post-title" target="_self" data-google-interstitial="false">A Beginner’s Guide to Setting Up Claude Code for High Performance Agentic Programming</a></li>
+
+</ul>
+    <br><br><br>
+
+    <div id="post-header-ad"><div id="AdThrive_Sidebar_1_desktop" class="adthrive-ad adthrive-sidebar adthrive-sidebar-1 adthrive-ad-cls" style="min-height: 250px;"></div>
+            </div>
+
+	<!-- Mailchimp for WordPress v4.13.1 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-4" class="mc4wp-form mc4wp-form-77281 mc4wp-ajax" method="post" data-id="77281" data-name="Subscribe to KDnuggets News (Sidebar)"><div class="mc4wp-form-fields"><div class="header-container">
+  <div><img width="100" height="111" src="/wp-content/uploads/newsletter-alt.png" class="perfmatters-lazy entered error" data-src="/wp-content/uploads/newsletter-alt.png" data-ll-status="error"></div>
+  <p>Get the <a href="/news/subscribe.html" data-google-interstitial="false"><strong>FREE ebook 'KDnuggets Artificial Intelligence Pocket Dictionary'</strong></a> along with the leading newsletter on Data Science, Machine Learning, AI &amp; Analytics straight to your inbox.</p>
+</div>  
+<div class="form-fields">
+  <div class="field-container"><input type="email" name="EMAIL" size="30" maxlength="60" placeholder="Your Email" required=""></div>
+  <div class="field-container submit-container" "form-button"="">
+    <input class="btn" type="submit" value="Sign Up"></div>
+    <p style="font-size:11px; margin-top: 10px;">By subscribing you accept KDnuggets <a style="font-size:10px" target="_blank" href="https://www.kdnuggets.com/news/privacy-policy.html" data-google-interstitial="false">Privacy Policy</a></p>
+  	<input type="hidden" name="Form Signup Location" value="popup_button">
+  </div></div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off"></label><input type="hidden" name="_mc4wp_timestamp" value="1784634654"><input type="hidden" name="_mc4wp_form_id" value="77281"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-4"><div class="mc4wp-response"></div></form><!-- / Mailchimp for WordPress Plugin -->
+<div class="rp-sticky-sb-wrapper" style="min-height: 600px;"><div id="AdThrive_Sidebar_9_desktop" class="adthrive-ad adthrive-sidebar adthrive-sidebar-9 adthrive-ad-cls adthrive-sticky" style="min-height: 250px; width: 299.922px;" data-google-query-id="CKPHgoPb45UDFWeZcgAdVywlxw"><div id="google_ads_iframe_/18190176,22523581566/AdThrive_Sidebar_9/6580aa6286340b3292ce8665_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 600px;"></div></div></div></div>
+
+<!--#content_wrapper end--></div>
+<br>
+  <div id="footer">
+  <div id="content" class="single">
+<hr class="grey-line">
+<br>
+© 2026 <a href="https://www.guidingtechmedia.com/" target="_blank" rel="noopener noreferrer">Guiding Tech Media</a> &nbsp; | &nbsp; <a href="/about/index.html" data-google-interstitial="false">About</a> &nbsp; | &nbsp; <a href="/contact.html" data-google-interstitial="false">Contact</a> &nbsp; | &nbsp; <a href="https://www.kdnuggets.com/media-kit?utm_source=kdn&amp;utm_medium=footer&amp;utm_campaign=link" data-google-interstitial="false">Advertise</a> | &nbsp; <a href="https://www.guidingtechmedia.com/privacy/" target="_blank">Privacy</a> &nbsp; | &nbsp; <a href="https://www.guidingtechmedia.com/terms-of-use/" target="_blank">Terms of Service</a>
+</div>
+<br>&nbsp;
+
+<div style="display: none;">
+Published on July 20, 2026 by Olumide Shittu</div>  </div>
+  <div class="clear"><!--blank--></div>
+</div>
+
+<div style="display: none;"><div id="boxzilla-box-138215-content"><!-- Mailchimp for WordPress v4.13.1 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-5" class="mc4wp-form mc4wp-form-138213" method="post" data-id="138213" data-name="Subscribe to KDnuggets News (Popup Button)"><div class="mc4wp-form-fields"><div class="header-container">
+  <div><img width="100" height="111" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100'%20height='111'%20viewBox='0%200%20100%20111'%3E%3C/svg%3E" class="perfmatters-lazy" data-src="/wp-content/uploads/newsletter-alt.png"></div>
+  <p>Get the <a href="/news/subscribe.html" data-google-interstitial="false"><strong>FREE ebook 'KDnuggets Artificial Intelligence Pocket Dictionary'</strong></a> along with the leading newsletter on Data Science, Machine Learning, AI &amp; Analytics straight to your inbox.</p>
+</div>  
+<div class="form-fields">
+  <div class="field-container"><input type="email" name="EMAIL" size="30" maxlength="60" placeholder="Your Email" required=""></div>
+  <div class="field-container submit-container" "form-button"="">
+    <input class="btn" type="submit" value="Sign Up"></div>
+    <p style="font-size:11px; margin-top: 10px;">By subscribing you accept KDnuggets <a style="font-size:10px" target="_blank" href="https://www.kdnuggets.com/news/privacy-policy.html" data-google-interstitial="false">Privacy Policy</a></p>
+  	<input type="hidden" name="Form Signup Location" value="popup_button">
+  </div></div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off"></label><input type="hidden" name="_mc4wp_timestamp" value="1784634654"><input type="hidden" name="_mc4wp_form_id" value="138213"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-5"><div class="mc4wp-response"></div></form><!-- / Mailchimp for WordPress Plugin -->
+</div><div id="boxzilla-box-82996-content"><!-- Mailchimp for WordPress v4.13.1 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-6" class="mc4wp-form mc4wp-form-138094" method="post" data-id="138094" data-name="Subscribe to KDnuggets News (Popup)"><div class="mc4wp-form-fields"><div class="header-container">
+  <div><img width="100" height="111" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100'%20height='111'%20viewBox='0%200%20100%20111'%3E%3C/svg%3E" class="perfmatters-lazy" data-src="/wp-content/uploads/newsletter-alt.png"></div>
+  <p>Get the <a href="/news/subscribe.html" data-google-interstitial="false"><strong>FREE ebook 'KDnuggets Artificial Intelligence Pocket Dictionary'</strong></a> along with the leading newsletter on Data Science, Machine Learning, AI &amp; Analytics straight to your inbox.</p>
+</div>  
+<div class="form-fields">
+  <div class="field-container"><input type="email" name="EMAIL" size="30" maxlength="60" placeholder="Your Email" required=""></div>
+  <div class="field-container submit-container" "form-button"="">
+    <input class="btn" type="submit" value="Sign Up"></div>
+    <p style="font-size:11px; margin-top: 10px;">By subscribing you accept KDnuggets <a style="font-size:10px" target="_blank" href="https://www.kdnuggets.com/news/privacy-policy.html" data-google-interstitial="false">Privacy Policy</a></p>
+  	<input type="hidden" name="Form Signup Location" value="popup_button">
+  </div></div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off"></label><input type="hidden" name="_mc4wp_timestamp" value="1784634654"><input type="hidden" name="_mc4wp_form_id" value="138094"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-6"><div class="mc4wp-response"></div></form><!-- / Mailchimp for WordPress Plugin -->
+<p class="small-text"><a href="javascript:Boxzilla.dismiss(82996);">No, thanks!</a></p>
+</div></div>
+<div class="a2a_kit a2a_kit_size_34 a2a_floating_style a2a_vertical_style" data-a2a-scroll-show="500" style="left:0px;top:200px;background-color:transparent"><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.kdnuggets.com%2Fa-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming&amp;linkname=A%20Beginner%26%238217%3Bs%20Guide%20to%20Setting%20Up%20Claude%20Code%20for%20High%20Performance%20Agentic%20Programming" title="Facebook" rel="nofollow noopener" target="_blank" data-google-interstitial="false"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.kdnuggets.com%2Fa-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming&amp;linkname=A%20Beginner%26%238217%3Bs%20Guide%20to%20Setting%20Up%20Claude%20Code%20for%20High%20Performance%20Agentic%20Programming" title="Twitter" rel="nofollow noopener" target="_blank" data-google-interstitial="false"></a><a class="a2a_button_linkedin" href="https://www.addtoany.com/add_to/linkedin?linkurl=https%3A%2F%2Fwww.kdnuggets.com%2Fa-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming&amp;linkname=A%20Beginner%26%238217%3Bs%20Guide%20to%20Setting%20Up%20Claude%20Code%20for%20High%20Performance%20Agentic%20Programming" title="LinkedIn" rel="nofollow noopener" target="_blank" data-google-interstitial="false"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=https%3A%2F%2Fwww.kdnuggets.com%2Fa-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming&amp;linkname=A%20Beginner%26%238217%3Bs%20Guide%20to%20Setting%20Up%20Claude%20Code%20for%20High%20Performance%20Agentic%20Programming" title="Reddit" rel="nofollow noopener" target="_blank" data-google-interstitial="false"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fwww.kdnuggets.com%2Fa-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming&amp;linkname=A%20Beginner%26%238217%3Bs%20Guide%20to%20Setting%20Up%20Claude%20Code%20for%20High%20Performance%20Agentic%20Programming" title="Email" rel="nofollow noopener" target="_blank" data-google-interstitial="false"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		<!--/.main_wrapper--></div>
+<!--<script defer type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=gpsaddthis"></script>-->
+<!--noptimize-->
+
+<!--/noptimize-->
+
+
+
+
+<div class="ad_unit ad-unit text-ad text_ad pub_300x250" style="width: 1px !important; height: 1px !important; position: absolute !important; left: 0px !important; top: 0px !important; overflow: hidden !important;">&nbsp;</div><div class="pub_300x250 pub_300x250m pub_728x90 text-ad textAd text_ad text_ads text-ads text-ad-links ad ad01 banner_ad banner-ad content_ad content-ad" style="visibility:visible; display:block; width: 1px !important; height: 1px !important; position: absolute !important; left: -10000px !important; top: -1000px !important;"></div><ins class="adsbygoogle adsbygoogle-noablate" data-ad-hi="true" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"></div></ins><iframe id="adt-ii" src="https://ads.adthrive.com/builds/core/839f403/html/i.html" style="display: none;"></iframe><iframe src="https://ads.adthrive.com/builds/core/839f403/html/rnf.html" id="adthrive-mcmp" style="display: none;"></iframe><img src="https://pixel.rubiconproject.com/token?pid=49096&amp;us_privacy=1YNY" alt="" style="display: none;"><div id="adthrive-ccpa-modal" class="adthrive-ccpa-modal" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1" aria-labelledby="adthrive-ccpa-modal-title" aria-describedby="adthrive-ccpa-modal-language"><div id="adthrive-ccpa-modal-content" class="adthrive-ccpa-modal-content"><button id="adthrive-ccpa-modal-close-btn-container" type="button" aria-label="Close Do not sell or share my personal information dialog"><span>✕</span></button><h2 id="adthrive-ccpa-modal-title" tabindex="-1">Do not sell or share my personal information.</h2><div id="adthrive-ccpa-modal-language" tabindex="0">You have chosen to opt-out of the sale or sharing of your information from this site and any of its affiliates. To opt back in please click the "Reenable Personalization" link.<br>
+    <br>This site collects information through the use of cookies and other tracking tools. Cookies and these tools do not contain any information that personally identifies a user, but personal information that would be stored about you may be linked to the information stored in and obtained from them. This information would be used and shared for Analytics, Ad Serving, Interest Based Advertising, among other purposes.<br>
+    <br>For more information please visit this site's Privacy Policy.</div><div class="adthrive-ccpa-lower-buttons-container"><div id="adthrive-ccpa-modal-cancel-btn" class="adthrive-ccpa-modal-btn" role="button" tabindex="0">CANCEL</div><div id="adthrive-ccpa-modal-continue-btn" class="adthrive-ccpa-modal-btn" role="button" tabindex="0">CONTINUE</div></div></div></div><dialog class="raptive-content-terms-modal" aria-labelledby="raptive-content-terms-modal-title" id="raptive-modal-1" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1"><div class="raptive-content-terms-modal-content"><div class="raptive-content-terms-modal-header"><h2 id="raptive-content-terms-modal-title" class="raptive-content-terms-modal-title">Your Use of Our Content</h2><button type="button" class="raptive-content-terms-modal-close" aria-label="Close Terms of Content Use">✕</button></div><div class="raptive-content-terms-modal-body" tabindex="0"><p>The content we make available on this website [and through our other channels] (the “Service”) was created, developed, compiled, prepared, revised, selected, and/or arranged by us, using our own methods and judgment, and through the expenditure of substantial time and effort. This Service and the content we make available are proprietary, and are protected by these Terms of Service (which is a contract between us and you), copyright laws, and other intellectual property laws and treaties. This Service is also protected as a collective work or compilation under U.S. copyright and other laws and treaties. We provide it for your personal, non-commercial use only.</p><p>You may not use, and may not authorize any third party to use, this Service or any content we make available on this Service in any manner that (i) is a source of or substitute for the Service or the content; (ii) affects our ability to earn money in connection with the Service or the content; or (iii) competes with the Service we provide. These restrictions apply to any robot, spider, scraper, web crawler, or other automated means or any similar manual process, or any software used to access the Service. You further agree not to violate the restrictions in any robot exclusion headers of this Service, if any, or bypass or circumvent other measures employed to prevent or limit access to the Service by automated means.</p></div></div></dialog><div id="AdThrive_Footer_1_desktop" class="adthrive-ad adthrive-footer adthrive-footer-1 adthrive-ad-cls adthrive-footer-desktop adthrive-sticky" data-google-query-id="CO6f_4Lb45UDFQ_qGAIdZbwqEQ"><div id="google_ads_iframe_/18190176,22523581566/AdThrive_Footer_1/6580aa6286340b3292ce8665_0__container__" style="border: 0pt none; display: inline-block; width: 728px; height: 90px;"></div></div><div class="adthrive-comscore adthrive-footer-message"><div id="adthrive-ccpa-link" class="adthrive-ccpa-link" style="display: none;">Information from your device can be used to personalize your ad experience. <br><br><a id="ccpaTag" href="/" aria-haspopup="dialog" aria-controls="adthrive-ccpa-modal" aria-expanded="false" data-google-interstitial="false">Do not sell or share my personal information.</a></div><div class="raptive-content-terms-footer"><a href="/" class="raptive-content-terms-footer-link" aria-haspopup="dialog" aria-controls="raptive-modal-1" aria-expanded="false" data-google-interstitial="false">Terms of Content Use</a></div><span>A Raptive Partner Site</span></div><div id="batBeacon889687038827" style="width: 0px; height: 0px; display: none; visibility: hidden;"><img id="batBeacon161758384732" width="0" height="0" alt="" src="https://bat.bing.com/action/0?ti=187158898&amp;tm=gtm002&amp;Ver=2&amp;mid=c4c04ccc-7206-47ec-8966-5ad189ad7107&amp;bo=1&amp;sid=e4fe41c084fa11f1a3e8d38e156df46b&amp;vid=e4fe918084fa11f1a6a455946c2e4c6d&amp;vids=0&amp;msclkid=N&amp;gtm_tag_source=1&amp;pi=918639831&amp;lg=en-US&amp;sw=1440&amp;sh=900&amp;sc=24&amp;tl=A%20Beginner%E2%80%99s%20Guide%20to%20Setting%20Up%20Claude%20Code%20for%20High%20Performance%20Agentic%20Programming%20-%20KDnuggets&amp;p=https%3A%2F%2Fwww.kdnuggets.com%2Fa-beginners-guide-to-setting-up-claude-code-for-high-performance-agentic-programming&amp;r=&amp;lt=3842&amp;evt=pageLoad&amp;sv=2&amp;cdb=AQAA&amp;rn=625190" style="width: 0px; height: 0px; display: none; visibility: hidden;"></div><style>
+  .ir-demo-disclaimer { position:fixed; bottom:0; left:0; right:0; z-index:2147483647;
+    background:#ffd60a; border-top:3px solid #b8960c; color:#1a1400;
+    font:800 13.5px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    text-align:center; padding:11px 18px; letter-spacing:.015em;
+    box-shadow:0 -2px 12px rgba(0,0,0,.18); }
+  .ir-demo-ribbon { position:fixed; top:50%; right:0; z-index:2147483647;
+    transform:translateY(-50%) rotate(180deg); writing-mode:vertical-rl;
+    background:#ffd60a; border:3px solid #b8960c; border-right:none; color:#1a1400;
+    font:800 12.5px/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    letter-spacing:.06em; padding:16px 9px; border-radius:0 8px 8px 0;
+    box-shadow:2px 0 12px rgba(0,0,0,.18); white-space:nowrap; }
+</style>
+<div class="ir-demo-disclaimer">⚠ DEMO ONLY — This page is a design mock-up created
+solely for demo purposes. Not affiliated with, endorsed by, or connected to any real
+service, publication, or person.</div>
+<div class="ir-demo-ribbon">⚠ DEMO — NOT A REAL PUBLICATION</div>
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest ? e.target.closest('a') : null;
+  if (a && !a.closest('#instaread-demo-player-wrap')) e.preventDefault();
+}, true);
+</script></body><iframe sandbox="allow-scripts allow-same-origin" id="1724a6e644fce23e" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://cdn.undertone.com/js/usersync.html?partnerId=66&amp;gdpr=&amp;gdpr_consent=&amp;us_privacy=1YNY&amp;gpp=&amp;gpp_sid=&amp;redirect=https%3A%2F%2Fprebid.production.adthrive.com%2Fsetuid%3Fbidder%3Dundertone%26gdpr%3D%26gdpr_consent%3D%26us_privacy%3D1YNY%26gpp%3D%26gpp_sid%3D%26f%3Db%26uid%3D%24UID">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="177ed163d310ed64" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://ssum.casalemedia.com/usermatch?s=205820&amp;gdpr=&amp;gdpr_consent=&amp;us_privacy=1YNY&amp;cb=https%3A%2F%2Fpbs-raptive-us.ay.delivery%2Fsetuid%3Fbidder%3Dix%26gdpr%3D%26gdpr_consent%3D%26gpp%3D%26gpp_sid%3D%26f%3Db%26uid%3D">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="19402560877d81d1" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://prebid.a-mo.net/isyn?gdpr=&amp;gdpr_consent=&amp;us_privacy=1YNY&amp;gpp=&amp;gpp_sid=&amp;s=pbs&amp;cb=https%3A%2F%2Fpbs-raptive-us.ay.delivery%2Fsetuid%3Fbidder%3Damx%26gdpr%3D%26gdpr_consent%3D%26gpp%3D%26gpp_sid%3D%26f%3Db%26uid%3D%24UID">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="207036b13ec36ba9" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://u.openx.net/w/1.0/cm?id=891039ac-a916-42bb-a651-4be9e3b201da&amp;ph=a3aece0c-9e80-4316-8deb-faf804779bd1&amp;gdpr=&amp;gdpr_consent=&amp;gpp=&amp;gpp_sid=&amp;r=https%3A%2F%2Fprebid.production.adthrive.com%2Fsetuid%3Fbidder%3Dopenx%26gdpr%3D%26gdpr_consent%3D%26us_privacy%3D1YNY%26gpp%3D%26gpp_sid%3D%26f%3Db%26uid%3D">
+    </iframe><style data-ir-clean="1">
+#onetrust-consent-sdk, #onetrust-banner-sdk, .onetrust-pc-dark-filter,
+.qc-cmp2-container, #qc-cmp2-container, [id^="sp_message_container"],
+.fc-consent-root, #usercentrics-root, #didomi-host, #cmpbox, #cmpbox2,
+#CybotCookiebotDialog, .truste_overlay, .truste_box_overlay, #cookie-notice,
+.cky-consent-container, #cookiescript_injected, .osano-cm-window,
+.pum, .pum-overlay, [class*="popmake"], .mfp-bg, .mfp-wrap, .modal-backdrop,
+.fancybox-overlay, [id^="om-"], .sgpb-popup-overlay, .elementor-popup-modal,
+.tve_p_lb_overlay, .mc-modal, .mc-modal-bg
+{ display: none !important; }
+</style><iframe sandbox="allow-scripts allow-same-origin" id="209e88c139732ca4" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://eb2.3lift.com/sync?gdpr=&amp;cmp_cs=&amp;us_privacy=1YNY&amp;gpp=&amp;gpp_sid=&amp;redir=https%3A%2F%2Fprebid.production.adthrive.com%2Fsetuid%3Fbidder%3Dtriplelift%26gdpr%3D%26gdpr_consent%3D%26us_privacy%3D1YNY%26gpp%3D%26gpp_sid%3D%26f%3Db%26uid%3D%24UID">
+    </iframe></html>
